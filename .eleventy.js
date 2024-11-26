@@ -9,6 +9,7 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const cacheBuster = require("./11ty/cacheBuster");
 const htmlMinify = require("./11ty/htmlMinify");
+const {slugifyString} = require("./11ty/utils");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
@@ -27,6 +28,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(htmlMinify);
 
   eleventyConfig.addFilter("cacheBuster", cacheBuster);
+  eleventyConfig.addFilter("slugify", slugifyString);
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd MMMM yyyy"
@@ -102,16 +104,6 @@ module.exports = function (eleventyConfig) {
     // Pre-process *.html files with: (default: `liquid`)
     htmlTemplateEngine: "njk",
 
-    // -----------------------------------------------------------------
-    // If your site deploys to a subdirectory, change `pathPrefix`.
-    // Don’t worry about leading and trailing slashes, we normalize these.
-
-    // If you don’t have a subdirectory, use "" or "/" (they do the same thing)
-    // This is only used for link URLs (it does not affect your file structure)
-    // Best paired with the `url` filter: https://www.11ty.dev/docs/filters/url/
-
-    // You can also pass this in on the command line using `--pathprefix`
-
     // Optional (default is shown)
     pathPrefix: "/",
     // -----------------------------------------------------------------
@@ -121,7 +113,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       includes: "_includes",
       data: "_data",
-      output: "_site",
+      output: "dist",
     },
   };
 };

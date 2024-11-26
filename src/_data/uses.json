@@ -1,0 +1,138 @@
+{
+  "gears": [
+    {
+      "title": "Apple MacBook Pro 2021 (14\")",
+      "hashtags": [
+        "computer"
+      ],
+      "details": "This is my personal coding computer. Processor M1 Pro Chip, 8-Core CPU, 16-Core GPU, 16 GB RAM, 512 GB SSD.",
+      "more_info_link": "https://www.apple.com/mac/"
+    },
+    {
+      "title": "Keychron K2 (US layout)",
+      "hashtags": [
+        "keyboard"
+      ],
+      "details": "Hot-Swap Mechanical Bluetooth Keyboard (Mac) with Keycap/Gateron Brown Switch/USB C, Compact Wireless RGB.",
+      "more_info_link": "https://www.keychron.com/products/keychron-k2-wireless-mechanical-keyboard?variant=31063869653081"
+    },
+    {
+      "title": "Logitech MX Master 3S For Business",
+      "hashtags": [
+        "mouse"
+      ],
+      "details": "A perfect mouse with zero lag in doing daily work with 8000 DPI sensor, customizable buttons, USB-C, Bluetooth",
+      "more_info_link": "https://www.logitech.com/en-eu/products/mice/mx-master-3s-business-wireless-mouse.910-006582.html"
+    },
+    {
+      "title": "Bose QC 35II Headphones",
+      "hashtags": [
+        "audio",
+        "headphones"
+      ],
+      "details": "My goto headphones, I am using them on my iPhone, Mac, sometimes with my LG TV ;)",
+      "more_info_link": "https://www.bose.de/de_de/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html#v=qc35_ii_silver"
+    },
+    {
+      "title": "AirPods 2",
+      "hashtags": [
+        "audio",
+        "headphones"
+      ],
+      "details": "You already know about them :)",
+      "more_info_link": "https://www.apple.com/airpods-2nd-generation/"
+    },
+    {
+      "title": "DELL S2722DC (27\")",
+      "hashtags": [
+        "workspace",
+        "monitor"
+      ],
+      "details": "A perfect QHD Monitor with USB-C connectivity, I am also using it for gaming (with PS5).",
+      "more_info_link": "https://www.dell.com/de-de/shop/dell-27-usb-c-monitor-s2722dc/apd/210-bbrr/monitore-und-monitorzubeh%C3%B6r"
+    },
+    {
+      "title": "TitanWolf Mate",
+      "hashtags": [
+        "workspace",
+        "monitor"
+      ],
+      "details": "Nice mate which compliments to my workspace.",
+      "more_info_link": "https://www.amazon.de/Titanwolf-Tischunterlage-verbessert-Pr%C3%A4zision-Geschwindigkeit/dp/B07BXVM7RN"
+    },
+    {
+      "title": "IKEA height-adjustable table",
+      "hashtags": [
+        "workspace"
+      ],
+      "details": "I don't want to set for 8 hours while working, I try to stand at least a little bit each day. This desk has been great for that. I like the color of this which goes perfectly fine with other stuff on my table.",
+      "more_info_link": "https://www.ikea.com/de/de/p/rodulf-schreibtisch-sitz-steh-grau-weiss-s99326170/"
+    },
+    {
+      "title": "Quntis Monitor USB LED Lamp",
+      "hashtags": [
+        "workspace"
+      ],
+      "details": "Care about your eyes, please use a lamp on your monitor. It helps to reduce raises coming from your monitor.",
+      "more_info_link": "https://www.amazon.de/gp/product/B08DKQ3JG1/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1"
+    }
+  ],
+  "softwares": [
+    {
+      "title": "Visual Studio Code",
+      "hashtags": [
+        "coding"
+      ],
+      "details": "Where I write my code.",
+      "more_info_link": "https://code.visualstudio.com/"
+    },
+    {
+      "title": "Night Owl",
+      "hashtags": [
+        "coding"
+      ],
+      "details": "Perfect theme for coding by Sarah Drasner",
+      "more_info_link": "https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
+    },
+    {
+      "title": "Fire Code Fonts",
+      "hashtags": [
+        "coding"
+      ],
+      "details": "An open source font which makes coding simply a fun.",
+      "more_info_link": "https://github.com/tonsky/FiraCode"
+    },
+    {
+      "title": "iTerm2",
+      "hashtags": [
+        "coding"
+      ],
+      "details": "I started using it long time ago, because I simply hate default terminal from Mac. You can check my custom setup <a href=\"/posts/how-to-setup-mac-terminal/\">here</a>",
+      "more_info_link": "https://iterm2.com/"
+    },
+    {
+      "title": "Oh My ZSH!",
+      "hashtags": [
+        "coding"
+      ],
+      "details": "It gives perfect detailing to git repositories.",
+      "more_info_link": "https://ohmyz.sh/"
+    },
+    {
+      "title": "Powerlevel10k",
+      "hashtags": [
+        "coding"
+      ],
+      "details": "Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.",
+      "more_info_link": "https://github.com/learnwithgurpreet/mac-dev-env-setup"
+    },
+    {
+      "title": "Brave",
+      "hashtags": [
+        "browser"
+      ],
+      "details": "Because I am privacy freak ;)",
+      "more_info_link": "https://brave.com/"
+    }
+  ]
+}

@@ -4,9 +4,9 @@
       {%- for entry in collections.all | eleventyNavigation %}
         <li><a href="{{ entry.url | url }}" {%if entry.url == page.url%}aria-current="page"{% endif %}>{{ entry.title }}</a></li>
       {%- endfor %}
-      <li><a href="{{ metadata.url + metadata.feed.path + metadata.feed.json }}">RSS</a></li>
+      <li><a href="{{ metadata.url + metadata.feed.path + metadata.feed.xml }}">RSS</a></li>
       <li><a href="https://www.lkhrs.com/" rel="noreferrer">Design inspired by Luke Harris</a></li>
     </ul>
   </nav>
-  <p>&copy; 2023 {{ metadata.author.name }}</p>
+  <p>&copy; 2020-Present {{ metadata.author.name }}</p>
 </footer>

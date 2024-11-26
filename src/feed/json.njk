@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: true
       "url": "{{ absolutePostUrl }}",
       "title": "{{ post.data.title }}",
       "excerpt": "{{ post.templateContent | excerpt }}",
-      "date_published": "{{ post.date | rssDate }}"
+      "date_published": "{{ post.date | dateToRfc3339 }}"
     }
     {%- if not loop.last -%}
     ,

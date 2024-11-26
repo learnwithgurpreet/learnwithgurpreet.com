@@ -14,9 +14,9 @@ keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankf
 
 <p>I get a lot of questions about what gear, software, and other stuff I use. To make it easier to share, I've collected a list here.</p>
 
-{% for key, value in metadata.uses %}
+{% for key, value in uses %}
   <h2 id="{{ key }}" class="capitalize">{{ key }}</h2>
-    {% for obj in metadata.uses[ key ] %}
+    {% for obj in uses[ key ] %}
       <h3>{{ obj.title }}</h3>
       <p>{{ obj.details | safe }}</p>
       <a href="{{ obj.more_info_link }}">More Info <svg data-wf-icon="ArrowUpRightIcon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline"><path d="M2 12.5701L10.5489 4.02254L4.33037 4.02254L4.33037 2L14 2L14 11.6696L11.9775 11.6696L11.9775 5.45243L3.42987 14L2 12.5701Z" fill="currentColor"></path></svg></a>
