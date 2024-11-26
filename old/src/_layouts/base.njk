@@ -1,0 +1,170 @@
+{% set assetHash = helpers.random() %}
+
+<!doctype html>
+<html lang="{{ meta.lang }}">
+  <head>
+    <!-- charset/http-equiv/viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title -->
+    <title>
+      {% if discover.title %}
+        {{ discover.title }}
+      {% elif title %}
+        {{ title }}
+      {% else %}
+        {{ meta.siteName }}
+      {% endif %}
+    </title>
+
+    <!-- 4 synchronous js  -->
+    <!-- load theme toggle first to avoid color flashing on page load and inline render blocking js  -->
+    {% set jsthemetoggle %}{% include "theme-toggle-inline.js" %}{% endset %}
+
+    <script>
+      // prettier-ignore
+      {{ jsthemetoggle | jsmin | safe }}
+    </script>
+
+    <!--  inline base schema -->
+    {% include "schemas/base-schema.njk" %}
+
+    {% if schema == 'blog' %}
+      <!--  inline blogpost schema  -->
+      {%- include "schemas/blogpost-schema.njk" -%}
+    {% endif %}
+
+    <link rel="stylesheet" href="/assets/css/global.css?{{ assetHash }}" />
+
+    <!-- preloads -->
+    <link
+      rel="preload"
+      href="/assets/fonts/figtree/figtree-variable[wght].woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link
+      rel="preload"
+      href="/assets/fonts/redhat/red-hat-display-v7-latin-900.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <!-- preloads in page data -->
+    {%- if preloads -%}
+      <!-- prettier-ignore -->
+      <link rel="preload"
+            href="{{ preloads.href }}"
+            as="{{ preloads.as }}"
+            {% if preloads.type %}type={{ preloads.type }}{% endif %}{% if preloads.imagesrcset %}imagesrcset="{{ preloads.imagesrcset }}"{% endif %}
+            {% if preloads.crossorigin %}crossorigin{% endif %} />
+    {% endif %}
+
+    <!-- defered js  -->
+
+    {% if masonry %}
+      <!-- masonry fallback, if true in frontmatter -->
+      <script src="/assets/scripts/masonry.js?{{ assetHash }}" defer></script>
+    {% endif %}
+
+    {% if youtube %}
+      <!-- youtube, if true in frontmatter -->
+      <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/@justinribeiro/lite-youtube@1.4.0/lite-youtube.min.js"
+      ></script>
+    {% endif %}
+
+    {% if meta.navigation.drawerNav %}
+      <!-- menu drawer js, if true in meta -->
+      <script src="/assets/scripts/nav-drawer.js?{{ assetHash }}" defer></script>
+    {% endif %}
+
+    {% if meta.easteregg %}
+      <!-- easteregg js, if true in meta -->
+      <script src="/assets/scripts/easteregg.js?{{ assetHash }}" defer></script>
+    {% endif %}
+
+    <!-- everything else: meta tags, icons, open graph etc.  -->
+    {% include "partials/meta-info.njk" %}
+  </head>
+
+  <body class="{{ layout }}">
+    {% include "partials/header.njk" %}
+
+    <main id="main" class="flow">{{ content | safe }}</main>
+
+    {% include "partials/footer.njk" %}
+
+    {% if meta.sw %}
+      <!-- sw.js, if true in meta -->
+      <script>
+        if ("serviceWorker" in navigator) {
+          // Register a service worker hosted at the root of the
+          // site using the default scope.
+          navigator.serviceWorker.register("/sw.js").then(
+            (registration) => {
+              console.log("service worker: Registered");
+            },
+            (error) => {
+              console.error(`Service worker registration failed: ${error}`);
+            },
+          );
+        } else {
+          console.error("Service workers are not supported.");
+        }
+      </script>
+    {% endif %}
+
+    <script>
+      (function(){
+        function hasClass(el, cls) {
+          if (el.className.match('(?:^|\\s)'+cls+'(?!\\S)')) { return true; } 
+        }
+        function addClass(el, cls) {
+          if (!el.className.match('(?:^|\\s)'+cls+'(?!\\S)')){ el.className += ' '+cls; } 
+        }
+        function delClass(el, cls) {
+          el.className = el.className.replace(new RegExp('(?:^|\\s)'+cls+'(?!\\S)'),'');
+        }
+
+        function elementFromTop(elem, classToAdd, distanceFromTop, unit) {
+          var winY = window.innerHeight || document.documentElement.clientHeight,
+              distTop = elem.getBoundingClientRect().top,
+              distPercent = Math.round((distTop / winY) * 100),
+              distPixels = Math.round(distTop),
+              distUnit;
+          
+          distUnit = unit == 'percent' ? distPercent : distPixels;
+
+          if (distUnit <= distanceFromTop) {
+            if (!hasClass(elem, classToAdd)) {
+              elem.dataset.blurRemoved = true;
+              addClass(elem, classToAdd);
+            }
+          } else {
+            if(elem.dataset.blurRemoved === "false") {
+              delClass(elem, classToAdd);
+            }
+          }
+        }
+        function mapThroughElements() {
+          // params: element id, class to add, distance from top, unit ('percent' or 'pixels')
+          var allIamagelements = document.querySelectorAll("picture img");
+
+          for (var i = 0; i < allIamagelements.length; i++) {
+            elementFromTop(allIamagelements[i], 'unBlur', window.innerHeight - 100, 'pixels');
+          }
+        }
+
+        window.addEventListener('scroll', mapThroughElements, false);
+
+        window.addEventListener('load', mapThroughElements)
+      })();
+    </script>
+  </body>
+</html>

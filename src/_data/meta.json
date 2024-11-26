@@ -1,0 +1,32 @@
+{
+  "lang": "en",
+  "siteName": "Learn with Gurpreet",
+  "url": "https://learnwithgurpreet.com",
+  "siteDescription": "I am working with Publicis Sapient as senior architect, experience engineering",
+  "locale": "en_EN",
+  "social": {
+    "github": "https://github.com/learnwithgurpreet",
+    "mastodon": "https://fosstodon.org/@GurpreetSingh"
+  },
+  "creator": {
+    "name": "Gurpreet Singh",
+    "email": "gsin.hello@gmail.com",
+    "website": "https://www.gurpreetsingh.me",
+    "social": "https://fosstodon.org/@GurpreetSingh"
+  },
+  "googleSiteVerification": "QfEK-rmBKbXGQ6woeJAgPBlfEJyLpoLmX3LwFqpYAcg",
+  "msvalidate": "6795913B9B37C4605C83D85239DB46F5",
+  "themeColor": "#DD4462",
+  "themeBgColor": "#FBFBFB",
+  "blog": {
+    "name": "Learn with Gurpreet Blog",
+    "description": "Building a greener web: where code meets sustainability to shape a better digital future. 🌍🌱",
+    "feedLinks": [
+      {
+        "title": "Atom Feed",
+        "url": "/feed/feed.xml",
+        "type": "application/atom+xml"
+      }
+    ]
+  }
+}

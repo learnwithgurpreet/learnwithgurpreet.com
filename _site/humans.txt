@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Gurpreet Singh
+Contact: gsin.hello@gmail.com
+Site: https://www.gurpreetsingh.me
+
+Find me on: https://fosstodon.org/@GurpreetSingh
+
+/* SITE */
+Doctype: HTML5

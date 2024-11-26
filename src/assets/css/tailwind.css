@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Skip link */
+.skip-link {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  clip: auto;
+  block-size: auto;
+  overflow: visible;
+  line-height: 1;
+}
+
+.skip-link:not(:focus) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  block-size: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  inline-size: 1px;
+  white-space: nowrap;
+}

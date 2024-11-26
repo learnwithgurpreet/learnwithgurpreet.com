@@ -1,0 +1,10 @@
+<header>
+  <nav class="bg-white shadow dark:bg-gray-800">
+    <div class="container flex items-center justify-center p-6 mx-auto text-gray-600 capitalize dark:text-gray-300">
+      <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %} class="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">Home</a>
+      {% for item in navigation.top %}
+        <a href="{{ item.url }}" class="text-gray-800 transition-colors duration-300 transform dark:text-gray-200 border-b-2 border-blue-500 mx-1.5 sm:mx-6">{{ item.text }}</a>
+      {% endfor %}
+    </div>
+  </nav>
+</header>
