@@ -135,7 +135,18 @@
   <body>
     <a href="#content" class="skip-link">Skip to main content</a>
     {% block content %}{% endblock %}
-    <script src="/sw.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+          .register('/sw.js')
+          .then(() => {
+            console.log('[Service Worker] Registered successfully.');
+          })
+          .catch((error) => {
+            console.error('[Service Worker] Registration failed:', error);
+          });
+      }
+    </script>
     {% if page.url === "/stats/" %}
       <script src="/assets/js/chart.umd.js"></script>
       <script>
