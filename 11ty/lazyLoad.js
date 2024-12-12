@@ -1,8 +1,6 @@
 const { JSDOM } = require("jsdom");
 
 function lazyImages(eleventyConfig, userOptions = {}) {
-  const { parse } = require("node-html-parser");
-
   const options = {
     name: "lazy-images",
     ...userOptions,

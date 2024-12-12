@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const markdownIt = require("markdown-it");
 const StripTags = require("./11ty/stripTags");
 const GroupBy = require("./11ty/groupBy");
 const LazyImages = require("./11ty/lazyLoad");
@@ -26,6 +27,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(LazyImages, {});
   eleventyConfig.addPlugin(htmlMinify);
+  eleventyConfig.setLibrary('md', markdownIt({
+    html: true,
+		breaks: true,
+		linkify: true,}
+  ));
 
   eleventyConfig.addFilter("cacheBuster", cacheBuster);
   eleventyConfig.addFilter("slugify", slugifyString);
@@ -94,21 +100,10 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    // Control which files Eleventy will process
-    // e.g.: *.md, *.njk, *.html, *.liquid
-    templateFormats: ["md", "njk", "html", "liquid"],
-
-    // Pre-process *.md files with: (default: `liquid`)
-    markdownTemplateEngine: "njk",
-
-    // Pre-process *.html files with: (default: `liquid`)
-    htmlTemplateEngine: "njk",
-
-    // Optional (default is shown)
-    pathPrefix: "/",
-    // -----------------------------------------------------------------
-
-    // These are all optional (defaults are shown):
+    // Pre-process *.md, *.html and global data files files with: (default: `liquid`)
+    markdownTemplateEngine: 'njk',
+    htmlTemplateEngine: 'njk',
+    dataTemplateEngine: 'njk',
     dir: {
       input: "src",
       includes: "_includes",
