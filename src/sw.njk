@@ -1,7 +1,7 @@
 ---
 permalink: /sw.js
 ---
-const CACHE_NAME = 'v1';
+const CACHE_NAME = 'v{{ "" | cacheBuster }}';
 
 // Fetch event: Serve from cache or fetch from network
 self.addEventListener('fetch', (event) => {
