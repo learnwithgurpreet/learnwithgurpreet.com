@@ -1,9 +1,11 @@
 const { DateTime } = require("luxon");
 const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 const StripTags = require("./11ty/stripTags");
 const GroupBy = require("./11ty/groupBy");
 const LazyImages = require("./11ty/lazyLoad");
 const CleanCSS = require("clean-css");
+const markdownItAnchorOptions = require("./11ty/markItAnchor");
 
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -31,7 +33,7 @@ module.exports = function (eleventyConfig) {
     html: true,
 		breaks: true,
 		linkify: true,}
-  ));
+  ).use(markdownItAnchor, markdownItAnchorOptions));
 
   eleventyConfig.addFilter("cacheBuster", cacheBuster);
   eleventyConfig.addFilter("slugify", slugifyString);

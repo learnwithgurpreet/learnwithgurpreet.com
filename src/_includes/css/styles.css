@@ -111,18 +111,20 @@ h1 {
 	font-size: var(--step-5);
 }
 
-h2 {
+h2, .h2 {
 	font-size: var(--step-4);
 }
 
-h3 {
+.h3, h3 {
 	font-size: var(--step-3);
 }
 
-h4 {
+.h4, h4 {
 	font-size: var(--step-2);
 }
 
+.h5,
+.h6,
 h5,
 h6 {
 	font-size: var(--step-1);
@@ -298,6 +300,18 @@ body > header > a > svg {
 
 body > header > a:hover > svg {
 	transform: scale(1.1) rotate(180deg);
+}
+
+.heading-wrapper {
+  display: block;
+}
+
+.heading-wrapper * {
+  display: inline;
+}
+
+.heading-wrapper a {
+  padding-left: 0.5rem;
 }
 
 @media screen and (min-width: 550px) {
