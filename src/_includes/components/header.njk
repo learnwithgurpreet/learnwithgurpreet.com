@@ -1,9 +1,9 @@
-<header class="overflow-visible transition-[height,background-color] duration-300 ease-out">
-  <nav class="flex items-center justify-between px-6 py-4 relative transition-all lg:max-w-7xl mx-auto">
-      <a href="#">
-          <span class="sr-only">Learn with Gurpreet</span>
+<header class="main-header fixed top-0 left-0 right-0 overflow-visible transition-[height,background-color] duration-300 ease-out flex">
+  <nav class="flex items-center justify-between px-6 py-4 relative transition-all lg:max-w-7xl mx-auto w-full">
+      <a href="#" class="group">
+        <span class="sr-only">Learn with Gurpreet</span>
         <img 
-          class="dark:invert h-10"
+          class="dark:invert h-10 group-hover:scale-110 group-hover:rotate-180 duration-300 transition-all"
           src="/assets/images/logo.svg"
           alt="Learn with Gurpreet home"
           width="40"
@@ -20,7 +20,7 @@
           </svg>
       </button>
 
-      <div id="mobile-menu" class="hidden absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden">
+      <div id="mobile-menu" class="hidden absolute top-[60px] left-0 w-full bg-gray-50 shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden">
         {% set globalNav = metadata.globalNav %}
         {% for nav in globalNav %}
         <a href="{{ nav.url }}">

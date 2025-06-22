@@ -7,7 +7,7 @@ eleventyNavigation:
 title: Home
 pagination:
   data: collections.posts
-  size: 6
+  size: 12
   alias: posts
 ---
 {# 
@@ -21,18 +21,8 @@ keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankf
 excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML5, CSS3, NodeJS, and ReactJS
 --- #}
 
-<section class="container mx-auto max-w-5xl pt-20 pb-20 px-6">
-  <p class="text-sm uppercase pb-2 text-center font-bold tracking-wide">
-    Blog
-  </p>
-  <h1 class="text-3xl md:text-5xl font-semibold text-center tracking-wide">
-    Learn with Gurpreet
-  </h1>
-  <p class="pt-2 text-center tracking-wide">
-    Building a greener web: where code meets sustainability to shape a
-    better digital future. 🌍🌱
-  </p>
-</section>
+{% set heading = "Learn with Gurpreet" %}
+{% include "components/intro.njk" %}
 
 <section class="px-6 pb-12 md:pb-24 flex flex-wrap container mx-auto max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-6xl">
   <aside class="w-full mb-10 pb-6 lg:pr-4 lg:pb-0 border-gray-200 border-b lg:border-none lg:w-1/4">

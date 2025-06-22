@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+.main-header {
+  @apply h-auto sm:h-32;
+}
+
+.main-header.scrolled {
+  @apply shadow-md sm:h-20 bg-white/70 backdrop-blur-md;
+}
+
 /* Skip link */
 .skip-link {
   display: block;

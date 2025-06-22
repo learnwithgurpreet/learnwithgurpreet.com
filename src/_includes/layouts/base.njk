@@ -133,7 +133,7 @@
     {% endif %}
     <meta name="generator" content="{{ eleventy.generator }}">
   </head>
-  <body>
+  <body class="bg-gray-50">
     <a href="#content" class="skip-link">Skip to main content</a>
     {% block content %}{% endblock %}
     <script id="menu-toggle-script">
@@ -146,6 +146,24 @@
               menu.classList.add("hidden");
           }
       });
+    </script>
+    <script id="sticky-header-toggle-script">
+      let scrollPos = window.scrollY;
+      const header = document.querySelector("header");
+      {# const header_height = header.offsetHeight; #}
+
+      const add_class_on_scroll = () => header.classList.add("scrolled");
+      const remove_class_on_scroll = () => header.classList.remove("scrolled");
+
+      window.addEventListener('scroll', function() { 
+        scrollPos = window.scrollY;
+
+        if (scrollPos >= 1) {
+          add_class_on_scroll();
+        } else {
+          remove_class_on_scroll();
+        }
+      })
     </script>
     <script id="service-worker-script">
       if ('serviceWorker' in navigator) {

@@ -1,6 +1,9 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
   {% include "components/header.njk" %}
+  {% set hasBackground = "true" %}
+  {% set heading = title %}
+  {% include "components/intro.njk" %}
   <article id="content">
     <header>
       <h1>{{ title }}</h1>
