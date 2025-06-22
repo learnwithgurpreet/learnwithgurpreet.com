@@ -1,4 +1,5 @@
 {
+  "description": "Building a greener web: where code meets sustainability to shape a better digital future. 🌍🌱",
   "globalNav": [
     {
       "name": "Posts",
@@ -20,5 +21,8 @@
       "name": "Contact",
       "url": "/contact"
     }
-  ]
+  ],
+  "language": "en",
+  "title": "Learn with Gurpreet",
+  "url": "https://www.learnwithgurpreet.com"
 }
