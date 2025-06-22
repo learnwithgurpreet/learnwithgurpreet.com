@@ -4,9 +4,22 @@ image: /assets/images/profile-pic.jpg
 eleventyNavigation:
   key: Home
   order: 1
+title: Home
+pagination:
+  data: collections.posts
+  size: 6
+  alias: posts
+---
+{# 
+---
+
+image: /assets/images/profile-pic.jpg
+eleventyNavigation:
+  key: Home
+  order: 1
 keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankfurt, publicissapient, sapient, publicis, advanced javascript tutorials, best free javascript tutorials, best javascript tutorials, best node js tutorials, best tutorials for node js, node js tutorial blog, tutorial javascript, tutorial node js, tutorial node.js, tutorials on javascript, why node.js
 excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML5, CSS3, NodeJS, and ReactJS
----
+--- #}
 
 <section class="container mx-auto max-w-5xl pt-20 pb-20 px-6">
   <p class="text-sm uppercase pb-2 text-center font-bold tracking-wide">
@@ -41,25 +54,17 @@ excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML
           />
         </svg>
       </summary>
-      <div class="mt-4 space-y-2">
-        <a
-          href="#"
-          class="block text-gray-700 hover:text-blue-600 transition-colors"
-        >
-          Web Development
-        </a>
-        <a
-          href="#"
-          class="block text-gray-700 hover:text-blue-600 transition-colors"
-        >
-          Sustainability
-        </a>
-        </div>
+      <ul class="mt-4 space-y-4">
+        {%- for tag in collections.tagList -%}
+          {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+          <li><a href="{{ tagUrl | url }}" class="font-semibold no-underline text-sm block leading-normal text-gray-700 transition-colors">{{ tag }}</a></li>
+        {%- endfor %}
+      </ul>
     </details>
   </aside>
   <div class="grid gap-x-16 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:w-37/50 lg:pl-8">
-    {% set globalNav = metadata.globalNav %}
-    {% for nav in globalNav %}
+    {% for post in posts %}
+      {# <li><a href="{{ post.url }}">{{ post.data.title }}</a></li> #}
       {% include "components/post-card.njk" %}
     {% endfor %}
   </div>

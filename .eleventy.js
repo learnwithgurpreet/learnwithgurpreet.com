@@ -3,7 +3,9 @@ const path = require("path");
 const postcss = require("postcss");
 const tailwindcss = require("@tailwindcss/postcss");
 const cssnano = require("cssnano");
-// const { DateTime } = require("luxon");
+
+const { getAllPosts, tagList } = require("./11ty/collections/index");
+const { DateTime } = require("luxon");
 // const markdownIt = require("markdown-it");
 // const markdownItAnchor = require("markdown-it-anchor");
 // const StripTags = require("./11ty/stripTags");
@@ -26,37 +28,28 @@ module.exports = function (eleventyConfig) {
   const processor = postcss([tailwindcss(), cssnano()]);
 
   eleventyConfig.on("eleventy.before", async () => {
-    const inPath = './src/css/tailwind.css';
-    const outPath = './dist/css/output.css';
+    const inPath = "./src/css/tailwind.css";
+    const outPath = "./dist/css/output.css";
     const css = fs.readFileSync(inPath, "utf-8");
     const result = await processor.process(css, { from: inPath, to: outPath });
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, result.css);
   });
 
-  // eleventyConfig.on('eleventy.before', async () => {
-  //   const tailwindInputPath = path.resolve('./src/css/tailwind.css');
-  //   const tailwindOutputPath = './dist/css/output.css';
-  //   const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
-  //   const outputDir = path.dirname(tailwindOutputPath);
+  // Collections
+  eleventyConfig.addCollection("posts", getAllPosts);
+  eleventyConfig.addCollection("tagList", tagList);
 
-  //   if (!fs.existsSync(outputDir)) {
-  //     fs.mkdirSync(outputDir, { recursive: true });
-  //   }
+  // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
+  eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+  });
 
-  //   const result = await postcss([tailwindcss()]).process(cssContent, {
-  //     from: tailwindInputPath,
-  //     to: tailwindOutputPath,
-  //   });
-
-  //   fs.writeFileSync(tailwindOutputPath, result.css);
-  // });
-  // eleventyConfig.addPassthroughCopy({
-  //   "./src/site.webmanifest": "site.webmanifest",
-  //   "./node_modules/chart.js/dist/chart.umd.js": "assets/js/chart.umd.js",
-  //   "./node_modules/chart.js/dist/chart.umd.js.map":
-  //     "assets/js/chart.umd.js.map",
-  // });
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
+      "dd MMMM yyyy"
+    );
+  });
 
   // // Add plugins
   // eleventyConfig.addPlugin(pluginRss);
@@ -72,20 +65,10 @@ module.exports = function (eleventyConfig) {
 
   // eleventyConfig.addFilter("cacheBuster", cacheBuster);
   // eleventyConfig.addFilter("slugify", slugifyString);
-  // eleventyConfig.addFilter("readableDate", (dateObj) => {
-  //   return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
-  //     "dd MMMM yyyy"
-  //   );
-  // });
   // eleventyConfig.addFilter(
   //   "readtime",
   //   (str) => `${Math.ceil(str.split(" ").length / 200)} min read`
   // );
-
-  // // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-  // eleventyConfig.addFilter("htmlDateString", (dateObj) => {
-  //   return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
-  // });
 
   // // Get the first `n` elements of a collection.
   // eleventyConfig.addFilter("head", (array, n) => {
@@ -104,13 +87,13 @@ module.exports = function (eleventyConfig) {
   //   return Math.min.apply(null, numbers);
   // });
 
-  // function filterTagList(tags) {
-  //   return (tags || []).filter(
-  //     (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
-  //   );
-  // }
+  function filterTagList(tags) {
+    return (tags || []).filter(
+      (tag) => ["all", "nav", "post", "posts"].indexOf(tag) === -1
+    );
+  }
 
-  // eleventyConfig.addFilter("filterTagList", filterTagList);
+  eleventyConfig.addFilter("filterTagList", filterTagList);
   // eleventyConfig.addFilter(
   //   "groupByYear",
   //   GroupBy((post) => post.date.getFullYear())
@@ -138,9 +121,9 @@ module.exports = function (eleventyConfig) {
 
   return {
     // Pre-process *.md, *.html and global data files files with: (default: `liquid`)
-    markdownTemplateEngine: 'njk',
-    htmlTemplateEngine: 'njk',
-    dataTemplateEngine: 'njk',
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk",
     dir: {
       input: "src",
       includes: "_includes",

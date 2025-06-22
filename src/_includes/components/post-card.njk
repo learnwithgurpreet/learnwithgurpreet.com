@@ -12,19 +12,15 @@
   <div class="py-4 pb-6 px-6">
     <h2 class="text-base pb-0">
       <a
-        href="/blog/rewards-partners-may/"
+        href="{{ post.url }}"
         class="no-underline text-light-01 font-semibold"
       >
-        Brave Rewards 3.0 Partner Program: May Update
+        {{ post.data.title }}
       </a>
     </h2>
-    <p class="text-sm font-semibold text-gray-500 pt-1 pb-0">
-      May 29, 2025
-    </p>
-    <p class="line-clamp-5 text-sm pt-2 pb-0">
-      Brave's Rewards 3.0 Partner Program is picking up speed. Designed to
-      expand BAT utility, the program gives partners premium exposure to
-      Brave's 86M+ monthly active users.
-    </p>
+    <time class="text-sm font-semibold text-gray-500 pt-1 pb-0" datetime="{{ post.date | htmlDateString }}">
+      {{ post.date | readableDate }}
+    </time>
+    <p class="line-clamp-5 text-sm pt-2 pb-0">{{ post.data.description }}</p>
   </div>
 </article>

@@ -11,23 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-<<<<<<< HEAD
-    "gray-matter": "^4.0.3",
-    "next": "15.3.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.3.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-=======
     "@11ty/eleventy": "^3.1.1",
     "@tailwindcss/cli": "^4.1.10",
     "@tailwindcss/postcss": "^4.1.10",
@@ -36,7 +19,7 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
-    "cssnano": "^7.0.7"
->>>>>>> fb427e2ac03c7c94d8b912de63bf0b1fce44241a
+    "cssnano": "^7.0.7",
+    "luxon": "^3.6.1"
   }
 }
