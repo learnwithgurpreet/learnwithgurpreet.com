@@ -150,10 +150,14 @@
     <script id="sticky-header-toggle-script">
       let scrollPos = window.scrollY;
       const header = document.querySelector("header");
+      const hasDarkBg = !!header.dataset.hasDarkBg;
       {# const header_height = header.offsetHeight; #}
+      console.log(hasDarkBg);
 
-      const add_class_on_scroll = () => header.classList.add("scrolled");
-      const remove_class_on_scroll = () => header.classList.remove("scrolled");
+      let classSet = hasDarkBg ? "bg-black/70" : "bg-white/70";
+
+      const add_class_on_scroll = () => header.classList.add("scrolled", classSet);
+      const remove_class_on_scroll = () => header.classList.remove("scrolled", classSet);
 
       window.addEventListener('scroll', function() { 
         scrollPos = window.scrollY;

@@ -5,7 +5,7 @@
 }
 
 .main-header.scrolled {
-  @apply shadow-md sm:h-20 bg-white/70 backdrop-blur-md;
+  @apply shadow-md sm:h-20 backdrop-blur-md;
 }
 
 /* Skip link */

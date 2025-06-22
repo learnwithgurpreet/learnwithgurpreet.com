@@ -1,9 +1,9 @@
-<header class="main-header fixed top-0 left-0 right-0 overflow-visible transition-[height,background-color] duration-300 ease-out flex">
+<header data-has-dark-bg="{% if textColor === 'light' %}true{% endif %}" class="main-header fixed top-0 left-0 right-0 overflow-visible transition-[height,background-color] duration-300 ease-out flex {% if textColor === 'light' %} text-white {% endif %}">
   <nav class="flex items-center justify-between px-6 py-4 relative transition-all lg:max-w-7xl mx-auto w-full">
       <a href="#" class="group">
         <span class="sr-only">Learn with Gurpreet</span>
         <img 
-          class="dark:invert h-10 group-hover:scale-110 group-hover:rotate-180 duration-300 transition-all"
+          class="h-10 group-hover:scale-110 group-hover:rotate-180 duration-300 transition-all {% if textColor === 'light' %} invert{% endif %}"
           src="/assets/images/logo.svg"
           alt="Learn with Gurpreet home"
           width="40"
