@@ -64,7 +64,6 @@ excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML
   </aside>
   <div class="grid gap-x-16 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:w-37/50 lg:pl-8">
     {% for post in posts %}
-      {# <li><a href="{{ post.url }}">{{ post.data.title }}</a></li> #}
       {% include "components/post-card.njk" %}
     {% endfor %}
   </div>
