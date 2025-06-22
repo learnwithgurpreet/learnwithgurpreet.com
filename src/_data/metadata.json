@@ -1,0 +1,24 @@
+{
+  "globalNav": [
+    {
+      "name": "Posts",
+      "url": "/"
+    },
+    {
+      "name": "Stats",
+      "url": "/stats"
+    },
+    {
+      "name": "Tags",
+      "url": "/tags"
+    },
+    {
+      "name": "Uses",
+      "url": "/uses"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    }
+  ]
+}

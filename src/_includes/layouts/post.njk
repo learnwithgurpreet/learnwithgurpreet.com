@@ -1,0 +1,26 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+  {% include "components/header.njk" %}
+  <article id="content">
+    <header>
+      <h1>{{ title }}</h1>
+      <p><date class="slash" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</date></p>
+    </header>
+    {{ content | safe}}
+    <footer>
+      <div>
+        <p>Tags</p>
+        <ul>
+          {%- for tag in tags | filterTagList -%}
+            {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+            <li><a href="{{ tagUrl | url }}">#{{ tag }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <p>
+        <a class="button" href="mailto:{{ metadata.author.email }}?subject=Re: {{ title }}">Reply via email</a>
+      </p>
+    </footer>
+  </article>
+  {% include "components/footer.njk" %}
+{% endblock %}

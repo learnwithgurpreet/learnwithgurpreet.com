@@ -1,0 +1,66 @@
+---
+layout: layouts/page.njk
+image: /assets/images/profile-pic.jpg
+eleventyNavigation:
+  key: Home
+  order: 1
+keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankfurt, publicissapient, sapient, publicis, advanced javascript tutorials, best free javascript tutorials, best javascript tutorials, best node js tutorials, best tutorials for node js, node js tutorial blog, tutorial javascript, tutorial node js, tutorial node.js, tutorials on javascript, why node.js
+excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML5, CSS3, NodeJS, and ReactJS
+---
+
+<section class="container mx-auto max-w-5xl pt-20 pb-20 px-6">
+  <p class="text-sm uppercase pb-2 text-center font-bold tracking-wide">
+    Blog
+  </p>
+  <h1 class="text-3xl md:text-5xl font-semibold text-center tracking-wide">
+    Learn with Gurpreet
+  </h1>
+  <p class="pt-2 text-center tracking-wide">
+    Building a greener web: where code meets sustainability to shape a
+    better digital future. 🌍🌱
+  </p>
+</section>
+
+<section class="px-6 pb-12 md:pb-24 flex flex-wrap container mx-auto max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-6xl">
+  <aside class="w-full mb-10 pb-6 lg:pr-4 lg:pb-0 border-gray-200 border-b lg:border-none lg:w-1/4">
+    <details class="group" open>
+      <summary class="flex items-center justify-between cursor-pointer">
+        <span class="text-lg font-semibold lg:text-2xl">All Categories</span>
+        <svg
+          class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 9l-7 7-7-7"
+          />
+        </svg>
+      </summary>
+      <div class="mt-4 space-y-2">
+        <a
+          href="#"
+          class="block text-gray-700 hover:text-blue-600 transition-colors"
+        >
+          Web Development
+        </a>
+        <a
+          href="#"
+          class="block text-gray-700 hover:text-blue-600 transition-colors"
+        >
+          Sustainability
+        </a>
+        </div>
+    </details>
+  </aside>
+  <div class="grid gap-x-16 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:w-37/50 lg:pl-8">
+    {% set globalNav = metadata.globalNav %}
+    {% for nav in globalNav %}
+      {% include "components/post-card.njk" %}
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,8 @@
+{% extends "layouts/base.njk" %}
+{% block content %}
+  {% include "components/header.njk" %}
+  <main id="content">
+    {{ content | safe}}
+  </main>
+  {% include "components/footer.njk" %}
+{% endblock %}
