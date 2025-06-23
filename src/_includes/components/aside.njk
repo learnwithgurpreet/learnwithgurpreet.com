@@ -1,0 +1,27 @@
+<aside class="w-full mb-10 pb-6 lg:pr-4 lg:pb-0 border-gray-200 border-b lg:border-none lg:w-1/4">
+  <details class="group" open>
+    <summary class="flex items-center justify-between cursor-pointer">
+      <span class="text-lg font-semibold lg:text-2xl">All Categories</span>
+      <svg
+        class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M19 9l-7 7-7-7"
+        />
+      </svg>
+    </summary>
+    <ul class="mt-4 space-y-4">
+      {%- for tag in dataSet -%}
+        {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+        <li><a href="{{ tagUrl | url }}" class="font-semibold no-underline text-sm block leading-normal text-gray-700 transition-colors">{{ tag }}</a></li>
+      {%- endfor %}
+    </ul>
+  </details>
+</aside>
