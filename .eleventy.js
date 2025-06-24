@@ -3,16 +3,18 @@ const path = require("path");
 const postcss = require("postcss");
 const tailwindcss = require("@tailwindcss/postcss");
 const cssnano = require("cssnano");
+const markdownItAnchor = require("markdown-it-anchor");
+const pluginTOC = require("eleventy-plugin-toc");
+const { DateTime } = require("luxon");
+const markdownIt = require("markdown-it");
 
 const { getAllPosts, tagList } = require("./11ty/collections/index");
-const { DateTime } = require("luxon");
-// const markdownIt = require("markdown-it");
-// const markdownItAnchor = require("markdown-it-anchor");
+const markdownItAnchorOptions = require("./11ty/markItAnchor");
+
 // const StripTags = require("./11ty/stripTags");
 // const GroupBy = require("./11ty/groupBy");
 // const LazyImages = require("./11ty/lazyLoad");
 // const CleanCSS = require("clean-css");
-// const markdownItAnchorOptions = require("./11ty/markItAnchor");
 
 // const pluginRss = require("@11ty/eleventy-plugin-rss");
 // const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
@@ -22,7 +24,6 @@ const { DateTime } = require("luxon");
 // const {slugifyString} = require("./11ty/utils");
 
 module.exports = function (eleventyConfig) {
-  // eleventyConfig.addPassthroughCopy("src/css/output.css");
   eleventyConfig.addPassthroughCopy("src/assets");
 
   const processor = postcss([tailwindcss(), cssnano()]);
@@ -35,6 +36,8 @@ module.exports = function (eleventyConfig) {
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
     fs.writeFileSync(outPath, result.css);
   });
+
+  eleventyConfig.addPlugin(pluginTOC);
 
   // Collections
   eleventyConfig.addCollection("posts", getAllPosts);
@@ -57,11 +60,14 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addPlugin(pluginNavigation);
   // eleventyConfig.addPlugin(LazyImages, {});
   // eleventyConfig.addPlugin(htmlMinify);
-  // eleventyConfig.setLibrary('md', markdownIt({
-  //   html: true,
-  // 	breaks: true,
-  // 	linkify: true,}
-  // ).use(markdownItAnchor, markdownItAnchorOptions));
+  eleventyConfig.setLibrary(
+    "md",
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+    }).use(markdownItAnchor, markdownItAnchorOptions)
+  );
 
   // eleventyConfig.addFilter("cacheBuster", cacheBuster);
   // eleventyConfig.addFilter("slugify", slugifyString);

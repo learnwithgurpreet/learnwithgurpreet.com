@@ -5,9 +5,18 @@
   {% set hasBackground = "true" %}
   {% set heading = title %}
   {% include "components/intro.njk" %}
+
+  <section class="py-12 px-6 md:pb-24 grid grid-cols-1 md:grid-cols-4 gap-4 container mx-auto max-w-sm sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
+    {% set asideType = "toc" %}
+    {% set dataSet = collections.tagList %}
+    {% include "components/aside.njk" %}
+    <div class="grid md:col-span-3 gap-x-16 gap-y-10 grid-cols-1 sm:grid-cols-2">
+      something
+    </div>
+  </section>
+
   <article id="content">
     <header>
-      <h1>{{ title }}</h1>
       <p><date class="slash" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</date></p>
     </header>
     {{ content | safe}}

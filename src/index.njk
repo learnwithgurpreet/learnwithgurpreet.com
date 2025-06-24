@@ -26,10 +26,10 @@ excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML
 {% set tagLine = metadata.description %}
 {% include "components/intro.njk" %}
 
-<section class="px-6 pb-12 md:pb-24 flex flex-wrap container mx-auto max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-6xl">
+<section class="pb-12 px-6 md:pb-24 grid grid-cols-1 md:grid-cols-4 gap-4 container mx-auto max-w-sm sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
   {% set dataSet = collections.tagList %}
   {% include "components/aside.njk" %}
-  <div class="grid gap-x-16 gap-y-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 lg:w-37/50 lg:pl-8">
+  <div class="grid md:col-span-3 gap-x-16 gap-y-10 grid-cols-1 sm:grid-cols-2">
     {% for post in posts %}
       {% include "components/post-card.njk" %}
     {% endfor %}
