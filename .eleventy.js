@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
     fs.writeFileSync(outPath, result.css);
   });
 
-  eleventyConfig.addPlugin(pluginTOC);
+  eleventyConfig.addPlugin(pluginTOC, { "tags": ["h2", "h3"], "wrapper": "nav", "wrapperClass": "content-toc" });
 
   // Collections
   eleventyConfig.addCollection("posts", getAllPosts);

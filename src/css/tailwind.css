@@ -8,6 +8,11 @@
   @apply shadow-md sm:h-20;
 }
 
+.content-toc ol,
+aside .tag-list {
+  @apply mt-4 space-y-4 max-h-[calc(100vh-160px-1em)] overflow-y-auto font-semibold no-underline text-sm block leading-normal text-gray-700 transition-colors;
+}
+
 /* Skip link */
 .skip-link {
   display: block;

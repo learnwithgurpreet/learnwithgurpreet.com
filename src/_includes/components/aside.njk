@@ -1,4 +1,4 @@
-<aside class="mb-10 pb-6 lg:pb-0 border-gray-200 border-b lg:border-none">
+<aside class="mb-10 pb-6 lg:pb-0 border-gray-200 border-b lg:border-none md:sticky md:top-28 self-start">
   <details class="group lg:pr-4" open>
     <summary class="flex items-center justify-between cursor-pointer">
       <span class="text-lg font-semibold lg:text-2xl">{% if asideType === "toc" %}Table of Contents{% else %}All Categories{% endif %}</span>
@@ -20,7 +20,7 @@
     {% if asideType === "toc" %}
       {{ content | toc | safe }}
     {% else %}
-      <ul class="mt-4 space-y-4">
+      <ul class="tag-list">
         {%- for tag in dataSet -%}
           {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
           <li><a href="{{ tagUrl | url }}" class="font-semibold no-underline text-sm block leading-normal text-gray-700 transition-colors">{{ tag }}</a></li>

@@ -1,5 +1,31 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
+  {% include "components/header.njk" %}
+  <main id="content">
+    {% set textColor = "light" %}
+    {% include "components/header.njk" %}
+    {% set hasBackground = "true" %}
+    {% set heading = title %}
+    {% include "components/intro.njk" %}
+
+    <section class="pb-12 px-6 md:pb-24 grid grid-cols-1 md:grid-cols-4 gap-4 container mx-auto max-w-sm sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
+      {% set dataSet = collections.tagList %}
+      {% include "components/aside.njk" %}
+      <div class="grid md:col-span-3 gap-x-16 gap-y-10 grid-cols-1 sm:grid-cols-2">
+        {% for post in posts %}
+          {% include "components/post-card.njk" %}
+        {% endfor %}
+      </div>
+    </section>
+
+    {{ content | safe}}
+  </main>
+  {% include "components/footer.njk" %}
+{% endblock %}
+
+
+{# {% extends "layouts/base.njk" %}
+{% block content %}
   {% set textColor = "light" %}
   {% include "components/header.njk" %}
   {% set hasBackground = "true" %}
@@ -36,4 +62,4 @@
     </footer>
   </article>
   {% include "components/footer.njk" %}
-{% endblock %}
+{% endblock %} #}
