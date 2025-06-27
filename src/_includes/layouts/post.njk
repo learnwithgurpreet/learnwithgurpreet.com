@@ -1,10 +1,9 @@
 {% extends "layouts/base.njk" %}
 {% block content %}
+  {% set textColor = "light" %}
+  {% set hasBackground = "true" %}
   {% include "components/header.njk" %}
   <main id="content">
-    {% set textColor = "light" %}
-    {% include "components/header.njk" %}
-    {% set hasBackground = "true" %}
     {% set heading = title %}
     {% include "components/intro.njk" %}
 
