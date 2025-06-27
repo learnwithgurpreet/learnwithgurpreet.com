@@ -1,9 +1,9 @@
-<aside class="mb-10 pb-6 lg:pb-0 border-gray-200 border-b lg:border-none md:sticky md:top-28 self-start">
+<aside class="mb-10 pb-6 lg:pb-0 border-border border-b lg:border-none md:sticky md:top-28 self-start">
   <details class="group lg:pr-4" open>
     <summary class="flex items-center justify-between cursor-pointer">
       <span class="text-lg font-semibold lg:text-2xl">{% if asideType === "toc" %}Table of Contents{% else %}All Categories{% endif %}</span>
       <svg
-        class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform duration-200"
+        class="w-5 h-5 text-text group-open:rotate-180 transition-transform duration-200"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -23,7 +23,7 @@
       <ul class="tag-list">
         {%- for tag in dataSet -%}
           {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-          <li><a href="{{ tagUrl | url }}" class="font-semibold no-underline text-sm block leading-normal text-gray-700 transition-colors">{{ tag }}</a></li>
+          <li><a href="{{ tagUrl | url }}" class="font-semibold no-underline text-sm block leading-normal text-text hover:text-text-muted transition-colors duration-200">{{ tag }}</a></li>
         {%- endfor %}
       </ul>
     {% endif %}

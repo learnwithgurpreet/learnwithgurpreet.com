@@ -1,5 +1,95 @@
 @import "tailwindcss";
 
+:root {
+  /* hsl (fallback color) */
+  --bg-dark: hsl(212 100% 3%);
+  --bg: hsl(199 100% 3%);
+  --bg-light: hsl(193 100% 4%);
+  --text: hsl(190 100% 86%);
+  --text-muted: hsl(189 60% 59%);
+  --highlight: hsl(189 100% 12%);
+  --border: hsl(191 100% 9%);
+  --border-muted: hsl(194 100% 7%);
+  --primary: hsl(187 100% 24%);
+  --secondary: hsl(8 100% 73%);
+  --danger: hsl(7 100% 66%);
+  --warning: hsl(53 100% 21%);
+  --success: hsl(162 100% 22%);
+  --info: hsl(217 100% 70%);
+  /* oklch */
+  --bg-dark: oklch(0.1 0.1 211);
+  --bg: oklch(0.15 0.1 211);
+  --bg-light: oklch(0.2 0.1 211);
+  --text: oklch(0.96 0.1 211);
+  --text-muted: oklch(0.76 0.1 211);
+  --highlight: oklch(0.5 0.2 211);
+  --border: oklch(0.4 0.2 211);
+  --border-muted: oklch(0.3 0.2 211);
+  --primary: oklch(0.76 0.2 211);
+  --secondary: oklch(0.76 0.2 31);
+  --danger: oklch(0.7 0.2 30);
+  --warning: oklch(0.7 0.2 100);
+  --success: oklch(0.7 0.2 160);
+  --info: oklch(0.7 0.2 260);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* hsl (fallback color) */
+    --bg-dark: hsl(189 100% 80%);
+    --bg: hsl(190 100% 86%);
+    --bg-light: hsl(190 100% 91%);
+    --text: hsl(211 100% 6%);
+    --text-muted: hsl(191 100% 9%);
+    --highlight: hsl(186 100% 45%);
+    --border: hsl(188 100% 16%);
+    --border-muted: hsl(187 100% 21%);
+    --primary: hsl(191 100% 9%);
+    --secondary: hsl(357 100% 23%);
+    --danger: hsl(4 99% 37%);
+    --warning: hsl(50 100% 12%);
+    --success: hsl(159 100% 9%);
+    --info: hsl(215 95% 42%);
+    /* oklch */
+    --bg-dark: oklch(0.92 0.1 211);
+    --bg: oklch(0.96 0.1 211);
+    --bg-light: oklch(1 0.1 211);
+    --text: oklch(0.15 0.2 211);
+    --text-muted: oklch(0.4 0.2 211);
+    --highlight: oklch(1 0.2 211);
+    --border: oklch(0.6 0.2 211);
+    --border-muted: oklch(0.7 0.2 211);
+    --primary: oklch(0.4 0.2 211);
+    --secondary: oklch(0.4 0.2 31);
+    --danger: oklch(0.5 0.2 30);
+    --warning: oklch(0.5 0.2 100);
+    --success: oklch(0.5 0.2 160);
+    --info: oklch(0.5 0.2 260);
+  }
+}
+
+@theme {
+  /* --color-*: initial; */
+  --color-bg-dark: var(--bg-dark);
+  --color-bg: var(--bg);
+  --color-bg-light: var(--bg-light);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-highlight: var(--highlight);
+  --color-border: var(--border);
+  --color-border-muted: var(--border-muted);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-danger: var(--danger);
+  --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-info: var(--info);
+}
+
+body {
+  @apply bg-bg text-text font-sans text-base leading-normal;
+}
+
 .main-header {
   @apply h-auto sm:h-32;
 }
