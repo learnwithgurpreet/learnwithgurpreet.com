@@ -133,7 +133,7 @@
     {% endif %}
     <meta name="generator" content="{{ eleventy.generator }}">
   </head>
-  <body class="bg-gray-50">
+  <body class="bg-gray-50 text-gray-900 font-sans text-base leading-normal">
     <a href="#content" class="skip-link">Skip to main content</a>
     {% block content %}{% endblock %}
     <script id="menu-toggle-script">
@@ -153,7 +153,7 @@
       const hasDarkBg = !!header.dataset.hasDarkBg;
       {# const header_height = header.offsetHeight; #}
 
-      let classSet = hasDarkBg ? "bg-text/70" : "bg-bg-light/70";
+      let classSet = hasDarkBg ? "bg-black/70" : "bg-white/70";
 
       const add_class_on_scroll = () => header.classList.add("scrolled", classSet);
       const remove_class_on_scroll = () => header.classList.remove("scrolled", classSet);

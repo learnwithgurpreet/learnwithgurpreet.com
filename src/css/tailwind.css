@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin '@tailwindcss/typography';
 
 :root {
   /* hsl (fallback color) */
@@ -84,10 +85,6 @@
   --color-warning: var(--warning);
   --color-success: var(--success);
   --color-info: var(--info);
-}
-
-body {
-  @apply bg-bg text-text font-sans text-base leading-normal;
 }
 
 .main-header {

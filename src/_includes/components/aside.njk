@@ -3,7 +3,7 @@
     <summary class="flex items-center justify-between cursor-pointer">
       <span class="text-lg font-semibold lg:text-2xl">{% if asideType === "toc" %}Table of Contents{% else %}All Categories{% endif %}</span>
       <svg
-        class="w-5 h-5 text-text group-open:rotate-180 transition-transform duration-200"
+        class="w-5 h-5 group-open:rotate-180 transition-transform duration-200"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -23,7 +23,7 @@
       <ul class="tag-list">
         {%- for tag in dataSet -%}
           {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-          <li><a href="{{ tagUrl | url }}" class="font-semibold no-underline text-sm block leading-normal text-text hover:text-text-muted transition-colors duration-200">{{ tag }}</a></li>
+          <li><a href="{{ tagUrl | url }}" class="font-semibold no-underline text-sm block leading-normal text-blue-700 hover:text-blue-800 transition-colors duration-200">{{ tag }}</a></li>
         {%- endfor %}
       </ul>
     {% endif %}
