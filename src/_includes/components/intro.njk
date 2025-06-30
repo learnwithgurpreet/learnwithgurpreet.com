@@ -1,13 +1,17 @@
 <section class="mx-auto pt-30 md:pt-40 pb-12 md:pb-24 px-6 {% if hasBackground === 'true' %}bg-[linear-gradient(to_right,#00a0f8,#052675),url('https://brave.com/static-assets/images/filler.png')] bg-blend-overlay bg-no-repeat bg-bottom md:bg-top bg-cover mb-6 md:mb-12{% endif %}">
   <div class="mx-auto container max-w-5xl {% if textColor === 'light' %} text-white {% endif %}">
-    <p class="text-sm uppercase pb-2 text-center font-bold tracking-wide">
-      {{ subHeading }}
-    </p>
+    {% if subHeading %}
+      <p class="text-sm uppercase pb-2 text-center font-bold tracking-wide">
+        {{ subHeading }}
+      </p>
+    {% endif %}
     <h1 class="text-4xl md:text-5xl font-semibold text-center tracking-wide">
       {{ heading }}
     </h1>
-    <p class="pt-2 text-center tracking-wide">
-      {{ tagLine }}
-    </p>
+    {% if tagLine %}
+      <p class="pt-2 text-center tracking-wide text-lg">
+        {{ tagLine }}
+      </p>
+    {% endif %}
   </div>
 </section>
