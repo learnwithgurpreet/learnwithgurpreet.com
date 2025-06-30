@@ -7,10 +7,10 @@
     {% set heading = title %}
     {% include "components/intro.njk" %}
 
-    <section class="pb-12 px-6 md:pb-24 grid grid-cols-1 md:grid-cols-4 gap-4 container mx-auto max-w-sm sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
-      {% set dataSet = collections.tagList %}
+    <section class="flex flex-col md:flex-row pb-12 px-6 md:pb-24 container mx-auto max-w-sm sm:max-w-xl md:max-w-4xl lg:max-w-6xl">
+      {% set asideType = "toc" %}
       {% include "components/aside.njk" %}
-      <div class="grid md:col-span-3 prose">
+      <div class="prose w-full md:w-3/4">
         {{ content | safe}}
       </div>
     </section>

@@ -2,7 +2,7 @@
   <nav class="flex flex-wrap items-center backdrop-blur-sm justify-between px-6 py-4 relative transition-all lg:max-w-7xl mx-auto w-full">
       <a href="/" class="group">
         <span class="sr-only">Learn with Gurpreet</span>
-        <svg width="64px" height="64px" class="fill-current h-10 w-10 group-hover:scale-110 group-hover:rotate-180 transition-all text-blue-700 hover:text-blue-800 duration-200" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.322 43.322" xml:space="preserve"><g><path d="M43.322,21.66c-0.001-1.242-0.479-2.365-1.239-3.233c0.457-1.063,0.564-2.28,0.18-3.463
+        <svg width="64px" height="64px" class="fill-current h-10 w-10 group-hover:scale-110 group-hover:rotate-180 transition-all {% if textColor === 'light' %}text-white{% else %}text-blue-700{% endif %} duration-200" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.322 43.322" xml:space="preserve"><g><path d="M43.322,21.66c-0.001-1.242-0.479-2.365-1.239-3.233c0.457-1.063,0.564-2.28,0.18-3.463
           c-0.382-1.171-1.174-2.109-2.178-2.707c0.103-1.146-0.171-2.331-0.898-3.332c-0.709-0.975-1.753-1.646-2.91-1.909
           c-0.258-1.119-0.884-2.158-1.883-2.884c-0.85-0.616-1.851-0.942-2.898-0.942c-0.154,0-0.307,0.013-0.458,0.027
           c-0.591-0.985-1.508-1.78-2.683-2.162c-0.495-0.161-1.009-0.242-1.525-0.242c-0.688,0-1.343,0.154-1.945,0.413
@@ -156,7 +156,7 @@
       <div id="mobile-menu" class="hidden w-full pt-6 flex-col items-start gap-2 text-sm md:hidden">
         {% set globalNav = metadata.globalNav %}
         {% for nav in globalNav %}
-        <a href="{{ nav.url }}" class="no-underline leading-normal text-blue-700 hover:text-blue-800 transition-colors duration-200">
+        <a href="{{ nav.url }}" class="no-underline hover:underline leading-normal {% if textColor === 'light' %}text-white{% else %}text-blue-700{% endif %} transition-colors duration-200">
             {{ nav.name }}
         </a>
         {% endfor %}
@@ -165,7 +165,7 @@
       <div class="hidden sm:flex items-center gap-8">
           {% set globalNav = metadata.globalNav %}
           {% for nav in globalNav %}
-              <a href="{{ nav.url }}" class="no-underline leading-normal text-blue-700 hover:text-blue-800 transition-colors duration-200">
+              <a href="{{ nav.url }}" class="no-underline hover:underline leading-normal transition-colors duration-200 {% if textColor === 'light' %}text-white{% else %}text-blue-700{% endif %}">
               {{ nav.name }}
               </a>
           {% endfor %}
