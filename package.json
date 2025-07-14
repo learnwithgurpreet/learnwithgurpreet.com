@@ -24,6 +24,8 @@
     "eleventy-plugin-toc": "^1.1.5",
     "luxon": "^3.6.1",
     "markdown-it": "^14.1.0",
-    "markdown-it-anchor": "^9.2.0"
+    "markdown-it-anchor": "^9.2.0",
+    "puppeteer": "^24.11.1",
+    "sharp": "^0.34.2"
   }
 }
