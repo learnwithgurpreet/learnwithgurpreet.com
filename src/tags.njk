@@ -19,8 +19,8 @@ excerpt: List of posts tagged under "{{ tag }}"
 ---
 
 <h3>Tagged "{{ tag }}"</h3>
-{% for post in collections[ tag ] | reverse %}
-  <ul>
+<ul class="posts-list">
+  {% for post in collections[ tag ] | reverse %}
     {% include "components/post_card.njk" %}
-  </ul>
-{% endfor %}
+  {% endfor %}
+</ul>
