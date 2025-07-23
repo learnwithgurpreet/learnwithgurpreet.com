@@ -1,7 +1,7 @@
 ---
 title: 'State Handling in React JS'
 date: 2024-04-11
-description: React's component-based architecture enables developers to create reusable, composable UI elements.
+excerpt: React's component-based architecture enables developers to create reusable, composable UI elements.
 tags:
   - 'Tech'
 ---

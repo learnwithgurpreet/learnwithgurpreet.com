@@ -1,7 +1,7 @@
 ---
 title: '7 ways to make your website more accessible and sustainable'
 date: '2022-05-21'
-description: We often talk about sustainability and try to decrease our CO₂
+excerpt: We often talk about sustainability and try to decrease our CO₂
 tags:
   - 'Sustainability'
 ---

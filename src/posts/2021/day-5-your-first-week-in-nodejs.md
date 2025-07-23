@@ -1,7 +1,7 @@
 ---
 title: 'Day 5 - Your first week in NodeJS'
 date: 2021-08-09
-description: I explained how to implement a template engine to get dynamic variables into your HTML file.
+excerpt: I explained how to implement a template engine to get dynamic variables into your HTML file.
 tags:
   - 'NodeJS Beginner Course'
 ---

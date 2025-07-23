@@ -2,7 +2,7 @@
 title: 'Starting my Journey to Veganism in 2024'
 date: '2023-12-04'
 eleventyExcludeFromCollections: false
-description: Embark on a journey of self-discovery and sustainability in 2024 as I share my resolution to go vegan. Explore the benefits of a plant-powered lifestyle, from health to ethical considerations. Join me on this transformative path toward a greener and more compassionate future.
+excerpt: Embark on a journey of self-discovery and sustainability in 2024 as I share my resolution to go vegan. Explore the benefits of a plant-powered lifestyle, from health to ethical considerations. Join me on this transformative path toward a greener and more compassionate future.
 tags:
   - 'Vegan'
 ---

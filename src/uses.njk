@@ -8,18 +8,29 @@ eleventyNavigation:
 excerpt: I get a lot of questions about what gear, software, and other stuff I use.
 keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankfurt, publicissapient, sapient, publicis, advanced javascript tutorials, best free javascript tutorials, best javascript tutorials, best node js tutorials, best tutorials for node js, node js tutorial blog, tutorial javascript, tutorial node js, tutorial node.js, tutorials on javascript, why node.js
 ---
-<header>
-  <h1>{{ title }}</h1>
-</header>
 
-<p>I get a lot of questions about what gear, software, and other stuff I use. To make it easier to share, I've collected a list here.</p>
-
+<h3>{{ title }}</h3>
+<p>I get a lot of questions about what gear, software, and other stuff I use. To make it easier to share, I've collected
+  a list here.</p>
 {% for key, value in uses %}
-  <h2 id="{{ key }}" class="capitalize">{{ key }}</h2>
-    {% for obj in uses[ key ] %}
-      <h3>{{ obj.title }}</h3>
-      <p>{{ obj.details | safe }}</p>
-      <a href="{{ obj.more_info_link }}">More Info <svg data-wf-icon="ArrowUpRightIcon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline"><path d="M2 12.5701L10.5489 4.02254L4.33037 4.02254L4.33037 2L14 2L14 11.6696L11.9775 11.6696L11.9775 5.45243L3.42987 14L2 12.5701Z" fill="currentColor"></path></svg></a>
-    {% endfor %}
-  </ul>
-{% endfor %}
+  <h4 id="{{ key }}" class="capitalize">{{ key }}</h4>
+  {% for obj in uses[ key ] %}
+    <h5>{{ obj.title }}</h5>
+    <p>{{ obj.details | safe }}</p>
+    <a href="{{ obj.more_info_link }}">More Info
+      <svg
+        data-wf-icon="ArrowUpRightIcon"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style="display:inline">
+        <path
+          d="M2 12.5701L10.5489 4.02254L4.33037 4.02254L4.33037 2L14 2L14 11.6696L11.9775 11.6696L11.9775 5.45243L3.42987 14L2
+            12.5701Z"
+          fill="currentColor"></path>
+      </svg>
+    </a>
+  {% endfor %}
+</ul>{% endfor %}

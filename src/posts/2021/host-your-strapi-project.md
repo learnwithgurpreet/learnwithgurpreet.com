@@ -1,7 +1,7 @@
 ---
 title: 'Host your Strapi project'
 date: '2021-02-25'
-description: In this article, I will walk you through the Strapi CMS setup on your local machine followed by deploying it to Heroku.
+excerpt: In this article, I will walk you through the Strapi CMS setup on your local machine followed by deploying it to Heroku.
 tags:
   - 'Tech'
 ---

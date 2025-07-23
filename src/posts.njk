@@ -8,17 +8,22 @@ keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankf
 excerpt: Blog posts from Gurpreet Singh on technology, sustainablity, and life.
 ---
 
-<header>
-  <h1>{{ title }}</h1>
-</header>
-
+{% set isCenter = 'true' %} <hr/>
+<section>
+  <ul class="year-list tags">
+    {% for year, yearPosts in collections.posts | groupByYear | reverse %}
+      <li class="tag">
+        <a href="#{{ year }}">{{ year }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+<hr/> {% include "components/tags.njk" %} <hr/>
 {% for year, yearPosts in collections.posts | groupByYear | reverse %}
   <h2 id="{{ year }}" class="year">{{ year }}</h2>
-  <ul class="big-words">
+  <ul class="posts-list">
     {% for post in yearPosts | reverse %}
-      <li>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </li>
+      {% include "components/post_card.njk" %}
     {% endfor %}
   </ul>
 {% endfor %}

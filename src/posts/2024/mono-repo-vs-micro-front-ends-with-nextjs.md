@@ -1,7 +1,7 @@
 ---
 title: Mono Repo vs. Micro Front-ends with Next.js
 date: '2024-07-01'
-description: 'In the world of web development, the architecture of your project can significantly influence its scalability, maintainability, and performance.'
+excerpt: 'In the world of web development, the architecture of your project can significantly influence its scalability, maintainability, and performance.'
 tags:
   - 'Tech'
 ---

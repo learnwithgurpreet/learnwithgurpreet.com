@@ -1,7 +1,7 @@
 ---
 title: 'The Rise of Digital Minimalism'
 date: '2023-06-23'
-description: Digital minimalism offers a solution to combat information overload, reduce screen time, etc.
+excerpt: Digital minimalism offers a solution to combat information overload, reduce screen time, etc.
 tags:
   - 'Sustainability'
 ---

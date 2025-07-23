@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
-title: Contact Gurpreet Singh
+title: Contact
 image: /assets/images/profile-pic.jpg
 eleventyNavigation:
   key: Contact
@@ -8,25 +8,20 @@ eleventyNavigation:
 keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankfurt, publicissapient, sapient, publicis, advanced javascript tutorials, best free javascript tutorials, best javascript tutorials, best node js tutorials, best tutorials for node js, node js tutorial blog, tutorial javascript, tutorial node js, tutorial node.js, tutorials on javascript, why node.js
 excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML5, CSS3, NodeJS, and ReactJS
 ---
-<header>
-  <h1>{{ title }}</h1>
-</header>
 
-<p>{{ metadata.description }}</p>
-
-<h2>Support me on</h2>
+<h3>{{ title }}</h3>
+<p class="center">{{ metadata.description }}</p>
+<h4>Support me on</h4>
 <p>
   <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a Coffee</a>
 </p>
-
-<h2>Mail me on</h2>
+<h4>Mail me on</h4>
 <p>
   <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a>
 </p>
-
-<h2>Follow me on</h2>
+<h4>Follow me on</h4>
 <ul>
-  <li><a rel="me" href="{{ metadata.author.mastodon }}" title="Mastodon page">Mastodon</a></li>
-  <li><a rel="me" href="{{ metadata.author.github }}" title="Github page">GitHub</a></li>
-  <li><a rel="me" href="{{ metadata.author.linkedin }}" title="LinkedIn page">LinkedIn</a></li>
+  <li><a rel="me"href="{{ metadata.author.mastodon }}" title="Mastodon page">Mastodon</a></li>
+  <li><a rel="me"href="{{ metadata.author.github }}" title="Github page">GitHub</a></li>
+  <li><a rel="me"href="{{ metadata.author.linkedin }}" title="LinkedIn page">LinkedIn</a></li>
 </ul>

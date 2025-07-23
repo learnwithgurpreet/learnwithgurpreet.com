@@ -1,0 +1,50 @@
+{
+  "editor.accessibilitySupport": "off",
+  "editor.fontSize": 16,
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.minimap.enabled": true,
+  "editor.suggestSelection": "first",
+  "editor.tabSize": 2,
+  "editor.unicodeHighlight.allowedLocales": {
+    "cs": true
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "files.associations": {
+    "package.json": "jsonc"
+  },
+  "files.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.svn": true,
+    "**/CVS": true,
+    "**/Thumbs.db": true,
+    "_site": false,
+    "coverage": true,
+    "**/dist": false,
+    "**/node_modules": false
+  },
+  "git.ignoreMissingGitWarning": true,
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 14,
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "window.zoomLevel": 1,
+  "workbench.colorTheme": "Vesper",
+  "workbench.editor.empty.hint": "hidden",
+  "workbench.iconTheme": "symbols",
+  "workbench.settings.editor": "json",
+  "workbench.sideBar.location": "left",
+  "workbench.startupEditor": "none",
+  "[njk]": {
+    "editor.defaultFormatter": "vscode.njk-language-features"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+}

@@ -1,7 +1,7 @@
 ---
 title: 'Day 6 (last) - Your first week in NodeJS'
 date: 2021-08-10
-description: During the course of this series, we have already developed a Node.js application that can be deployed on the cloud.
+excerpt: During the course of this series, we have already developed a Node.js application that can be deployed on the cloud.
 tags:
   - 'NodeJS Beginner Course'
 ---
