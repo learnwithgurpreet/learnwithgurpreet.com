@@ -1,0 +1,12 @@
+<li class="post">
+  <a href="{{ post.url | url }}" class="title">{{ post.data.title }}</a>
+  <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  <br/>
+  <span class="excerpt">{{ post.data.excerpt | excerpt }}</span>
+  <div>
+    {%- for tag in post.data.tags | filterTagList -%}
+      {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
+      <a href="{{ tagUrl | url }}" class="tag" aria-label="tag {{ tag }}">#{{ tag }}</a>
+    {%- endfor %}
+  </div>
+</li>

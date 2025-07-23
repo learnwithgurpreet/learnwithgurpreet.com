@@ -7,29 +7,21 @@ eleventyNavigation:
 keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankfurt, publicissapient, sapient, publicis, advanced javascript tutorials, best free javascript tutorials, best javascript tutorials, best node js tutorials, best tutorials for node js, node js tutorial blog, tutorial javascript, tutorial node js, tutorial node.js, tutorials on javascript, why node.js
 excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML5, CSS3, NodeJS, and ReactJS
 ---
-<section>
-  <h1>{{ metadata.author.title }}</h1>
-  <p>{{ metadata.author.short_description }}</p>
-</section>
 
+<p>{{ metadata.author.title }}</p>
+<p>{{ metadata.author.description }}</p>
+<h3>Here's my most recent posts</h3>
 <section>
-  <h2>Table of Contents</h2>
-  <ol class="big-words">
-    {% for entry in collections.all | eleventyNavigation %}
-      {% if entry.url == "/" %}
-        <li>{{ entry.title }}</li>
-      {% else %}
-        <li><a href="{{ entry.url | url }}" {%if entry.url == page.url%}aria-current="page"{% endif %}>{{ entry.title }}</a></li>
-      {% endif %}
-    {% endfor %}
-  </ol>
-</section>
-
-<section>
-  <h2>Recent Posts</h2>
-  <ul class="big-words">
+  <ul class="posts-list">
     {% for post in collections.posts | reverse | head(6) %}
-    <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
+      {% include "components/post_card.njk" %}
     {% endfor %}
   </ul>
 </section>
+<p class="center">
+  You can also
+  <a href="{{ metadata.url + metadata.feed.path + metadata.feed.xml }}">subscribe with RSS!</a>
+</p>
+<br/>
+<h3 class="tag-title">View posts by tag</h3>
+{% include "components/tags.njk" %}

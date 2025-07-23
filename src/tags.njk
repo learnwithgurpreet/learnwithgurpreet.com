@@ -18,17 +18,9 @@ permalink: /tags/{{ tag | slug }}/
 excerpt: List of posts tagged under "{{ tag }}"
 ---
 
-<header>
-  <h1>Tagged "{{ tag }}"</h1>
-</header>
-
-{% for year, yearPosts in collections[ tag ] | groupByYear | reverse %}
-  <h2 id="{{ year }}" class="year">{{ year }}</h2>
-  <ul class="big-words">
-    {% for post in yearPosts | reverse %}
-      <li>
-        <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-      </li>
-    {% endfor %}
+<h3>Tagged "{{ tag }}"</h3>
+{% for post in collections[ tag ] | reverse %}
+  <ul>
+    {% include "components/post_card.njk" %}
   </ul>
 {% endfor %}

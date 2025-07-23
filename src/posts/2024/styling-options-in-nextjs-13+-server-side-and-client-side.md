@@ -1,7 +1,7 @@
 ---
 title: 'Styling options in NextJS 13+ (Server Side and Client Side)'
 date: '2024-05-14'
-description: Styling choices in Next.js can be confusing. Some prefer CSS modules, while others opt for the popular Tailwind CSS.
+excerpt: Styling choices in Next.js can be confusing. Some prefer CSS modules, while others opt for the popular Tailwind CSS.
 tags:
   - 'NextJS'
 ---

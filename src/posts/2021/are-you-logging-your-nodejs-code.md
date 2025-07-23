@@ -1,7 +1,7 @@
 ---
 title: 'Are you logging your NodeJS code?'
 date: '2021-01-16'
-description: Logs are an essential part of an application, it provides you deep level access
+excerpt: Logs are an essential part of an application, it provides you deep level access
 tags:
   - 'NodeJS'
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'Track web traffic anonymously'
 date: '2022-06-27'
-description: Implementing analytics on any web platform is not a difficult job but keeping it privacy-focused is
+excerpt: Implementing analytics on any web platform is not a difficult job but keeping it privacy-focused is
 tags:
   - 'Privacy'
 ---

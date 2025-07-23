@@ -9,27 +9,14 @@ keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankf
 excerpt: Stats of Gurpreet Singh's blog, like first post, recent post, posts per year, all tags
 ---
 
-<header>
-  <h1>{{ title }}</h1>
-</header>
-
+<h3>{{ title }}</h3>
 {% set firstPost = collections.posts | head(1) %}
 {% set recentPost = collections.posts | head(-1) %}
-
-<ul class="stats">
-  <li>First Post: <a href="{{ firstPost[0].url }}">{{ firstPost[0].data.title }}</a></li>
-  <li>Recent Post: <a href="{{ recentPost[0].url }}">{{ recentPost[0].data.title }}</a></li>
-</ul>
-
-<h2>Posts per year</h2>
+<nav class="stats">
+  <a href="{{ firstPost[0].url }}">First Post:<br/>{{ firstPost[0].data.title }}</a>
+  <a href="{{ recentPost[0].url }}">Recent Post:<br/>{{ recentPost[0].data.title }}</a>
+</nav>
+<h4>Posts per year</h4>
 <canvas id="posts_per_year_chart"></canvas>
-<h2>All tags</h2>
-<ul class="tags">
-  {% for tag in collections.tagList %}
-    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-    {% set postCount = collections.posts | postByTag(tag) | length %}
-    <li>
-      <a href="{{ tagUrl | url }}">#{{ tag }}<span>x{{ postCount }}</span></a>
-    </li>
-  {% endfor %}
-</ul>
+<h3 class="tag-title">View posts by tag</h3>
+{% include "components/tags.njk" %}

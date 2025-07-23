@@ -1,7 +1,7 @@
 ---
 title: 'Eleventy Resume Builder'
 date: '2024-01-05'
-description: Despite searching the internet, I couldn't find a quick starter for my online resume project, not even on the official 11ty start page. Consequently, I decided to invest some time in creating one and making it available as a starter project for a broader audience.
+excerpt: Despite searching the internet, I couldn't find a quick starter for my online resume project, not even on the official 11ty start page. Consequently, I decided to invest some time in creating one and making it available as a starter project for a broader audience.
 tags:
   - '11ty'
 ---

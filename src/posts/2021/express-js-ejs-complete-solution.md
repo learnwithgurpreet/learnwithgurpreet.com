@@ -1,7 +1,7 @@
 ---
 title: 'Express.js + EJS complete solution'
 date: '2021-03-02'
-description: People who have less time to invest and are familiar with the Handlebar template engine can quickly set up their website.
+excerpt: People who have less time to invest and are familiar with the Handlebar template engine can quickly set up their website.
 tags:
   - 'NodeJS'
 ---
