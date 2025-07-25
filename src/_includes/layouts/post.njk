@@ -21,14 +21,14 @@
   <hr/> {% set previousPost = collections.posts | getPreviousCollectionItem %}
   {% set nextPost = collections.posts | getNextCollectionItem %}
   {% if previousPost or nextPost %}
-    <nav aria-label="pagination">
+    <ul aria-label="pagination" class="stats">
       {% if previousPost %}
-        <a href="{{ previousPost.url }}">&larr; Previous</a>
+        <li><a href="{{ previousPost.url }}">&larr; Previous</a></li>
       {% endif %}
       {% if nextPost %}
-        <a href="{{ nextPost.url }}">Next &rarr;</a>
+        <li><a href="{{ nextPost.url }}">Next &rarr;</a></li>
       {% endif %}
-    </nav>
+    </ul>
   {% endif %}
   <h3 class="tag-title">View posts by tag</h3>
   {% include "components/tags.njk" %}

@@ -12,10 +12,10 @@ excerpt: Stats of Gurpreet Singh's blog, like first post, recent post, posts per
 <h3>{{ title }}</h3>
 {% set firstPost = collections.posts | head(1) %}
 {% set recentPost = collections.posts | head(-1) %}
-<nav class="stats">
-  <a href="{{ firstPost[0].url }}">First Post:<br/>{{ firstPost[0].data.title }}</a>
-  <a href="{{ recentPost[0].url }}">Recent Post:<br/>{{ recentPost[0].data.title }}</a>
-</nav>
+<ul class="stats">
+  <li><a href="{{ firstPost[0].url }}">First Post:<br/>{{ firstPost[0].data.title }}</a></li>
+  <li><a href="{{ recentPost[0].url }}">Recent Post:<br/>{{ recentPost[0].data.title }}</a></li>
+</ul>
 <h4>Posts per year</h4>
 <canvas id="posts_per_year_chart"></canvas>
 <h3 class="tag-title">View posts by tag</h3>
