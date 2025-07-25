@@ -19,6 +19,8 @@
 	--yellow: #e9bc3f;
 	--transition: ease-in-out 150ms;
 	--gutter: 20px;
+	--max-width: 70ch;
+	--font-size: 16px;
 }
 
 ::selection {
@@ -27,21 +29,24 @@
 }
 
 footer {
-	padding: 25px;
+	padding: var(--gutter);
 	text-align: center;
 	font-size: .8rem;
 }
 
-html,
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: auto;
 	padding: var(--gutter);
-	max-width: 70ch;
+	max-width: var(--max-width);
 	background-color: var(--white);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--black);
-	scroll-behavior: smooth;
+	font-size: var(--font-size);
 }
 
 html,
@@ -78,18 +83,18 @@ body.dark-mode nav {
 
 .skip-link {
 	position: absolute;
-	padding: 20px;
+	padding: var(--gutter);
 	text-align: center;
 	left: 0;
 	right: 0;
 	transition: var(--transition);
-	transform: translateY(-200%);
+	transform: translateY(calc(-1 * (100% + var(--gutter) + 10px)));
 	background-color: var(--white);
 }
 
 .skip-link:focus {
 	z-index: 20;
-	transform: translateY(calc(-1 * var(--gutter) * 2));
+	transform: translateY(calc(-1 * var(--gutter)));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -189,7 +194,7 @@ ul.tags-list {
 }
 
 .post {
-	margin: 0 0 30px 0;
+	margin: 0 0 var(--gutter) 0;
 }
 
 .post .title {
@@ -238,11 +243,11 @@ div:not(.tags) .tag {
 
 textarea {
 	width: 100%;
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 input {
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 main,
