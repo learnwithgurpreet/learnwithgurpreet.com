@@ -83,21 +83,23 @@
         setRandomLinkColor();
       })();
     </script>
-    {% if process.env == "production" %}
-      <script>
-        if ('serviceWorker' in navigator) {
-          navigator
-            .serviceWorker
-            .register('/sw.js')
-            .then(() => {
-              console.log('[Service Worker] Registered successfully.');
-            })
-            .catch((error) => {
-              console.error('[Service Worker] Registration failed:', error);
-            });
-        }
-      </script>
-    {% endif %}
+    {#
+      {% if process.env == "production" %}
+        <script>
+          if ('serviceWorker' in navigator) {
+            navigator
+              .serviceWorker
+              .register('/sw.js')
+              .then(() => {
+                console.log('[Service Worker] Registered successfully.');
+              })
+              .catch((error) => {
+                console.error('[Service Worker] Registration failed:', error);
+              });
+          }
+        </script>
+      {% endif %}
+    #}
     {% if page.url === "/stats/" %}
       <script src="/assets/js/chart.umd.js"></script>
       <script>
