@@ -25,15 +25,4 @@ eleventyExcludeFromCollections: true
 		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
 	</entry>
 	{%- endfor %}
-	{% set navPages = collections.all | eleventyNavigation %}
-	{%- for navPage in navPages %}
-	{% set absoluteNavPageUrl %}{{ navPage.url | url | absoluteUrl(metadata.url) }}{% endset %}
-	<entry>
-		<title>{{ navPage.title }}</title>
-		<link href="{{ absoluteNavPageUrl }}"/>
-		<updated>2020-09-06T00:00:00Z</updated>
-		<id>{{ absoluteNavPageUrl }}</id>
-		<content type="html" />
-	</entry>
-	{%- endfor %}
 </feed>
