@@ -2,6 +2,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   text-align: left;
   white-space: pre;
+  display: block;
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
