@@ -173,6 +173,7 @@ nav {
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: var(--gutter) 0;
+  z-index: 1;
 }
 
 nav a[aria-current="page"] {
