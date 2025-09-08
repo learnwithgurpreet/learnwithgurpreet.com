@@ -38,8 +38,8 @@
 }
 
 ::selection {
-	background-color: var(--highlight);
-	color: var(--black);
+	background-color: var(--mauve);
+	color: var(--base);
 }
 
 footer {
@@ -89,7 +89,7 @@ b {
 	right: 0;
 	transition: var(--transition);
 	transform: translateY(calc(-1 * (100% + var(--gutter) + 10px)));
-	background-color: var(--white);
+	background-color: var(--mantle);
 }
 
 .skip-link:focus {
@@ -220,14 +220,9 @@ img {
 	height: auto;
 }
 
-code {
-	padding: 2px 5px;
-	background-color: var(--moretransblack);
-	font-weight: 700;
-}
-
 pre {
 	padding: 1rem;
+  overflow: auto;
 }
 
 blockquote {

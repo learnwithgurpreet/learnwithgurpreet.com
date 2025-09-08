@@ -65,7 +65,7 @@
     <a href="#content" class="skip-link">Skip to main content</a>
     {% block content %}{% endblock %}
     <script>
-      let colors = ["var(--green)", "var(--pink)", "var(--blue)", "var(--yellow)"];
+      let colors = ["var(--rosewater)", "var(--flamingo)", "var(--pink)", "var(--mauve)", "var(--red)", "var(--maroon)", "var(--peach)", "var(--yellow)", "var(--green)", "var(--teal)", "var(--sky)", "var(--sapphire)", "var(--blue)", "var(--lavender)"];
       function getRandomColor() {
         return colors[Math.floor(Math.random() * colors.length)];
       }
@@ -80,7 +80,7 @@
           e.style.borderLeftColor = getRandomColor();
         });
       }(function () {
-        {# setRandomLinkColor(); #}
+        setRandomLinkColor();
       })();
     </script>
     {% if page.url === "/stats/" %}
