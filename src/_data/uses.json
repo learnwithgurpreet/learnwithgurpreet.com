@@ -87,12 +87,12 @@
       "more_info_link": "https://code.visualstudio.com/"
     },
     {
-      "title": "Night Owl",
+      "title": "Catppuccin (Mocha)",
       "hashtags": [
         "coding"
       ],
-      "details": "Perfect theme for coding by Sarah Drasner",
-      "more_info_link": "https://marketplace.visualstudio.com/items?itemName=sdras.night-owl"
+      "details": "Soothing pastel theme for the high-spirited!",
+      "more_info_link": "https://catppuccin.com/"
     },
     {
       "title": "Fire Code Fonts",
@@ -111,12 +111,12 @@
       "more_info_link": "https://iterm2.com/"
     },
     {
-      "title": "Oh My ZSH!",
+      "title": "Starship",
       "hashtags": [
         "coding"
       ],
-      "details": "It gives perfect detailing to git repositories.",
-      "more_info_link": "https://ohmyz.sh/"
+      "details": "The minimal, blazing-fast, and infinitely customizable prompt for any shell!",
+      "more_info_link": "https://starship.rs/"
     },
     {
       "title": "Powerlevel10k",

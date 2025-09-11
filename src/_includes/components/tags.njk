@@ -1,7 +1,7 @@
-<div class="tags {% if isCenter == 'true' %} center{% endif %}">
+<ul>
   {% for tag in collections.tagList %}
-    {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+    {% set tagUrl %}/tag/{{ tag | slug }}/{% endset %}
     {% set postCount = collections.posts | postByTag(tag) | length %}
-    <a href="{{ tagUrl | url }}" class="tag">{{ tag }}({{ postCount }})</a>
+    <li><a href="{{ tagUrl | url }}">{{ tag }}({{ postCount }})</a></li>
   {% endfor %}
-</div>
+</ul>

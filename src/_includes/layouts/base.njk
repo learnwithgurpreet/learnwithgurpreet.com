@@ -9,8 +9,6 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="google-site-verification" content="QfEK-rmBKbXGQ6woeJAgPBlfEJyLpoLmX3LwFqpYAcg"/>
     <meta name="color-scheme" content="light dark"/>
-    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="{{ cssTertiaryColor }}">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="{{ cssPrimaryColor }}">
     <meta name="view-transition" content="same-origin" />
     {% set authorImage = metadata.url + "/assets/images/profile-pic.jpg" | url %}
     {% set socialImage = metadata.url + "/assets/images/banner.jpg" | url %}
@@ -38,8 +36,8 @@
     <meta name="twitter:image" content="{{ socialImage }}" />
     <meta itemprop="name" content="{{ metadata.title + secondTitle }}" />
     <meta itemprop="description" content="{{ excerpt }}" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     {% set css %}
-    {% include "css/fonts.css" %}
     {% include "css/prism-material-dark.css" %}
     {% include "css/global.css" %}
     {% endset %}
@@ -62,32 +60,14 @@
     <meta name="generator" content="{{ eleventy.generator }}">
   </head>
   <body>
-    <a href="#content" class="skip-link">Skip to main content</a>
+    <a href="#content" class="skip-to-content contrast" role="button">Skip to main content</a>
     {% block content %}{% endblock %}
-    <script>
-      let colors = ["var(--rosewater)", "var(--flamingo)", "var(--pink)", "var(--mauve)", "var(--red)", "var(--maroon)", "var(--peach)", "var(--yellow)", "var(--green)", "var(--teal)", "var(--sky)", "var(--sapphire)", "var(--blue)", "var(--lavender)"];
-      function getRandomColor() {
-        return colors[Math.floor(Math.random() * colors.length)];
-      }
-      function setRandomLinkColor() {
-        Array.from(document.getElementsByTagName("a")).forEach((e) => {
-          e.style.textDecorationColor = getRandomColor();
-        });
-        Array.from(document.getElementsByTagName("input")).forEach((e) => {
-          e.style.borderBottomColor = getRandomColor();
-        });
-        Array.from(document.getElementsByTagName("blockquote")).forEach((e) => {
-          e.style.borderLeftColor = getRandomColor();
-        });
-      }(function () {
-        setRandomLinkColor();
-      })();
-    </script>
     {% if page.url === "/stats/" %}
       <script src="/assets/js/chart.umd.js"></script>
       <script>
         const ctx = document.getElementById("posts_per_year_chart");
-        const color = "rgb(137, 180, 250)";
+        const getTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        const color = getTheme === "dark" ? "#01aaff" : "#0172ad";
         Chart.defaults.color = color;
         Chart.defaults.backgroundColor = color;
         Chart.defaults.borderColor = color;

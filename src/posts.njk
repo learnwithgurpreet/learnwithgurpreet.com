@@ -7,23 +7,23 @@ eleventyNavigation:
 keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankfurt, publicissapient, sapient, publicis, advanced javascript tutorials, best free javascript tutorials, best javascript tutorials, best node js tutorials, best tutorials for node js, node js tutorial blog, tutorial javascript, tutorial node js, tutorial node.js, tutorials on javascript, why node.js
 excerpt: Blog posts from Gurpreet Singh on technology, sustainablity, and life.
 ---
-
-{% set isCenter = 'true' %} <hr/>
-<section>
-  <ul class="year-list tags">
-    {% for year, yearPosts in collections.posts | groupByYear | reverse %}
-      <li class="tag">
-        <a href="#{{ year }}">{{ year }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
-<hr/> {% include "components/tags.njk" %} <hr/>
+<hr/>
+<nav>
+  {% for year, yearPosts in collections.posts | groupByYear | reverse %}
+    <a href="#{{ year }}">{{ year }}</a>
+  {% endfor %}
+</nav>
+<hr/>
+<details>
+  <summary>View posts by tag</summary>
+  {% include "components/tags.njk" %}
+</details>
+<hr/>
 {% for year, yearPosts in collections.posts | groupByYear | reverse %}
-  <h2 id="{{ year }}" class="year">{{ year }}</h2>
-  <ul class="posts-list">
-    {% for post in yearPosts | reverse %}
-      {% include "components/post_card.njk" %}
-    {% endfor %}
-  </ul>
+<section>
+  <h2 id="{{ year }}">{{ year }}</h2>
+  {% for post in yearPosts | reverse %}
+    {% include "components/post_card.njk" %}
+  {% endfor %}
+</section>
 {% endfor %}

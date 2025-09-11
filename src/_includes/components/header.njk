@@ -1,10 +1,7 @@
-<header>
-  <div class="header-section">
-    <div class="header-frame">
-      <h1>{{ metadata.author.name }}</h1>
-      <h2>{{ metadata.author.subtitle }}</h2>
-    </div>
-    <div class="img-frame"><img src="{{ authorImage }}" height="200" width="200" alt="{{ metadata.author.name }}" loading="lazy" />
-    </div>
-  </div>
+<header class="container">
+  <hgroup>
+    <h1>{{ metadata.title }}</h1>
+    <p>{{ metadata.description }}</p>
+  </hgroup>
+  {% include "components/nav.njk" %}
 </header>

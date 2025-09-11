@@ -14,17 +14,48 @@ In this article, we'll dive into the fundamentals of state handling in React, ex
 
 ## State Management Flow Chart
 
-<div class="overflow-table">
-
-| Method               | Use Case                                                                                                                                                                                                                                                                                    | Example                                                                                                                                                                                |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| useState (component) | Scoped to a single component                                                                                                                                                                                                                                                                | `selected` state in `Single Component` (product-variations/index.jsx) The property is used only in this component.                                                                     |
-| useState (page)      | Scoped to a single page                                                                                                                                                                                                                                                                     | `isOverlayOpen` state in `CustomizationContainer` (customization-component.js) The property is part of an object that is passed as a prop to AddToCartModalComponent (and no further). |
-| Context API          | Prop drill is needed for more than one level                                                                                                                                                                                                                                                | PDP, where we might have component/page state for "selected option set" and some deep component needs to know about it.                                                                |
-| Zustand/Redux        | Needed across the application and is based on user action, whether that be: - Direct input (Eg. deliveryInfo.phone) - Selection of explicit options (Eg. fulfillmentDate) - Selection of implicit options (Eg. storeId) - System assigned value that can’t be querieddirectly (Eg. orderId) | In addition to the use case-specific examples at left, you can find the rest of the global store in /stores                                                                            |
-| SWR Hook             | - Managing data fetching and server managed state - `useSWR` is able to fetch backend data, as well as manage caching for redundant requests - Supports traditional HTTP requests as well as graphQL queries.                                                                               |                                                                                                                                                                                        |
-| URL query params     | When page level state needs to be set from outside of the page.                                                                                                                                                                                                                             | Passing an orderId from an email, etc.                                                                                                                                                 |
-
+<div style="overflow:auto;">
+  <table class="striped">
+    <thead>
+      <tr>
+        <th scope="col">Case</th>
+        <th scope="col">Use Case</th>
+        <th scope="col">Example</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">useState (component)</th>
+        <td>Scoped to a single component</td>
+        <td><code>selected</code> state in <code>Single Component</code> (product-variations/index.jsx) The property is used only in this component.</td>
+      </tr>
+      <tr>
+        <th scope="row">useState (page)</th>
+        <td>Scoped to a single page</td>
+        <td><code>isOverlayOpen</code> state in <code>CustomizationContainer</code> (customization-component.js) The property is part of an object that is passed as a prop to AddToCartModalComponent (and no further).</td>
+      </tr>
+      <tr>
+        <th scope="row">Context API</th>
+        <td>Prop drill is needed for more than one level</td>
+        <td>PDP, where we might have component/page state for "selected option set" and some deep component needs to know about it.</td>
+      </tr>
+      <tr>
+        <th scope="row">Zustand/Redux</th>
+        <td>Needed across the application and is based on user action, whether that be: - Direct input (Eg. deliveryInfo.phone) - Selection of explicit options (Eg. fulfillmentDate) - Selection of implicit options (Eg. storeId) - System assigned value that can’t be querieddirectly (Eg. orderId)</td>
+        <td>In addition to the use case-specific examples at left, you can find the rest of the global store in /stores</td>
+      </tr>
+      <tr>
+        <th scope="row">SWR Hook</th>
+        <td>- Managing data fetching and server managed state - <code>useSWR</code> is able to fetch backend data, as well as manage caching for redundant requests - Supports traditional HTTP requests as well as graphQL queries.</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <th scope="row">URL query params</th>
+        <td>When page level state needs to be set from outside of the page.</td>
+        <td>Passing an orderId from an email, etc.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 ## Application Flow
