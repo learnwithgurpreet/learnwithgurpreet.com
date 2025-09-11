@@ -1,0 +1,26 @@
+---
+layout: layouts/page.njk
+pagination:
+  reverse: true
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - nav
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: false
+eleventyComputed:
+  title: Tagged "{{ tag }}"
+permalink: /tag/{{ tag | slug }}/
+excerpt: List of posts tagged under "{{ tag }}"
+---
+
+<section>
+  <h2>Tagged "{{ tag }}"</h2>
+  {% for post in collections[ tag ] | reverse %}
+    {% include "components/post_card.njk" %}
+  {% endfor %}
+</section>

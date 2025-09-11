@@ -9,19 +9,23 @@ keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankf
 excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML5, CSS3, NodeJS, and ReactJS
 ---
 
-<h3>{{ title }}</h3>
-<p class="center">{{ metadata.description }}</p>
-<h4>Support me on</h4>
-<p>
-  <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a Coffee</a>
-</p>
-<h4>Mail me on</h4>
-<p>
-  <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a>
-</p>
-<h4>Follow me on</h4>
-<ul>
-  <li><a rel="me"href="{{ metadata.author.mastodon }}" title="Mastodon page">Mastodon</a></li>
-  <li><a rel="me"href="{{ metadata.author.github }}" title="Github page">GitHub</a></li>
-  <li><a rel="me"href="{{ metadata.author.linkedin }}" title="LinkedIn page">LinkedIn</a></li>
-</ul>
+<section>
+  <h2>{{ title }}</h2>
+  <p>
+    <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a>
+  </p>
+</section>
+<section>
+  <h2>Support</h2>
+  <p>
+    <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a Coffee</a>
+  </p>
+</section>
+<section>
+  <h2>Social Media</h2>
+  <ul>
+    <li><a rel="me"href="{{ metadata.author.mastodon }}" title="Mastodon page">Mastodon</a></li>
+    <li><a rel="me"href="{{ metadata.author.github }}" title="Github page">GitHub</a></li>
+    <li><a rel="me"href="{{ metadata.author.linkedin }}" title="LinkedIn page">LinkedIn</a></li>
+  </ul>
+</section>

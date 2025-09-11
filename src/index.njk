@@ -8,20 +8,16 @@ keywords: tech blog, gurpreet singh, gurpreet from germany, gurpreet from frankf
 excerpt: Experienced Front-end Technologist | Expert in jQuery, JavaScript, HTML5, CSS3, NodeJS, and ReactJS
 ---
 
-<p>{{ metadata.author.title }}</p>
-<p>{{ metadata.author.description }}</p>
-<h3>Here's my most recent posts</h3>
 <section>
-  <ul class="posts-list">
-    {% for post in collections.posts | reverse | head(6) %}
-      {% include "components/post_card.njk" %}
-    {% endfor %}
-  </ul>
+  <h2>{{ metadata.author.title }}</h2>
+  <p>{{ metadata.author.description }}</p>
 </section>
-<p class="center">
-  You can also
-  <a href="{{ metadata.url + metadata.feed.path + metadata.feed.xml }}">subscribe with RSS!</a>
+<section>
+  <h2>Here's my most recent posts</h2>
+  {% for post in collections.posts | reverse | head(6) %}
+    {% include "components/post_card.njk" %}
+  {% endfor %}
+</section>
+<p>
+  <center>You can also <a href="{{ metadata.url + metadata.feed.path + metadata.feed.xml }}">subscribe with RSS!</a></center>
 </p>
-<br/>
-<h3 class="tag-title">View posts by tag</h3>
-{% include "components/tags.njk" %}

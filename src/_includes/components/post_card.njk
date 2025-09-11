@@ -1,12 +1,13 @@
-<li class="post">
-  <a href="{{ post.url | url }}" class="title">{{ post.data.title }}</a>
-  <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-  <br/>
-  <span class="excerpt">{{ post.data.excerpt | excerpt }}</span>
-  <div>
+<article>
+  <h2><a href="{{ post.url | url }}">{{ post.data.title }}</a></h2>
+  <p>{{ post.data.excerpt | excerpt }}</p>
+  <span>
     {%- for tag in post.data.tags | filterTagList -%}
-      {%- set tagUrl %}/tags/{{ tag | slug }}/{% endset -%}
-      <a href="{{ tagUrl | url }}" class="tag" aria-label="tag {{ tag }}">#{{ tag }}</a>
+      {%- set tagUrl %}/tag/{{ tag | slug }}/{% endset -%}
+      <a href="{{ tagUrl | url }}" aria-label="tag {{ tag }}" style="margin-inline-end: 0.5em;">#{{ tag }}</a>
     {%- endfor %}
-  </div>
-</li>
+  </span>
+  <footer>
+    <time datetime="{{ post.date | htmlDateString }}"><small>{{ post.date | readableDate }}</small></time>
+  </footer>
+</article>
