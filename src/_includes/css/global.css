@@ -16,3 +16,7 @@
 .center {
   text-align: center;
 }
+
+.inline-margin-end {
+  margin-inline-end: 0.5em;
+}

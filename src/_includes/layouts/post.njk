@@ -8,7 +8,7 @@
       <p>
         {%- for tag in tags | filterTagList -%}
           {%- set tagUrl %}/tag/{{ tag | slug }}/{% endset -%}
-          <a href="{{ tagUrl | url }}" style="margin-inline-end: 0.5em;">#{{ tag }}</a>
+          <a href="{{ tagUrl | url }}" class="inline-margin-end">#{{ tag }}</a>
         {%- endfor %}
       </p>
       {{ content | safe }}

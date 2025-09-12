@@ -4,7 +4,7 @@
   <span>
     {%- for tag in post.data.tags | filterTagList -%}
       {%- set tagUrl %}/tag/{{ tag | slug }}/{% endset -%}
-      <a href="{{ tagUrl | url }}" aria-label="tag {{ tag }}" style="margin-inline-end: 0.5em;">#{{ tag }}</a>
+      <a href="{{ tagUrl | url }}" aria-label="tag {{ tag }}" class="inline-margin-end">#{{ tag }}</a>
     {%- endfor %}
   </span>
   <footer>
