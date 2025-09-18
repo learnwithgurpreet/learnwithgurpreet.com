@@ -1,6 +1,6 @@
 {
   "name": "www.learnwithgurpreet.com",
-  "short_name": "lwg",
+  "short_name": "learnwithgurpreet",
   "icons": [
     {
       "src": "/assets/favicons/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#fafafa",
-  "background_color": "#fafafa",
+  "theme_color": "#13171f",
+  "background_color": "#13171f",
   "display": "standalone"
 }
