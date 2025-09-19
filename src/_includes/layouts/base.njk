@@ -27,7 +27,11 @@
     <meta name="og:title" content="{{ metadata.title + secondTitle }}" />
     <meta name="og:locale" content="{{ metadata.language }}" />
     <meta name="og:type" content="website" />
-    <meta name="og:image" content="{{ ogImageUrl }}" />
+    {% if '/posts/' in page.url and page.url !== "/posts/" %}
+      {% ogImage "./og-image.og.njk", { title: title } %}
+    {% else %}
+      <meta name="og:image" content="{{ ogImageUrl }}" />
+    {% endif %}
     <meta property="og:image:alt" content="{{ ogImageAlt }}" />
     <meta name="generator" content="{{ eleventy.generator }}">
     <meta name="robots" content="index, follow" />

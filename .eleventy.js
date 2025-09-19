@@ -1,4 +1,5 @@
 const { DateTime } = require("luxon");
+const fs = require("fs");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const StripTags = require("./11ty/stripTags");
@@ -12,9 +13,10 @@ const pluginSyntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const cacheBuster = require("./11ty/cacheBuster");
 const htmlMinify = require("./11ty/htmlMinify");
-const {slugifyString} = require("./11ty/utils");
+const { slugifyString } = require("./11ty/utils");
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+  const EleventyPluginOgImage = (await import('eleventy-plugin-og-image')).default;
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy({
     "./src/site.webmanifest": "site.webmanifest",
@@ -31,9 +33,23 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(htmlMinify);
   eleventyConfig.setLibrary('md', markdownIt({
     html: true,
-		breaks: true,
-		linkify: true,}
+    breaks: true,
+    linkify: true,
+  }
   ).use(markdownItAnchor, markdownItAnchorOptions));
+
+  eleventyConfig.addPlugin(EleventyPluginOgImage, {
+    satoriOptions: {
+      fonts: [
+        {
+          name: 'Inter',
+          data: fs.readFileSync('./src/assets/fonts/Inter-Regular.woff'),
+          weight: 700,
+          style: 'normal',
+        },
+      ]
+    }
+  });
 
   eleventyConfig.addFilter("cacheBuster", cacheBuster);
   eleventyConfig.addFilter("slugify", slugifyString);
