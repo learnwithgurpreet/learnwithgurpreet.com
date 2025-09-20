@@ -38,6 +38,16 @@ module.exports = async function (eleventyConfig) {
   }
   ).use(markdownItAnchor, markdownItAnchorOptions));
 
+  if (fs.existsSync("./dist/og-images")) {
+    fs.rmSync("./dist/og-images", { recursive: true }, (err) => {
+      if (err) {
+        console.log("Error while deleting og-images folder.", err);
+      } else {
+        console.log("Deleted og-images folder.");
+      }
+    });
+  }
+
   eleventyConfig.addPlugin(EleventyPluginOgImage, {
     satoriOptions: {
       fonts: [

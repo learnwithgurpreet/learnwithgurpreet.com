@@ -5,23 +5,38 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(135deg, #ebf4f5, #b5c6e0);
+    background: #4FACF7;
+    background: linear-gradient(0deg,rgba(79, 172, 247, 1) 0%, rgba(0, 102, 255, 1) 100%);
+    position: relative;
   }
 
   .title {
-    color: #2d3138;
+    color: #000;
     font-size: 80px;
-    margin: auto 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+    font-weight: bold;
+    margin: 0;
   }
 
   p {
-    color: #2d2e32ff;
+    color: #2d3138;
     font-size: 30px;
-    margin: auto 0;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    margin: 0;
+    font-weight: 500;
+    transform: translateY(50%);
+    opacity: 0.7;
   }
 </style>
 
 <div class="root">
   <h1 class="title">{{ title }}</h1>
-  <p>by Gurpreet Singh</p>
+  <p>by {{ author }}</p>
 </div>

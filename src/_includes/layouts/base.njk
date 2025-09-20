@@ -28,7 +28,7 @@
     <meta name="og:locale" content="{{ metadata.language }}" />
     <meta name="og:type" content="website" />
     {% if '/posts/' in page.url and page.url !== "/posts/" %}
-      {% ogImage "./og-image.og.njk", { title: title } %}
+      {% ogImage "./og-image.og.njk", { title: title, author: metadata.author.name } %}
     {% else %}
       <meta name="og:image" content="{{ ogImageUrl }}" />
     {% endif %}
