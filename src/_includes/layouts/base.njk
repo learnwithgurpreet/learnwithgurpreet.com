@@ -2,13 +2,18 @@
 {% set socialImage = metadata.url + "/assets/images/banner.jpg" | url %}
 {% set secondTitle = " - " + metadata.description if page.url === "/" else " - " + title %}
 {% set ogImageUrl = ogImage if ogImage else socialImage %}
-{% set ogImageAlt = title + " - " + metadata.title if ogImage else metadata.author.name %}
+{% if '/posts/' in page.url and page.url !== "/posts/" %}
+  {% set ogImageAlt = title %}
+{% else %}
+  {% set ogImageAlt = metadata.title + " - " + metadata.description if ogImage else metadata.author.name %}
+{% endif %}
+{% set excerpt = excerpt | striptags | truncate(160, true, "...") if excerpt else metadata.description %}
 {% set currentPageUrl = metadata.url + page.url | url %}
 {% set css %}
   {% include "css/prism-material-dark.css" %}
   {% include "css/global.css" %}
 {% endset %}
-<html lang="en">
+<html lang="en-GB">
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -27,6 +32,10 @@
     <meta name="og:title" content="{{ metadata.title + secondTitle }}" />
     <meta name="og:locale" content="{{ metadata.language }}" />
     <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ metadata.title + secondTitle }}" />
+    <meta name="twitter:description" content="{{ excerpt }}" />
+    <meta name="twitter:image" content="{{ ogImageUrl }}" />
     {% if '/posts/' in page.url and page.url !== "/posts/" %}
       {% ogImage "./og-image.og.njk", { title: title, author: metadata.author.name } %}
     {% else %}
