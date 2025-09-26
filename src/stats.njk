@@ -10,13 +10,11 @@ excerpt: All articles are written by Gurpreet Singh, a software engineer based i
 {% set firstPost = collections.posts | head(1) %}
 {% set recentPost = collections.posts | head(-1) %}
 
-<section>
-  <h2>{{ title }}</h2>
-  <nav>
-    <a href="{{ firstPost[0].url }}">First Post:<br/>{{ firstPost[0].data.title }}</a>
-    <a href="{{ recentPost[0].url }}">Recent Post:<br/>{{ recentPost[0].data.title }}</a>
-  </nav>
-</section>
+<h1>{{ title }}</h1>
+<nav class="back-link">
+  <a href="{{ firstPost[0].url }}">First Post:<br/>{{ firstPost[0].data.title }}</a>
+  <a href="{{ recentPost[0].url }}">Recent Post:<br/>{{ recentPost[0].data.title }}</a>
+</nav>
 <section>
   <h2>Posts per year</h2>
   <canvas id="posts_per_year_chart"></canvas>

@@ -1,5 +1,6 @@
 {
   "title": "Learn with Gurpreet",
+  "short_title": "Learn with",
   "url": "https://www.learnwithgurpreet.com",
   "language": "en_GB",
   "description": "Every space has a story",
@@ -10,6 +11,7 @@
   },
   "author": {
     "name": "Gurpreet Singh",
+    "short_name": "Gurpreet",
     "title": "Hi! I'm Gurpreet Singh, people also call me gS.",
     "subtitle": "Front-end Architect",
     "short_description": "Building a greener web: where code meets sustainability to shape a better digital future. 🌍🌱",

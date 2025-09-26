@@ -1,4 +1,4 @@
-<ul>
+<ul class="nav__tags">
   {% for tag in collections.tagList %}
     {% set tagUrl %}/tag/{{ tag | slug }}/{% endset %}
     {% set postCount = collections.posts | postByTag(tag) | length %}

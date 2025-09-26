@@ -1,34 +1,37 @@
+{% set previousPost = collections.posts | getPreviousCollectionItem %}
+{% set nextPost = collections.posts | getNextCollectionItem %}
 {% extends "layouts/base.njk" %}
 {% block content %}
-  {% include "components/header.njk" %}
-  <main class="container">
-    <article id="content">
-      <h1 class="article-title">{{ title }}</h1>
-      <time datetime="{{ page.date | htmlDateString }}"><small>{{ page.date | readableDate }}</small></time>
-      <p>
-        {%- for tag in tags | filterTagList -%}
-          {%- set tagUrl %}/tag/{{ tag | slug }}/{% endset -%}
-          <a href="{{ tagUrl | url }}" class="inline-margin-end">#{{ tag }}</a>
-        {%- endfor %}
-      </p>
-      {{ content | safe }}
-      <pre class="language-bash"><code class="language-bash">:wq</code></pre>
-      <footer>
-        <a class="button" href="mailto:{{ metadata.author.email }}?subject=Re: {{ title }}">Reply via email</a>
-      </footer>
-    </article>
-    {% set previousPost = collections.posts | getPreviousCollectionItem %}
-    {% set nextPost = collections.posts | getNextCollectionItem %}
-    {% if previousPost or nextPost %}
-    <nav class="container">
-      {% if previousPost %}
-        <li><a href="{{ previousPost.url }}">&larr; Previous</a></li>
-      {% endif %}
-      {% if nextPost %}
-        <li><a href="{{ nextPost.url }}">Next &rarr;</a></li>
-      {% endif %}
-    </nav>
+  <main class="fluid-container">
+    {% include "components/header.njk" %}
+    <section id="content" class="fluid-container__content">
+      <nav class="back-link">
+        <a href="/">&larr; All Posts</a>
+        {% if previousPost %}
+          <a href="{{ previousPost.url }}">&larr; Previous</a>
+        {% endif %}
+        {% if nextPost %}
+          <a href="{{ nextPost.url }}">Next &rarr;</a>
+        {% endif %}
+      </nav>
+      <article class="article --perma">
+        <div class="article__mast">
+          <p class="article__number">
+            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+          </p>
+          <div class="nav__tags">
+            {%- for tag in tags | filterTagList -%}
+              {%- set tagUrl %}/tag/{{ tag | slug }}/{% endset -%}
+              <a href="{{ tagUrl | url }}" class="inline-margin-end">#{{ tag }}</a>
+            {%- endfor %}
+          </div>
+          <h1 class="article__title">{{ title }}</h1>
+        </div>
+        <section class="article__content">
+          {{ content | safe }}
+        </section>
+      </article>
+      {% include "components/footer.njk" %}
+    </section>
   </main>
-  {% endif %}
-  {% include "components/footer.njk" %}
 {% endblock %}

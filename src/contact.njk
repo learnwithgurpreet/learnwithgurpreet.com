@@ -8,23 +8,15 @@ eleventyNavigation:
 excerpt: All articles are written by Gurpreet Singh, a software engineer based in Frankfurt, Germany. He writes about JavaScript, Node.js, and web development.
 ---
 
-<section>
-  <h2>{{ title }}</h2>
-  <p>
-    <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a>
-  </p>
-</section>
-<section>
-  <h2>Support</h2>
-  <p>
-    <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a Coffee</a>
-  </p>
-</section>
-<section>
-  <h2>Social Media</h2>
-  <ul>
-    <li><a rel="me"href="{{ metadata.author.mastodon }}" title="Mastodon page">Mastodon</a></li>
-    <li><a rel="me"href="{{ metadata.author.github }}" title="Github page">GitHub</a></li>
-    <li><a rel="me"href="{{ metadata.author.linkedin }}" title="LinkedIn page">LinkedIn</a></li>
-  </ul>
-</section>
+<h1>{{ title }}</h1>
+<p>
+  <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a Coffee</a>
+</p>
+<p>
+  <a href="mailto:{{ metadata.author.email }}">{{ metadata.author.email }}</a>
+</p>
+<ul>
+  <li><a rel="me"href="{{ metadata.author.mastodon }}" title="Mastodon page">Mastodon</a></li>
+  <li><a rel="me"href="{{ metadata.author.github }}" title="Github page">GitHub</a></li>
+  <li><a rel="me"href="{{ metadata.author.linkedin }}" title="LinkedIn page">LinkedIn</a></li>
+</ul>

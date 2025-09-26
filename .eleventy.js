@@ -1,5 +1,4 @@
 const { DateTime } = require("luxon");
-const fs = require("fs");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const StripTags = require("./11ty/stripTags");
@@ -16,7 +15,6 @@ const htmlMinify = require("./11ty/htmlMinify");
 const { slugifyString } = require("./11ty/utils");
 
 module.exports = async function (eleventyConfig) {
-  const EleventyPluginOgImage = (await import('eleventy-plugin-og-image')).default;
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy({
     "./src/site.webmanifest": "site.webmanifest",
@@ -35,31 +33,7 @@ module.exports = async function (eleventyConfig) {
     html: true,
     breaks: true,
     linkify: true,
-  }
-  ).use(markdownItAnchor, markdownItAnchorOptions));
-
-  if (fs.existsSync("./dist/og-images")) {
-    fs.rmSync("./dist/og-images", { recursive: true }, (err) => {
-      if (err) {
-        console.log("Error while deleting og-images folder.", err);
-      } else {
-        console.log("Deleted og-images folder.");
-      }
-    });
-  }
-
-  eleventyConfig.addPlugin(EleventyPluginOgImage, {
-    satoriOptions: {
-      fonts: [
-        {
-          name: 'Inter',
-          data: fs.readFileSync('./src/assets/fonts/Inter-Regular.woff'),
-          weight: 700,
-          style: 'normal',
-        },
-      ]
-    }
-  });
+  }));
 
   eleventyConfig.addFilter("cacheBuster", cacheBuster);
   eleventyConfig.addFilter("slugify", slugifyString);

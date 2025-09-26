@@ -10,8 +10,8 @@
 {% set excerpt = excerpt | striptags | truncate(160, true, "...") if excerpt else metadata.description %}
 {% set currentPageUrl = metadata.url + page.url | url %}
 {% set css %}
+  {% include "css/main.css" %}
   {% include "css/prism-material-dark.css" %}
-  {% include "css/global.css" %}
 {% endset %}
 <html lang="en-GB">
   <head>
@@ -19,7 +19,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ metadata.title + secondTitle }}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
     <style type="text/css">
       {{css | cssmin | safe}}
     </style>
@@ -36,11 +35,7 @@
     <meta name="twitter:title" content="{{ metadata.title + secondTitle }}" />
     <meta name="twitter:description" content="{{ excerpt }}" />
     <meta name="twitter:image" content="{{ ogImageUrl }}" />
-    {% if '/posts/' in page.url and page.url !== "/posts/" %}
-      {% ogImage "./og-image.og.njk", { title: title, author: metadata.author.name } %}
-    {% else %}
-      <meta name="og:image" content="{{ ogImageUrl }}" />
-    {% endif %}
+    <meta name="og:image" content="{{ ogImageUrl }}" />
     <meta property="og:image:alt" content="{{ ogImageAlt }}" />
     <meta name="generator" content="{{ eleventy.generator }}">
     <meta name="robots" content="index, follow" />
@@ -93,14 +88,13 @@
     {% endif %}
   </head>
   <body>
-    <a href="#content" class="skip-to-content contrast" role="button">Skip to main content</a>
     {% block content %}{% endblock %}
     {% if page.url === "/stats/" %}
       <script src="/assets/js/chart.umd.js"></script>
       <script>
         const ctx = document.getElementById("posts_per_year_chart");
         const getTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-        const color = getTheme === "dark" ? "#01aaff" : "#0172ad";
+        const color = getTheme === "dark" ? "rgb(231, 19, 26)" : "rgb(231, 19, 26)";
         Chart.defaults.color = color;
         Chart.defaults.backgroundColor = color;
         Chart.defaults.borderColor = color;
