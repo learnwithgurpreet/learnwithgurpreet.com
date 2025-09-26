@@ -25,13 +25,13 @@
       "more_info_link": "https://www.logitech.com/en-eu/products/mice/mx-master-3s-business-wireless-mouse.910-006582.html"
     },
     {
-      "title": "Bose QC 35II Headphones",
+      "title": "Bose QC Headphones",
       "hashtags": [
         "audio",
         "headphones"
       ],
       "details": "My goto headphones, I am using them on my iPhone, Mac, sometimes with my LG TV ;)",
-      "more_info_link": "https://www.bose.de/de_de/products/headphones/over_ear_headphones/quietcomfort-35-wireless-ii.html#v=qc35_ii_silver"
+      "more_info_link": "https://www.amazon.de/-/en/dp/B0CCZ26B5V?th=1"
     },
     {
       "title": "AirPods 2",
@@ -117,14 +117,6 @@
       ],
       "details": "The minimal, blazing-fast, and infinitely customizable prompt for any shell!",
       "more_info_link": "https://starship.rs/"
-    },
-    {
-      "title": "Powerlevel10k",
-      "hashtags": [
-        "coding"
-      ],
-      "details": "Powerlevel10k is a theme for Zsh. It emphasizes speed, flexibility and out-of-the-box experience.",
-      "more_info_link": "https://github.com/learnwithgurpreet/mac-dev-env-setup"
     },
     {
       "title": "Brave",

@@ -11,8 +11,6 @@ tags:
 
 Companies are shifting away from Next.js because of concerns about increased complexity, vendor lock-in, performance limitations at scale, and the flexibility offered by alternative frameworks like Astro, Remix, or pure React solutions with Vite. While Next.js remains a powerful tool, it's not always the best choice for all projects.
 
----
-
 ## The Rise and (Partial) Fall of Next.js
 
 Next.js has been the darling of the frontend community for years. And why wouldn't it be? It’s easy to use, SEO-friendly, and simplifies tasks like server-side rendering (SSR) and static site generation (SSG). But lately, a surprising number of companies have started exploring or outright migrating to alternatives. What's happening here?

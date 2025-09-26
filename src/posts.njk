@@ -1,23 +1,18 @@
 ---
 layout: layouts/page.njk
-title: Posts
+title: All Posts
+eleventyExcludeFromCollections: true
 eleventyNavigation:
   key: Posts
   order: 2
 excerpt: All articles are written by Gurpreet Singh, a software engineer based in Frankfurt, Germany. He writes about JavaScript, Node.js, and web development.
 ---
-<hr/>
-<nav>
+<h1>{{ title }}</h1>
+<nav class="article__title">
   {% for year, yearPosts in collections.posts | groupByYear | reverse %}
     <a href="#{{ year }}">{{ year }}</a>
   {% endfor %}
 </nav>
-<hr/>
-<details>
-  <summary>View posts by tag</summary>
-  {% include "components/tags.njk" %}
-</details>
-<hr/>
 {% for year, yearPosts in collections.posts | groupByYear | reverse %}
 <section>
   <h2 id="{{ year }}">{{ year }}</h2>

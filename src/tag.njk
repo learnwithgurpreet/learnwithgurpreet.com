@@ -17,9 +17,11 @@ eleventyComputed:
 permalink: /tag/{{ tag | slug }}/
 excerpt: List of posts tagged under "{{ tag }}"
 ---
-
-<section>
-  <h2>Tagged "{{ tag }}"</h2>
+<div class="back-link">
+  <a href="/tags/">&larr; All Tags</a>
+</div>
+<section class="article --no-border">
+  <h1>Tagged "{{ tag }}"</h1>
   {% for post in collections[ tag ] | reverse %}
     {% include "components/post_card.njk" %}
   {% endfor %}

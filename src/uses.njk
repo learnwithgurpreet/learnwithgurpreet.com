@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.njk
-title: Software, Gear, and Other Things Gurpreet Singh Uses
+title: Software, Gear & Stuff I Use
 image: /assets/images/profile-pic.jpg
 eleventyNavigation:
   key: Uses
@@ -8,19 +8,17 @@ eleventyNavigation:
 excerpt: All articles are written by Gurpreet Singh, a software engineer based in Frankfurt, Germany. He writes about JavaScript, Node.js, and web development.
 ---
 
-<section>
-  <h2>{{ title }}</h2>
-  <p>I get a lot of questions about what gear, software, and other stuff I use. To make it easier to share, I've collected
-  a list here.</p>
-</section>
+<h1>{{ title }}</h1>
+<p>I get a lot of questions about what gear, software, and other stuff I use. To make it easier to share, I've collected
+a list here.</p>
 {% for key, value in uses %}
   <section>
-    <h3 id="{{ key }}">{{ key | capitalize }}</h3>
+    <h2 id="{{ key }}">{{ key | capitalize }}</h2>
     {% for obj in uses[ key ] %}
-    <article>
-      <h5>{{ obj.title }}</h5>
+    <article class="article">
+      <h3 class="article__title">{{ obj.title }}</h3>
       <p>{{ obj.details | safe }}</p>
-      <footer>
+      <p>
         <a href="{{ obj.more_info_link }}">More Info
           <svg
             data-wf-icon="ArrowUpRightIcon"
@@ -36,7 +34,7 @@ excerpt: All articles are written by Gurpreet Singh, a software engineer based i
               fill="currentColor"></path>
           </svg>
         </a>
-      </footer>
+      </p>
     </article>
     {% endfor %}
   </section>
