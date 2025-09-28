@@ -56,6 +56,14 @@ pre>code {
   padding: var(--space-m);
 }
 
+blockquote {
+  margin: 0;
+  border-left: 0.1rem solid var(--color-neutral);
+  font-style: italic;
+  padding: var(--space-xs) var(--space-m);
+  text-align: left;
+}
+
 @media (min-width: 45em) {
   :root {
     --type-scale-l: 1.3;
