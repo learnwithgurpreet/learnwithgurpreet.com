@@ -20,13 +20,11 @@ OS selection in Raspberry PI Imager
 
 ![raspberry pi advanced options](/assets/images/raspberry_pi_advanced_options.jpg "raspberry pi advanced options")
 
-Enabling SSH and new password from Advanced options
-
-> However, you can later add `SSH` option by creating `ssh` file (without any extension) on the root.
+Enabling SSH and new password from Advanced options. However, you can later add `SSH` option by creating `ssh` file (without any extension) on the root.
 
 **Update and Upgrade all packages:** The fact of having an open-source system is you will get lots of updates, I would recommend updating packages even after a fresh install. Log in with SSH and perform `sudo apt update -y && sudo apt upgrade -y` this command will first pull a list of the latest packages and followed by the installation.
 
-Note: If you want to check what all packages are being installed, simply remove -y from the end of both commands.
+> Note: If you want to check what all packages are being installed, simply remove -y from the end of both commands.
 
 ## Auto Updates
 
