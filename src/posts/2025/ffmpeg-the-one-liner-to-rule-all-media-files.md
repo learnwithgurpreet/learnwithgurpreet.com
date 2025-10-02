@@ -74,7 +74,7 @@ sudo pacman -S ffmpeg
 
 Here are some of the most common and useful FFmpeg commands:
 
-### Image Resizing:
+### Image Resizing
 
 To resize an image, you can use the `scale` filter. To maintain the aspect ratio, you can specify one dimension and set the other to `-1`.
 
@@ -84,7 +84,7 @@ ffmpeg -i input.jpg -vf scale=320:-1 output.png
 
 This command resizes `input.jpg` to a width of 320 pixels while maintaining the original aspect ratio.
 
-### GIF Creation:
+### GIF Creation
 
 You can easily create a GIF from a video. The following command creates a high-quality GIF from a specific portion of a video.
 
@@ -99,7 +99,7 @@ ffmpeg -ss 30 -t 3 -i input.mp4 -vf "fps=10,scale=320:-1:flags=lanczos,split[s0]
 - The `palettegen` and `paletteuse` filters create a custom color palette for better quality.
 - `-loop 0`: Makes the GIF loop infinitely.
 
-### Video Format Changes:
+### Video Format Changes
 
 Converting a video from one format to another is straightforward.
 
@@ -109,7 +109,7 @@ ffmpeg -i input.mp4 output.avi
 
 This command converts an MP4 file to an AVI file. You can also specify video and audio codecs, bitrates, and other options for more control over the output.
 
-### Other Useful Commands:
+### Other Useful Commands
 
 - **Extract Audio:**
 
