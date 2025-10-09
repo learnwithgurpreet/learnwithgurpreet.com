@@ -1,7 +1,7 @@
 ---
 title: 'PiHole on Docker'
 date: '2021-05-21'
-excerpt: My follow-up article to Up and running with RaspberryPi with Docker. Previously, I showed configuring docker and docker-compose on RaspberryPi.
+description: My follow-up article to Up and running with RaspberryPi with Docker. Previously, I showed configuring docker and docker-compose on RaspberryPi.
 tags:
   - 'Raspberry PI'
 ---
@@ -76,7 +76,7 @@ If you have static IP defined [configured in my previous article](https://learnw
 
 After the installation of PiHole now we need to map other devices to use PiHole as the default gateway. For that, you can go to the network/Wifi settings of your individual devices and add **192.168.0.4** IP address to the DNS list (should be on top). See the example below:
 
-![network setup](/assets/images/Ijzg5OW20.png "network setup")
+![network setup](/assets/images/blog/Ijzg5OW20.png "network setup")
 
 DNS settings on MAC
 

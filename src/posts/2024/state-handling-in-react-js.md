@@ -1,7 +1,7 @@
 ---
 title: 'State Handling in React JS'
 date: 2024-04-11
-excerpt: React's component-based architecture enables developers to create reusable, composable UI elements.
+description: React's component-based architecture enables developers to create reusable, composable UI elements.
 tags:
   - 'Tech'
 ---
@@ -60,6 +60,6 @@ In this article, we'll dive into the fundamentals of state handling in React, ex
 
 ## Application Flow
 
-![Application flow with selection of state management options](/assets/images/state-management.jpg "Application flow with selection of state management options")
+![Application flow with selection of state management options](/assets/images/blog/state-management.jpg "Application flow with selection of state management options")
 
 With the help of above example, you can decide which path to got with.

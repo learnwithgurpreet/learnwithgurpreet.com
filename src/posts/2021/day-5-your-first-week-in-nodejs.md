@@ -1,7 +1,7 @@
 ---
 title: 'Day 5 - Your first week in NodeJS'
 date: 2021-08-09
-excerpt: I explained how to implement a template engine to get dynamic variables into your HTML file.
+description: I explained how to implement a template engine to get dynamic variables into your HTML file.
 tags:
   - 'NodeJS Beginner Course'
 ---
@@ -46,25 +46,25 @@ We will be using [MongoLabs](https://account.mongodb.com/account/login) for our 
 
 You can go to [https://account.mongodb.com/account/login](https://account.mongodb.com/account/login) and claim your free account. You can follow the given steps to create a new database.
 
-![create project](/assets/images/SUhXqX_0a-1024x385.png "create project")
+![create project](/assets/images/blog/SUhXqX_0a-1024x385.png "create project")
 
 **Create a new project**
 
-![save project](/assets/images/wCpF9djRm-1024x517.png "save project")
+![save project](/assets/images/blog/wCpF9djRm-1024x517.png "save project")
 
 **Save project with members (default is logged-in user)**
 
-![create database](/assets/images/GjWoGMegW-1024x455.png "create database")
+![create database](/assets/images/blog/GjWoGMegW-1024x455.png "create database")
 
 **Create your first database**
 
-![select plan](/assets/images/Es-Go-hMJ-1024x774.png "select plan")
+![select plan](/assets/images/blog/Es-Go-hMJ-1024x774.png "select plan")
 
 **Select free plan**
 
 Once you create your cluster, it will take some time for the initial deployment.
 
-![create a database user](/assets/images/lm898S-_05-1024x831.png "create a database user")
+![create a database user](/assets/images/blog/lm898S-_05-1024x831.png "create a database user")
 
 Now you need to create a user for your database
 

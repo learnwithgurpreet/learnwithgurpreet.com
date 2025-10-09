@@ -1,7 +1,7 @@
 ---
 title: 'Day 3 - Your first week in NodeJS'
 date: 2021-08-07
-excerpt: I believe you have already read my previous article where I explained, how to spin up a Node.js server instance
+description: I believe you have already read my previous article where I explained, how to spin up a Node.js server instance
 tags:
   - 'NodeJS Beginner Course'
 ---

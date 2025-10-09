@@ -1,7 +1,7 @@
 ---
 title: 'Track web traffic anonymously'
 date: '2022-06-27'
-excerpt: Implementing analytics on any web platform is not a difficult job but keeping it privacy-focused is
+description: Implementing analytics on any web platform is not a difficult job but keeping it privacy-focused is
 tags:
   - 'Privacy'
 ---
@@ -26,7 +26,7 @@ I recently came across an open-source analytics tool called **[umami.is](https:/
 
 Their goal is to provide you with a friendlier, privacy-focused alternative to Google Analytics and a free, open-sourced alternative to paid solutions.
 
-![Umami tool example screenshot](/assets/images/umami-about-screenshot.png "Umami tool example screenshot")
+![Umami tool example screenshot](/assets/images/blog/umami-about-screenshot.png "Umami tool example screenshot")
 
 <small class="text-center block">Screenshot from [umami.is](https://umami.is/)</small>
 

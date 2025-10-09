@@ -1,0 +1,66 @@
+---
+title: Stats
+permalink: /stats/index.html
+eleventyExcludeFromCollections: true
+description: 'Read what gears and softwares Gurpreet Singh uses'
+layout: page
+---
+
+<p>I get a lot of questions about what gear, software, and other stuff I use. To make it easier to share, I've collected a list here.</p>
+
+<article class="full section" style="--spot-color: var(--color-bg-accent)">
+  {% include 'svg/divider-soft-top.svg' %}
+  <section class="section__inner wrapper">
+    <h2>Posts per year</h2>
+    <canvas id="posts_per_year_chart"></canvas>
+    <h2>All tags</h2>
+    <div class="taglist | mt-s-m cluster">
+      {% for tag in collections.tagList %}
+      <a href="/tags/{{ tag }}" class="button">
+        {{ tag }}
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% include 'svg/divider-soft-bottom.svg' %}
+</article>
+<script src="/assets/scripts/chart.umd.js"></script>
+<script>
+    const ctx = document.getElementById("posts_per_year_chart");
+    const color = "#dd4462";
+
+    Chart.defaults.color = color;
+    Chart.defaults.backgroundColor = color;
+    Chart.defaults.borderColor = color;
+    var myChart = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: [{% for year, yearPosts in collections.posts | groupByYear | reverse %}{{year}}{% if loop.last === false %},{% endif %}{% endfor %}],
+        datasets: [
+          {
+            label: "Posts per year",
+            data: [{% for year, yearPosts in collections.posts | groupByYear | reverse %}{{yearPosts | length}}{% if loop.last === false %},{% endif %}{% endfor %}],
+          },
+        ],
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,
+          },
+        },
+        elements: {
+          bar: {
+            backgroundColor: color
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: color
+            }
+          }
+        }
+      },
+    });
+  </script>

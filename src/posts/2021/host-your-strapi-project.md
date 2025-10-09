@@ -1,7 +1,7 @@
 ---
 title: 'Host your Strapi project'
 date: '2021-02-25'
-excerpt: In this article, I will walk you through the Strapi CMS setup on your local machine followed by deploying it to Heroku.
+description: In this article, I will walk you through the Strapi CMS setup on your local machine followed by deploying it to Heroku.
 tags:
   - 'Tech'
 ---
@@ -45,7 +45,7 @@ $ npx create-strapi-app app
 
 After running the above command you can start your local server by running `npm run develop` and it will ask you to create a local user. You can choose whatever username password you want because it will not gonna be deployed with your application.
 
-![strapi login](/assets/images/5FAuja_X8.jpeg "strapi login")
+![strapi login](/assets/images/blog/5FAuja_X8.jpeg "strapi login")
 
 Strapi Login
 
@@ -55,7 +55,7 @@ Before sending it to Heroku we need to set up **production database** configurat
 
 You will find the local database configuration here: `./config/database.js`. Now we need to create another similar set for the production database. Let’s do some re-structuring of files.
 
-![directory](/assets/images/gycZqL1d3.jpeg "directory")
+![directory](/assets/images/blog/gycZqL1d3.jpeg "directory")
 
 directory structure
 

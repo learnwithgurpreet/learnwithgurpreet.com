@@ -1,7 +1,7 @@
 ---
 title: Why companies are moving away from NextJS?
 date: '2025-06-16'
-excerpt: Companies are shifting away from Next.js because of concerns about increased complexity, vendor lock-in, performance limitations at scale, and the flexibility offered by alternative frameworks like Astro, Remix, or pure React solutions with Vite. While Next.js remains a powerful tool, it's not always the best choice for all projects.
+description: Companies are shifting away from Next.js because of concerns about increased complexity, vendor lock-in, performance limitations at scale, and the flexibility offered by alternative frameworks like Astro, Remix, or pure React solutions with Vite. While Next.js remains a powerful tool, it's not always the best choice for all projects.
 tags:
   - 'Tech'
   - 'Thoughts'

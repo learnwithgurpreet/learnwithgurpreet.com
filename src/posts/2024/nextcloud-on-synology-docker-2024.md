@@ -1,7 +1,7 @@
 ---
 title: NextCloud on Synology Docker 2024
 date: '2024-01-25'
-excerpt: NextCloud is a widely used hosting solution that offers an integrated office suite, allowing users to utilize the platform in a manner similar to services such as Dropbox and Google Drive.
+description: NextCloud is a widely used hosting solution that offers an integrated office suite, allowing users to utilize the platform in a manner similar to services such as Dropbox and Google Drive.
 tags:
   - 'Tech'
 ---
@@ -12,7 +12,7 @@ The application can be hosted in two ways on Synology.
 
 ## Using Web station
 
-![synology web station](/assets/images/synology_webstation.png "synology web station")
+![synology web station](/assets/images/blog/synology_webstation.png "synology web station")
 
 You can directly install different web services as part of Synology packages from the Synology package center and host them as a website using [Web Station](https://www.synology.com/en-us/dsm/packages/WebStation?os_ver=7.2).
 
@@ -26,7 +26,7 @@ Using Docker method also enables you to move your NextCloud setup in future to d
 
 Create new folder namely `nextcloud` under the root level docker folder. Inside the `nextcloud` folder create two more folders called, `data` and `config`.
 
-![synology file station](/assets/images/synology_filestation.jpg "synology file station")
+![synology file station](/assets/images/blog/synology_filestation.jpg "synology file station")
 
 ### Step 2
 

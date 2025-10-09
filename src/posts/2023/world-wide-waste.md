@@ -2,7 +2,7 @@
 title: 'World Wide Waste'
 date: '2023-09-11'
 eleventyExcludeFromCollections: false
-excerpt: Digital is Physical, it is quite important to understand whatever you download/upload on web is all impacting our planet earth
+description: Digital is Physical, it is quite important to understand whatever you download/upload on web is all impacting our planet earth
 tags:
   - 'Sustainability'
 ---
@@ -11,7 +11,7 @@ I recently finished a book called [World Wide Waste](https://gerrymcgovern.com/w
 
 Thank you, [Holger Hellinger](https://polente.de/), for the recommendation; reading it was indeed worthwhile! 😊
 
-![world wide waste book cover](/assets/images/world-wide-waste.jpg "world wide waste book cover")
+![world wide waste book cover](/assets/images/blog/world-wide-waste.jpg "world wide waste book cover")
 
 ## What is Digital waste?
 

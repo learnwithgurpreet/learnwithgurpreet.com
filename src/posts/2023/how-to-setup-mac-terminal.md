@@ -1,7 +1,7 @@
 ---
 title: 'How to Setup Mac Terminal'
 date: '2023-03-21'
-excerpt: People often ask me how I setup my Mac terminal, here is the guide.
+description: People often ask me how I setup my Mac terminal, here is the guide.
 tags:
   - 'Tech'
 ---
