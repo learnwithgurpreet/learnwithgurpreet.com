@@ -1,7 +1,7 @@
 ---
 title: 'How to secure a Raspberry Pi on your network'
 date: '2022-05-14'
-excerpt: If you are planning to expose your RaspberryPi over the internet, you should consider these security guidelines.
+description: If you are planning to expose your RaspberryPi over the internet, you should consider these security guidelines.
 tags:
   - 'Raspberry PI'
 ---
@@ -12,13 +12,13 @@ If you are planning to expose your RaspberryPi over the internet, you should con
 
 **Use the official Image tool:** You often find RaspberryPi images online from various sources. When it comes to security and privacy I would consider the official [RaspberryPi imager](https://www.raspberrypi.com/software/) to install RaspberryPi OS.
 
-![raspberry pi OS selection](/assets/images/raspberry_pi_os_selection.jpg "raspberry pi OS selection")
+![raspberry pi OS selection](/assets/images/blog/raspberry_pi_os_selection.jpg "raspberry pi OS selection")
 
 OS selection in Raspberry PI Imager
 
 **Password and SSH:** Use advance options and change the default password. In case you are going to use it with SSH then consider enabling it while the installation process itself.
 
-![raspberry pi advanced options](/assets/images/raspberry_pi_advanced_options.jpg "raspberry pi advanced options")
+![raspberry pi advanced options](/assets/images/blog/raspberry_pi_advanced_options.jpg "raspberry pi advanced options")
 
 Enabling SSH and new password from Advanced options. However, you can later add `SSH` option by creating `ssh` file (without any extension) on the root.
 
@@ -42,7 +42,7 @@ $ sudoedit /etc/apt/apt.conf.d/50unattended-upgrades
 "origin=Raspberry Pi Foundation,codename=${distro_codename},label=Raspberry Pi Foundation";
 ```
 
-![raspberry pi auto updates](/assets/images/raspberry_pi_auto_updates-1024x542.jpg "raspberry pi auto updates")
+![raspberry pi auto updates](/assets/images/blog/raspberry_pi_auto_updates-1024x542.jpg "raspberry pi auto updates")
 
 Adding auto-update script configurations
 
@@ -112,7 +112,7 @@ It will immediately enable defined firewall rules on your Raspberry Pi. You can 
 $ sudo ufw status numbered
 ```
 
-![UFW status](/assets/images/raspberry_pi_ufw_status-1024x534.jpg "UFW status")
+![UFW status](/assets/images/blog/raspberry_pi_ufw_status-1024x534.jpg "UFW status")
 
 `ufw` status command output
 

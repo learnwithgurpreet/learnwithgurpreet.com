@@ -1,7 +1,7 @@
 ---
 title: 'Day 4 - Your first week in NodeJS'
 date: 2021-08-08
-excerpt: I believe by now you are already comfortable with core modules of Node.js and have created your own RESTFul API service.
+description: I believe by now you are already comfortable with core modules of Node.js and have created your own RESTFul API service.
 tags:
   - 'NodeJS Beginner Course'
 ---
@@ -369,11 +369,11 @@ app.listen(3000);
 
 ### Snapshots
 
-![contact page](/assets/images/4c3Oe6sO0-1024x546.png "contact page")
+![contact page](/assets/images/blog/4c3Oe6sO0-1024x546.png "contact page")
 
 contact page
 
-![user details](/assets/images/KuCLn8OPP-1024x602.png "user details")
+![user details](/assets/images/blog/KuCLn8OPP-1024x602.png "user details")
 
 user details
 

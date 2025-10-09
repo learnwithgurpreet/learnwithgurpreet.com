@@ -1,7 +1,7 @@
 ---
 title: 'Dockerizing a React App in Simple Steps'
 date: '2023-05-21'
-excerpt: Docker allows you to package your React app along with its dependencies and configuration into a container
+description: Docker allows you to package your React app along with its dependencies and configuration into a container
 tags:
   - 'Tech'
 ---

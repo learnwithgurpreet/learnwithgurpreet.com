@@ -1,7 +1,7 @@
 ---
 title: '7 ways to make your website more accessible and sustainable'
 date: '2022-05-21'
-excerpt: We often talk about sustainability and try to decrease our CO₂
+description: We often talk about sustainability and try to decrease our CO₂
 tags:
   - 'Sustainability'
 ---
@@ -57,7 +57,7 @@ Some websites, especially news and media are showing auto-play videos. Sometimes
 
 The better option is to have a video transcript available even before clicking on the play button. Especially users who are using screen readers can upfront check the content of the video before really going through the entire video and downloading that 10MB of data.
 
-![Video transcript example from w3.org](/assets/images/interactive-transcript.png "Video transcript example from w3.org")
+![Video transcript example from w3.org](/assets/images/blog/interactive-transcript.png "Video transcript example from w3.org")
 
 Video transcript example from w3.org
 

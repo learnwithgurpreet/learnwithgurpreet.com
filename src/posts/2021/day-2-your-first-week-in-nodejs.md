@@ -1,7 +1,7 @@
 ---
 title: 'Day 2 - Your first week in NodeJS'
 date: 2021-08-04
-excerpt: I believe you have already read my previous article where I explained, the basics of Node.js
+description: I believe you have already read my previous article where I explained, the basics of Node.js
 tags:
   - 'NodeJS Beginner Course'
 ---
@@ -28,7 +28,7 @@ Let’s quickly jump on client-side server creation. We will use the core Node.j
 
 We will divide this into two sections, request and response.
 
-![request and response](/assets/images/NRrw-CXTO-1024x538.png "request and response")
+![request and response](/assets/images/blog/NRrw-CXTO-1024x538.png "request and response")
 
 Request and Response architecture
 
@@ -106,7 +106,7 @@ server.listen(3000, '127.0.0.1', () =>
 
 #### Output
 
-![webpage output](/assets/images/4YVWO-UmXp-1024x585.png "webpage output")
+![webpage output](/assets/images/blog/4YVWO-UmXp-1024x585.png "webpage output")
 
 homepage
 
@@ -239,11 +239,11 @@ server.listen(3000, '127.0.0.1', () =>
 );
 ```
 
-![home page](/assets/images/pokvIuVoQV-1024x520.png "home page")
+![home page](/assets/images/blog/pokvIuVoQV-1024x520.png "home page")
 
 homepage
 
-![contact page](/assets/images/4c3Oe6sO0-1024x546.png "contact page")
+![contact page](/assets/images/blog/4c3Oe6sO0-1024x546.png "contact page")
 
 Contact Page
 
@@ -263,7 +263,7 @@ You have noticed before whenever we were making any changes to our `app.js` file
 
 You can install this package with `npm install nodemon` and you will see another directory created with some packages called `node_modules`.
 
-![directory structure](/assets/images/D5gk3lR9A2.png "directory structure")
+![directory structure](/assets/images/blog/D5gk3lR9A2.png "directory structure")
 
 We will now quickly open our `package.json` file and make the following changes:
 

@@ -1,7 +1,7 @@
 ---
 title: 'How I explained Web designing to my Grandmother'
 date: '2020-09-10'
-excerpt: I would like to share a question that I often asked my grandmother
+description: I would like to share a question that I often asked my grandmother
 tags:
   - 'Thoughts'
 ---
@@ -12,19 +12,19 @@ However, I found a way to explain the same by taking some real-life examples. Fi
 
 A construction site can be a perfect example, where core construction elements can play the role of different elements of programming.
 
-![html](/assets/images/GKDRGX5yX.png "html")
+![html](/assets/images/blog/GKDRGX5yX.png "html")
 
 ## HTML
 
 _HTML (Bricks): The way we build our pages using HTML, the same way we build building structures by using bricks. is our foundation stone on which we build the whole structure of the page._
 
-![javascript](/assets/images/UF7g0XjPJ.png "javascript")
+![javascript](/assets/images/blog/UF7g0XjPJ.png "javascript")
 
 ## JavaScript
 
 _JavaScript (Cement): Don’t forget bricks can’t build the structure alone we need another special element called Cement. With the help of cement, we can create meaningful structures. I can also add dynamic elements by using JavaScript like electricity boards, lights, etc._
 
-![css](/assets/images/CRmlTCd6z.png "css")
+![css](/assets/images/blog/CRmlTCd6z.png "css")
 
 ## CSS
 

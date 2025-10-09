@@ -1,7 +1,7 @@
 ---
 title: 'CORS in NextJS'
 date: '2021-07-19'
-excerpt: Setting up CORS is always a challenge for people who are not really from server-side application backgrounds.
+description: Setting up CORS is always a challenge for people who are not really from server-side application backgrounds.
 tags:
   - 'Tech'
 ---

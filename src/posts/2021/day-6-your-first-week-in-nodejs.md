@@ -1,7 +1,7 @@
 ---
 title: 'Day 6 (last) - Your first week in NodeJS'
 date: 2021-08-10
-excerpt: During the course of this series, we have already developed a Node.js application that can be deployed on the cloud.
+description: During the course of this series, we have already developed a Node.js application that can be deployed on the cloud.
 tags:
   - 'NodeJS Beginner Course'
 ---
@@ -28,7 +28,7 @@ To use Heroku, you defiantly need an account which can be done from [here](https
 
 Once you have your Heroku account up and running, please create a project after login into your account.
 
-![create a new app](/assets/images/UXERpk00V-1024x586.png "create a new app")
+![create a new app](/assets/images/blog/UXERpk00V-1024x586.png "create a new app")
 
 All you need is a unique name here which will become a sub-domain of Heroku, in my case, it will be [https://not-failing.herokuapp.com/](https://not-failing.herokuapp.com/)
 
@@ -110,7 +110,7 @@ app.listen(PORT);
 
 I believe your App is up and running on Heroku now, like mine :)
 
-![welcome page](/assets/images/zQscyTFF-1024x645.png "welcome page")
+![welcome page](/assets/images/blog/zQscyTFF-1024x645.png "welcome page")
 
 running app
 

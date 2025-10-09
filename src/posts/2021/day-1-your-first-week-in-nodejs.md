@@ -1,7 +1,7 @@
 ---
 title: 'Day 1 - Your first week in NodeJS'
 date: 2021-08-03
-excerpt: I believe you know something about Node.js before starting this course, just to refresh your memory.
+description: I believe you know something about Node.js before starting this course, just to refresh your memory.
 tags:
   - 'NodeJS Beginner Course'
 ---
@@ -16,7 +16,7 @@ Node.js package ecosystem, npm, is the largest ecosystem of open source librarie
 
 You can simply go to the [official Node.js website](https://nodejs.org/en/download/) and download the latest stable version (LTS) based on your OS.
 
-![download node](/assets/images/l82jOlmdT.png "download node")
+![download node](/assets/images/blog/l82jOlmdT.png "download node")
 
 download nodejs page
 
