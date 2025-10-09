@@ -115,6 +115,62 @@ export async function POST(req: Request) {
 
 This gave us a reliable way to control cache invalidation after deployments.
 
+## Bonus tip
+
+Make sure when you are deploying to Azure Web Apps, CDN enablement is not that easy. Since Next.js comes with its own compress policy (gzip) it won't allow you to easily use Azure frontdoor as a CDN solution.
+
+You have to do some tweaks.
+
+```bash
+# Create a ruleset in Azure Frontdoor
+
+Name: RuleSetName
+
+IF
+  - Condition: Request file extension
+  - Operator: Equal
+  - Value:
+    - js
+    - css
+    - woff
+    - woff2
+    - ttf
+    - eot
+    - otf
+    - ico
+  - String transform: To lowercase
+  
+THEN
+  - Action: Response header
+  - Operator: Append
+  - Header name: x-cache-version
+  - Header value: v1 (treat it as a version number)
+AND THEN
+  - Action: Route Configuration Override
+  - Override Origin group: no
+  - Caching: Enabled
+  - Query String caching behavior: Use Query String
+  - Compression: Enabled
+  - Cache behavior: Override always
+  - Days: 1
+  - Hours: 0
+  - Minutes: 0
+  - Seconds: 0
+AND THEN
+  - Action: Response header
+  - Operator: Overwrite
+  - Header name: Cache-Control
+  - Header value: public, max-age=31536000, immutable
+AND THEN
+  - Action: Request header
+  - Operator: Delete
+  - Header name: Accept-Encoding
+  
+Stop evaluating remaining rules: Checked
+```
+
+Above configurations enable caching for all your mentioned files in `IF` condition for 1 year
+
 ## Conclusion
 
 Modern frameworks like Next.js look sleek and make development feel effortless. But once you move into enterprise territory, you'll run into bottlenecks that require extra effort, research, and debugging.
