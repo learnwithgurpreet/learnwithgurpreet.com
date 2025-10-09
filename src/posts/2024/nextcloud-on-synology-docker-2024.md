@@ -26,7 +26,7 @@ Using Docker method also enables you to move your NextCloud setup in future to d
 
 Create new folder namely `nextcloud` under the root level docker folder. Inside the `nextcloud` folder create two more folders called, `data` and `config`.
 
-![synology file station](/assets/images/synology_filestation.png "synology file station")
+![synology file station](/assets/images/synology_filestation.jpg "synology file station")
 
 ### Step 2
 
