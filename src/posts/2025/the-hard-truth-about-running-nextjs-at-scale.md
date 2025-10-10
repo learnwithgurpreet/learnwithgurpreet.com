@@ -29,8 +29,8 @@ After scouring forums, I noticed many developers struggling to build Next.js app
 
 Still, I decided to give it a shot. Here's what we did:
 
-- Renamed all environment variables starting with `NEXT_PUBLIC_` to `PUBLIC_`. Why? Because Next.js inlines `NEXT_PUBLIC_` variables at build time, which makes them static. For example: `process.env.NEXT_PUBLIC_KEY` gets replaced with a fixed value during build.
-- Split our env variables into two categories:
+- Renamed all public environment variables starting with `NEXT_PUBLIC_` to `PUBLIC_` because Next.js inlines `NEXT_PUBLIC_` variables at build time, which makes them static. For example: `process.env.NEXT_PUBLIC_KEY` gets replaced with a fixed value during build.
+- Split our env. variables into two categories:
   1. **Public** (`PUBLIC_`)
   2. **Secret** (`SECRET_`)
 
@@ -170,6 +170,8 @@ Stop evaluating remaining rules: Checked
 ```
 
 Above configurations enable caching for all your mentioned files in `IF` condition for 1 year
+
+*I would like to express my gratitude to [Frank Mueller](https://www.linkedin.com/in/frank-mueller-2bbb491b0/) for his assistance in writing the cache rules.*
 
 ## Conclusion
 
