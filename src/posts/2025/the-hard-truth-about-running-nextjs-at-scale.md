@@ -1,7 +1,7 @@
 ---
 title: The Hard Truth About Running Next.js at Scale
 date: '2025-09-30'
-eleventyExcludeFromCollections: true
+eleventyExcludeFromCollections: false
 description: Next.js has quickly become one of the most dominant frameworks for frontend fullstack development. It's great for shipping MVPs fast, but here's the big question, is it equally good for production-grade applications? Let's break it down and talk about the trade-offs you might face when using the Next.js stack.
 tags:
   - 'Tech'
