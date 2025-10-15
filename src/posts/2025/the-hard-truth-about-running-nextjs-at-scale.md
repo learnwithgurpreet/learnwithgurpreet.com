@@ -171,7 +171,7 @@ Stop evaluating remaining rules: Checked
 
 Above configurations enable caching for all your mentioned files in `IF` condition for 1 year
 
-*I would like to express my gratitude to [Frank Mueller](https://www.linkedin.com/in/frank-mueller-2bbb491b0/) for his assistance in writing the cache rules.*
+*I would like to express my gratitude to [Frank Mueller](https://www.linkedin.com/in/frank-mueller-2bbb491b0/) and [Vikas Chawla](https://www.linkedin.com/in/vikas-chawla-94726312/) for their assistance in writing the cache rules.*
 
 ## Conclusion
 
