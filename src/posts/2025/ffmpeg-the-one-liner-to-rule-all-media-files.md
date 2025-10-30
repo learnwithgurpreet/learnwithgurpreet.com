@@ -7,6 +7,7 @@ tags:
 ---
 
 ## TL;DR
+
 FFmpeg is a powerful command-line tool to handle all your media needs. Use it to quickly convert formats, create GIFs, resize images, trim videos, and extract audio right from your terminal. It's the fast, free, and scriptable alternative to heavy video editing software.
 
 ## Introduction to the Library
