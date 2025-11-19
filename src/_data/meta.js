@@ -11,12 +11,12 @@ module.exports = {
   author: {
     name: 'Gurpreet Singh', // i.e. Gurpreet Singh - page / blog author's name. Must be set.
     avatar: '/favicon.png',
-    email: 'gsin.hello@gmail.com', // i.e. gsin.hello@gmail.com - email of the author
+    email: 'contact@gurpreetsingh.me', // i.e. contact@gurpreetsingh.me - email of the author
     website: 'https://www.gurpreetsingh.me' // i.e. https.://www.gurpreetsingh.me - the personal site of the author
   },
   creator: {
     name: 'Gurpreet Singh', // i.e. Gurpreet Singh - creator's (developer) name.
-    email: 'gsin.hello@gmail.com',
+    email: 'contact@gurpreetsingh.me',
     website: 'https://www.gurpreetsingh.me',
     social: 'https://fosstodon.org/@GurpreetSingh'
   },

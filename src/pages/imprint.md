@@ -8,3 +8,4 @@ layout: page
 ---
 
 {{ personal.address }}
+Email: {{ personal.email }}
