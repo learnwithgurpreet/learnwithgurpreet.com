@@ -11,13 +11,13 @@ module.exports = {
   author: {
     name: 'Gurpreet Singh', // i.e. Gurpreet Singh - page / blog author's name. Must be set.
     avatar: '/favicon.png',
-    email: 'contact@gurpreetsingh.me', // i.e. contact@gurpreetsingh.me - email of the author
-    website: 'https://www.gurpreetsingh.me' // i.e. https.://www.gurpreetsingh.me - the personal site of the author
+    email: 'gurupreetsingh2000@gmail.com',
+    website: 'https://www.learnwithgurpreet.com'
   },
   creator: {
     name: 'Gurpreet Singh', // i.e. Gurpreet Singh - creator's (developer) name.
-    email: 'contact@gurpreetsingh.me',
-    website: 'https://www.gurpreetsingh.me',
+    email: 'gurupreetsingh2000@gmail.com',
+    website: 'https://www.learnwithgurpreet.com',
     social: 'https://fosstodon.org/@GurpreetSingh'
   },
   themeColor: '#DD4462', //  Manifest: defines the default theme color for the application
