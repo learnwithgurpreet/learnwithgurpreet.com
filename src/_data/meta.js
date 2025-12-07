@@ -18,7 +18,8 @@ module.exports = {
     name: 'Gurpreet Singh', // i.e. Gurpreet Singh - creator's (developer) name.
     email: 'gurupreetsingh2000@gmail.com',
     website: 'https://www.learnwithgurpreet.com',
-    social: 'https://fosstodon.org/@GurpreetSingh'
+    social: 'https://fosstodon.org/@GurpreetSingh',
+    company: 'Gurpreet Labs'
   },
   themeColor: '#DD4462', //  Manifest: defines the default theme color for the application
   themeBgColor: '#FBFBFB', // Manifest: defines a placeholder background color for the application page to display before its stylesheet is loaded

@@ -7,7 +7,9 @@ permalink: /privacy-policy-for-my-toy-fan/index.html
 description: 
 layout: page
 ---
-Last updated: {{ date | formatDate('MMMM D, YYYY') }}
+**Last Updated:** Last updated: December 3, 2025
+
+---
 
 ## 1. Introduction
 
@@ -59,4 +61,4 @@ We may update our Privacy Policy from time to time to reflect changes in our pra
 
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:
 
-Email: <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>
+Email: <a href="mailto:{{ meta.creator.email }}">{{ meta.creator.email }}</a>
