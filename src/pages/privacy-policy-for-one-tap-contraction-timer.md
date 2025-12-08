@@ -238,7 +238,29 @@ By using the One Tap Contraction Timer App, you acknowledge that you have read t
 
 ### **Do Not Track**
 
-The App does not respond to "Do Not Track" signals as it does not track users across websites.
+**Browser DNT Signals:**  
+The App does not respond to browser-based "Do Not Track" (DNT) signals as it is a mobile application, not a website.
+
+**Third-Party Tracking:**  
+While the App itself does not track your behavior, we use Google AdMob for advertising, which may track you for the following purposes:
+
+- Displaying personalized advertisements
+- Measuring ad performance
+- Building advertising profiles across apps
+
+**How to Opt Out of Ad Tracking:**
+
+**On Android:**
+
+1. Open **Settings** → **Google** → **Ads**
+2. Enable **"Opt out of Ads Personalization"**
+
+**On Web:**
+
+- Visit https://adssettings.google.com/ to manage your ad preferences
+
+**Note:** Opting out means you'll still see ads, but they won't be personalized based on your interests.
+
 
 ### **Cookies**
 
