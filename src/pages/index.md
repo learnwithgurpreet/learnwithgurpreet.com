@@ -5,7 +5,7 @@ description: 'I am working with Publicis Sapient as senior architect, experience
 layout: 'home'
 blog:
   title: 'Recent Posts'
-  intro: "I'm showing recent 6 blog posts, but there might be more!"
+  intro: "I'm showing recent 10 blog posts, but there might be more!"
 ---
 
 ## Gurpreet Singh
