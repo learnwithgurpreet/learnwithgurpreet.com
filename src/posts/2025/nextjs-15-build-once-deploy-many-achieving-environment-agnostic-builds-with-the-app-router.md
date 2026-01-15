@@ -13,6 +13,24 @@ In many Next.js setups, developers rebuild the app for every environment to inje
 
 With Next.js 15 and the App Router, we can break this cycle.
 
+## Strategic Use Case: Market-Specific Scaling
+
+This architecture is particularly powerful for organizations operating across multiple regions or brands.
+
+**The Scenario**: You have a single codebase for a Next.js application that must serve different markets (e.g., UK, USA, and Germany). Each market has its own Azure Web App instance, unique API endpoints, different currency formatting, and localized feature flags.
+
+**The Solution**: Instead of running three separate builds, which would result in three different versions of the truth, you build the application **one time**. You then deploy that same universal artifact to three separate Azure Web Apps. The unique "Market Behavior" is injected via **Azure App Settings** at runtime.
+
+```text
+[ Universal Build Artifact ]
+           |
+           +-----> [ Azure Web App: UK ]  --> Config: GBP, UK-API, Metric
+           |
+           +-----> [ Azure Web App: USA ] --> Config: USD, US-API, Imperial
+           |
+           +-----> [ Azure Web App: GER ] --> Config: EUR, DE-API, Metric
+```
+
 ## Project Architecture and Infrastructure
 
 To manage a "Build Once" workflow effectively, your architecture needs to be modular and your infrastructure needs to support runtime configuration.
@@ -148,21 +166,33 @@ export async function GET(request: NextRequest) {
 
 ## Infrastructure Cost Factors
 
-Moving to a build-once model significantly alters your infrastructure bill, generally leading to a **net reduction in costs**.
+By shifting to this model, the financial profile of your project changes. While there are slight increases in some areas, the overall ROI is significantly positive.
 
-1. **CI/CD Compute Savings (Decrease)**: By eliminating redundant builds for SIT and PROD, you drastically reduce the minutes spent on CI/CD runners (like GitHub Actions or Azure DevOps Agents). For large Next.js apps, a build can take 10 minutes. Removing two builds per deployment saves 20 minutes of compute time every single time you push code.
+### CI/CD Compute Savings (Major Decrease)
 
-2. **Storage Costs (Slight Increase)**: You will need to store the build artifacts (zip files or Docker images) in a registry or blob storage to facilitate promotion. While this adds a small storage cost, it is usually negligible compared to compute savings.
+In a multi-market setup, if you have 10 markets and 3 environments (DEV/SIT/PROD), a traditional model would require **30 separate builds**. With this approach, you run 1 build and 30 simple "copy-paste" deployments. This reduces your CI/CD runner bill (GitHub Actions/Azure DevOps) by up to 90%.
 
-3. **Server-Side Resource Usage (Neutral to Slight Increase)**: Because we are reading environment variables at runtime via SSR rather than using static inlined strings, there is a micro-cost in CPU cycles on the Azure Web App. However, since `process.env` access in Node.js is extremely fast, this rarely requires a higher App Service Plan tier.
+### Market Launch Velocity (Operational Savings)
+
+The cost of "Time to Market" is reduced. Launching in a new country no longer requires a new CI/CD pipeline configuration or a new build process. You simply spin up a new Azure Web App, point it to the existing artifact, and set the App Settings.
+
+### Storage and Registry (Slight Increase)
+
+You will store a single, slightly larger "Standalone" artifact in a registry (like Azure Container Registry or GitHub Packages). However, storing one universal image is often cheaper than storing dozens of environment-specific images that share 99% of the same code.
+
+### Developer Productivity (Hidden Savings)
+
+The "Cost of Debugging" drops. When a bug is reported in the German market but not the UK market, you know with 100% certainty that the code is identical. This allows your team to focus strictly on configuration or data issues, cutting down investigation time.
 
 ## Outcomes
 
-- **Bit-for-Bit Consistency**: The exact code tested in SIT is what goes to PROD.
+- **Market Agnostic Core**: Your core logic remains clean and independent of regional logic.
 
-- **Rapid Rollbacks**: Since artifacts are versioned and agnostic, rolling back is as simple as re-deploying a previous "known good" artifact.
+- **Bit-for-Bit Consistency**: Guaranteed parity across every market and every environment.
 
-- **Zero Client Waterfall**: By using SSR for your URLs, the browser doesn't need to make an extra API call just to figure out where the main API is.
+- **Rapid Global Rollouts**: Deploy updates to all global markets simultaneously using the same verified artifact.
+
+- **Significant Reduction in CI/CD Spend**: Minimized compute hours for build agents.
 
 ## Trade-offs and Risks
 
@@ -177,8 +207,6 @@ Moving to a build-once model significantly alters your infrastructure bill, gene
 
 Building once and deploying many is more than just a convenience; it is a professional standard that ensures your Next.js 15 applications are robust and predictable. By decoupling your configuration from your build process and prioritizing SSR for environment variables, you create a pipeline that is fast, safe, and truly environment-agnostic.
 
-## Next Steps: Automating the Pipeline
+## Internal Reference
 
-Now that you understand the architecture required for environment-agnostic builds, the next step is implementation. 
-
-Read my follow-up guide: **["Automating Next.js 15 Deployments: A Build Once, Deploy Many GitHub Actions Guide"](/posts/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide/)** to learn how to configure GitHub Actions and Azure to move your artifacts through DEV, SIT, and PROD seamlessly.
+Ready to automate this global rollout? Read my follow-up guide: ["Automating Next.js 15 Deployments: A Build Once, Deploy Many GitHub Actions Guide"](/posts/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide/) to see how to build the pipeline that handles this multi-market promotion.
