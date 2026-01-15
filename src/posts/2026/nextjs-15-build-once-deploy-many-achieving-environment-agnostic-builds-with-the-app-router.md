@@ -8,7 +8,7 @@ tags:
   - 'NextJS'
 ---
 
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" height="315" src="https://www.youtube-nocookie.com/embed/V9nu-bOwkrE" title="Next.js 15 Build Once, Deploy Many: Achieving Environment-Agnostic Builds with the App Router" width="100%" style="border: 0;"></iframe>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" height="315" src="https://www.youtube-nocookie.com/embed/V9nu-bOwkrE" title="Next.js 15 Build Once, Deploy Many: Achieving Environment-Agnostic Builds with the App Router" width="560" style="border: 0; max-width:100%"></iframe>
 
 In enterprise software engineering, the "Build Once, Deploy Many" philosophy is the gold standard for reliability. The goal is simple: compile your code into a single artifact and move that identical bundle through your testing environments (DEV, SIT) all the way to Production.
 
