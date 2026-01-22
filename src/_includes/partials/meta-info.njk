@@ -49,7 +49,7 @@
   {%- elif title -%}
     {{- title -}}
   {%- else -%}
-    {{- meta.siteName -}}
+    {{- meta.siteName -}}{{- meta.siteName2 -}}
   {%- endif -%}"
 />
 
@@ -75,7 +75,7 @@
   property="og:description"
   content="{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}"
 />
-<meta property="og:site_name" content="{{ meta.siteName }}" />
+<meta property="og:site_name" content="{{ meta.siteName }}{{ meta.siteName2 }}" />
 <meta property="og:locale" content="{{ meta.locale }}" />
 <meta property="article:author" content="{{ meta.author.name }}" />
 
@@ -86,7 +86,7 @@
   <link
     rel="alternate"
     type="{{ feedLink.type }}"
-    title="{{ feedLink.title }}: {{ meta.siteName }}"
+    title="{{ feedLink.title }}: {{ meta.siteName }}{{ meta.siteName2 }}"
     href="{{ feedLink.url }}"
   />
 {% endfor %}

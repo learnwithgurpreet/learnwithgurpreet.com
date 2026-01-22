@@ -9,7 +9,7 @@
       "@id": "{{ meta.url }}#website"
     },
     "@id": "{{ url }}",
-    "headline": "{{ title or meta.siteName }}",
+    "headline": "{{ title or meta.siteName + meta.siteName2 }}",
     "description": "{{ discover.description or description or meta.siteDescription }}",
     "image": "{{ meta.url }}{% if discover.image %}/assets/images/{{ discover.image }}{% else %}{{ meta.opengraph_default }}{% endif %}",
     "inLanguage": "{{ meta.locale }}",

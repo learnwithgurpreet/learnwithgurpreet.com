@@ -1,6 +1,7 @@
 module.exports = {
   url: process.env.URL || 'http://localhost:8080',
-  siteName: 'Learn with Gurpreet',
+  siteName: 'Learn',
+  siteName2: 'WithGurpreet',
   tagLine: 'Every space has a story',
   siteDescription:
     'I am working with Publicis Sapient as senior architect, experience engineering',

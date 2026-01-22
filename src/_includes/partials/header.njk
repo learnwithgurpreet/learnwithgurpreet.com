@@ -8,7 +8,7 @@
       {% if page.url == "/" %}aria-current="page"{% endif %}
     >
       {% include "svg/star.svg" %}
-      <span>{{ meta.siteName }}</span>
+      <span>{{ meta.siteName }}<span style="color: var(--color-primary)">{{ meta.siteName2 }}</span></span>
     </a>
     {% include "partials/main-nav.njk" %}
   </div>
