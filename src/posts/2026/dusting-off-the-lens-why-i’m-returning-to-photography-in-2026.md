@@ -3,7 +3,7 @@ title: "Dusting Off the Lens: Why I’m Returning to Photography in 2026"
 date: '2026-01-19'
 description: Reconnecting with photography hasn't just been about picking up a piece of gear. It’s been about relearning how to look at the world.
 tags:
-  - 'Thoughts'
+  - 'Photography'
 ---
 
 For a long time, my camera sat in its bag, a silent witness to the moments I stopped capturing. Life happened, priorities shifted, and that creative spark that used to drive me out of bed at dawn for the perfect light began to flicker and, eventually, fade.
@@ -12,7 +12,7 @@ But as 2026 begins, I’ve realized that losing a passion doesn’t mean it’s 
 
 ## A Look Back to Move Forward
 
-The catalyst for this comeback was revisiting my past work. I recently revived my [portfolio website](https://p.learnwithgurpreet.com), and seeing those captured memories reminded me of the "why" behind my art. Every image held a story, a technical challenge overcome, or a quiet emotion frozen in time.
+The catalyst for this comeback was revisiting my past work. I recently revived my [portfolio](/photography), and seeing those captured memories reminded me of the "why" behind my art. Every image held a story, a technical challenge overcome, or a quiet emotion frozen in time.
 
 ## What’s Next?
 

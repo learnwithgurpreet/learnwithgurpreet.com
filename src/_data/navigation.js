@@ -13,6 +13,10 @@ module.exports = {
       url: '/tags/'
     },
     {
+      text: 'Photography',
+      url: '/photography/'
+    },
+    {
       text: 'Uses',
       url: '/uses/'
     }

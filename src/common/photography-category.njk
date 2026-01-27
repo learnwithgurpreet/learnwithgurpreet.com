@@ -1,0 +1,92 @@
+---
+layout: tags
+pagination:
+  data: photography.categories
+  size: 1
+  alias: category
+permalink: /photography/{{ category | slugify }}/
+eleventyComputed:
+  title: 'Photography: {{ category }}'
+  description: 'Photography gallery featuring {{ category }} images'
+masonry: true
+---
+
+<div class="flow">
+  <p>Browse my {{ category }} photography collection.</p>
+
+  <h2>More Categories</h2>
+  <ul class="taglist | my-s-m cluster" role="list">
+    <li>
+      <a href="/photography/" class="button">
+        All Photos
+      </a>
+    </li>
+    {% for cat in photography.categories %}
+    <li>
+      <a
+        href="/photography/{{ cat | slugify }}/"
+        class="button"
+        {% if cat === category %}aria-current="page"{% endif %}
+      >
+        {{ cat }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <div class="grid" data-rows="masonry" style="--grid-min-item-size: clamp(16rem, 30vw, 20rem)">
+    
+    {# Filtered Photography Gallery #}
+    {% set filteredPhotos = photography.photosByCategory[category] %}
+    {% for photo in filteredPhotos %}
+    <figure class="flow photo-item" style="--flow-space: var(--space-xs)">
+      <img 
+        src="{{ photo.images.medium }}" 
+        srcset="{{ photo.images.small }} 640w,
+                {{ photo.images.medium }} 1024w,
+                {{ photo.images.large }} 1920w,
+                {{ photo.images.original }} 2400w"
+        sizes="(max-width: 640px) 100vw,
+               (max-width: 1024px) 50vw,
+               33vw"
+        alt="{{ photo.alt }}"
+        loading="lazy"
+        decoding="async"
+        style="width: 100%; height: auto; border-radius: var(--border-radius, 0.5rem);"
+      />
+      <figcaption style="font-size: var(--size-step-0); color: var(--color-text-muted);">
+        <strong>{{ photo.title }}</strong>
+        {% if photo.location %}
+          <br><span style="font-size: var(--size-step--1);">{{ photo.location }}</span>
+        {% endif %}
+      </figcaption>
+    </figure>
+    {% endfor %}
+
+  </div>
+</div>
+
+<style>
+  /* Hover effects for images */
+  figure img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  figure img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Ensure figures fit well in masonry layout */
+  figure {
+    margin: 0;
+    break-inside: avoid;
+  }
+
+  /* Highlight current category */
+  [aria-current="page"] {
+    background: var(--color-primary, #007acc);
+    color: var(--color-light, #fff);
+  }
+</style>

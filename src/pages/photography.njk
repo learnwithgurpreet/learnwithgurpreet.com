@@ -1,0 +1,72 @@
+---
+title: Photography
+permalink: /photography/index.html
+description: 'Showcase of my photography work - capturing moments through my lens'
+layout: tags
+masonry: true
+---
+
+<div class="flow">
+  <p>Welcome to my photography portfolio. Here are some of my favorite shots from various locations and moments.</p>
+
+  {# Category Filter Links #}
+  <div class="taglist | mt-s-m cluster" role="navigation" aria-label="Photo category filter">
+    {% for category in photography.categories %}
+    <a href="/photography/{{ category | slugify }}/" class="button">
+      {{ category }}
+    </a>
+    {% endfor %}
+  </div>
+
+  <div class="grid" data-rows="masonry" style="--grid-min-item-size: clamp(16rem, 30vw, 20rem)">
+    
+    {# All Photography Gallery #}
+    {% for photo in photography.gallery %}
+    <figure class="flow photo-item" style="--flow-space: var(--space-xs)">
+      <img 
+        src="{{ photo.images.medium }}" 
+        srcset="{{ photo.images.small }} 640w,
+                {{ photo.images.medium }} 1024w,
+                {{ photo.images.large }} 1920w,
+                {{ photo.images.original }} 2400w"
+        sizes="(max-width: 640px) 100vw,
+               (max-width: 1024px) 50vw,
+               33vw"
+        alt="{{ photo.alt }}"
+        loading="lazy"
+        decoding="async"
+        style="width: 100%; height: auto; border-radius: var(--border-radius, 0.5rem);"
+      />
+      <figcaption style="font-size: var(--size-step-0); color: var(--color-text-muted);">
+        <strong>{{ photo.title }}</strong>
+        {% if photo.location %}
+          <br><span style="font-size: var(--size-step--1);">{{ photo.location }}</span>
+        {% endif %}
+        {% if photo.category %}
+          <br><a href="/photography/{{ photo.category | slugify }}/" style="font-size: var(--size-step--2); opacity: 0.7;">{{ photo.category }}</a>
+        {% endif %}
+      </figcaption>
+    </figure>
+    {% endfor %}
+
+  </div>
+</div>
+
+<style>
+  /* Hover effects for images */
+  figure img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  figure img:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Ensure figures fit well in masonry layout */
+  figure {
+    margin: 0;
+    break-inside: avoid;
+  }
+</style>
