@@ -1,14 +1,14 @@
 ---
 layout: tags
 pagination:
-  data: collections
+  data: collections.tagList
   size: 1
   alias: tag
+  addAllPagesToCollections: true
 permalink: /tags/{{ tag | slugify }}/
 eleventyComputed:
   title: '{{ meta.blog.tagSingle }}: {{ tag }}'
 ---
-
 
 <ul class="grid region" role="list" data-rows="masonry" data-layout="50-50">
 	<!-- loop posts -->

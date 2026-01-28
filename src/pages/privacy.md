@@ -10,10 +10,10 @@ layout: page
 I respect the EU General Data Protection Regulation (GDPR) and this policy document explains how I collect and handle any information you provide to me.
 
 **What background data is collected?**
-This site does not use any third party tracking scripts.
+I'm using Umami analytics to track page views and errors on the site.
 
 **How do I use the data you provide?**
-This website does not collect any data.
+It does not collect any personal data, and all stats are in aggregate only.
 
 **How secure is your data?**
 Very secure, as this website does not collect any information.

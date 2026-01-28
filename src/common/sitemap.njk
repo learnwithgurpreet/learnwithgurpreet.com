@@ -5,8 +5,10 @@ excludeFromSitemap: true
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for page in collections.onlyMarkdown %}
-  {% if page.url and page.data.excludeFromSitemap != true %}
+  {% for page in collections.all %}
+  {% set isAsset = page.url and (page.url.includes('/assets/') or page.url.endsWith('.css') or page.url.endsWith('.js') or page.url.endsWith('.json') or page.url.endsWith('.txt')) %}
+  {% set isFeed = page.url and (page.url.includes('/feed.xml') or page.url.includes('/sitemap.xml')) %}
+  {% if page.url and not isAsset and not isFeed and page.data.excludeFromSitemap != true and page.data.eleventyExcludeFromCollections != true %}
 
   {% if page.data.lastUpdated %}{% set lastmod = page.data.lastUpdated %}
   {% else %}{% set lastmod = page.date %}
