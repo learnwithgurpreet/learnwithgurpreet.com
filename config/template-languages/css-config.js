@@ -14,7 +14,8 @@ module.exports = eleventyConfig => {
   eleventyConfig.addExtension('css', {
     outputFileExtension: 'css',
     compile: async (content, path) => {
-      if (path !== './src/assets/css/global.css') {
+      // Only process light.css and dark.css
+      if (path !== './src/assets/css/light.css' && path !== './src/assets/css/dark.css') {
         return;
       }
 
@@ -23,7 +24,7 @@ module.exports = eleventyConfig => {
           postcssImportExtGlob,
           postcssImport,
           tailwindcss,
-          postcssRelativeColorSyntax({preserve: true}),
+          postcssRelativeColorSyntax({ preserve: true }),
           autoprefixer,
           cssnano
         ]).process(content, {

@@ -33,7 +33,8 @@
     <!--  inline blogpost schema  -->
     {% if schema == 'blog' %}{%- include "schemas/blogpost-schema.njk" -%}{% endif %}
 
-    <link rel="stylesheet" href="/assets/css/global.css?{{ assetHash }}" />
+    <link rel="stylesheet" href="/assets/css/light.css?{{ assetHash }}" />
+    <link rel="stylesheet" href="/assets/css/dark.css?{{ assetHash }}" media="(prefers-color-scheme: dark)" />
 
     <!-- preloads -->
     <link

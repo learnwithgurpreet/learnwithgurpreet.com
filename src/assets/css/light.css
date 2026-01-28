@@ -5,7 +5,7 @@
 
 @import 'tailwindcss/components';
 
-@import 'global/variables.css';
+@import 'global/variables-light.css';
 @import 'global/global-styles.css';
 
 @import-glob 'blocks/*.css';
