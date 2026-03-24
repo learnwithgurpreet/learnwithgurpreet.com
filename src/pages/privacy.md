@@ -16,7 +16,7 @@ I'm using Umami analytics to track page views and errors on the site.
 It does not collect any personal data, and all stats are in aggregate only.
 
 **How secure is your data?**
-Very secure, as this website does not collect any information.
+Very secure, as this website does not collect any personal information.
 
 **How secure is this website?**
 This website transmits itself using HTTPS, encrypting all data between the browser and the server. Your network provider can still see that you are downloading assets from this site, but not its content. This also protects you from third parties intercepting data, for example, while browsing on public WiFi, or from network providers injecting advertisements on this site. All relevant response HTTP headers are set for your protection and the Content Security Policy is adjusted to this websites requirements.
