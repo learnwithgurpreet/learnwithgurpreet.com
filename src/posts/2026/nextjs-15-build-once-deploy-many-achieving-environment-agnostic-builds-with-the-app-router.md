@@ -1,5 +1,5 @@
 ---
-title: "Next.js 15 Build Once, Deploy Many: Achieving Environment-Agnostic Builds with the App Router"
+title: "Next.js 15 build once, deploy many: Achieving environment-agnostic builds with the app router"
 # eleventyExcludeFromCollections: true
 date: '2026-01-15'
 description: Master Next.js 15 App Router deployments. Discover how to avoid NEXT_PUBLIC_ variables, implement runtime config, and purge SSG pages on Azure Web Apps for a faster, more reliable CI/CD pipeline

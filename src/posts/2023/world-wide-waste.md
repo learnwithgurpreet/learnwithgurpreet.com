@@ -1,5 +1,5 @@
 ---
-title: 'World Wide Waste'
+title: 'World wide waste'
 date: '2023-09-11'
 eleventyExcludeFromCollections: false
 description: Digital is Physical, it is quite important to understand whatever you download/upload on web is all impacting our planet earth

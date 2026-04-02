@@ -1,5 +1,5 @@
 ---
-title: 'Responsive vs. Adaptive Design'
+title: 'Responsive vs. adaptive design'
 date: '2020-09-06'
 description: One of the regular topics which usually comes in every discussion before starting a website is actually a bit confusing too.
 tags:

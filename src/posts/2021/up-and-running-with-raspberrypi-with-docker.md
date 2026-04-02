@@ -1,5 +1,5 @@
 ---
-title: 'Up and running with RaspberryPi with Docker'
+title: 'Up and running with raspberrypi with docker'
 date: '2021-05-19'
 description: How to configure RaspberryPi with docker and docker-compose.
 tags:

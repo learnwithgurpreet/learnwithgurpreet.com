@@ -1,5 +1,5 @@
 ---
-title: "Dusting Off the Lens: Why I’m Returning to Photography in 2026"
+title: "Dusting off the lens: Why I’m returning to photography in 2026"
 date: '2026-01-19'
 description: Reconnecting with photography hasn't just been about picking up a piece of gear. It’s been about relearning how to look at the world.
 tags:

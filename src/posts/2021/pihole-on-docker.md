@@ -1,5 +1,5 @@
 ---
-title: 'PiHole on Docker'
+title: 'PiHole on docker'
 date: '2021-05-21'
 description: My follow-up article to Up and running with RaspberryPi with Docker. Previously, I showed configuring docker and docker-compose on RaspberryPi.
 tags:

@@ -1,5 +1,5 @@
 ---
-title: 'The Rise of Digital Minimalism'
+title: 'The rise of digital minimalism'
 date: '2023-06-23'
 description: Digital minimalism offers a solution to combat information overload, reduce screen time, etc.
 tags:

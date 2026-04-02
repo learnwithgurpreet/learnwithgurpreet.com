@@ -1,5 +1,5 @@
 ---
-title: 'How I explained Web designing to my Grandmother'
+title: 'How I explained web designing to my grandmother'
 date: '2020-09-10'
 description: I would like to share a question that I often asked my grandmother
 tags:

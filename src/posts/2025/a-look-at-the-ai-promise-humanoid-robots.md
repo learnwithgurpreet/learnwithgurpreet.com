@@ -1,5 +1,5 @@
 ---
-title: A Look at the AI Promise Humanoid Robots
+title: A look at the AI promise humanoid robots
 date: '2025-10-30'
 image: './src/assets/images/blog/robot.jpg'
 credit: '1x.tech'

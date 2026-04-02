@@ -1,5 +1,5 @@
 ---
-title: How to Shrink Docker Images from Gigabytes to Megabytes
+title: How to shrink docker images from gigabytes to megabytes
 date: '2025-09-16'
 description: You might wonder why you should care about the size of your Docker images. Here are a few compelling reasons...
 tags:
