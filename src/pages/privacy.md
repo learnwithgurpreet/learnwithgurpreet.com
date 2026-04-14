@@ -10,7 +10,7 @@ layout: page
 I respect the EU General Data Protection Regulation (GDPR) and this policy document explains how I collect and handle any information you provide to me.
 
 **What background data is collected?**
-I'm using Umami analytics to track page views and errors on the site.
+I'm using [Umami](https://umami.is/) analytics to track page views and errors on the site.
 
 **How do I use the data you provide?**
 It does not collect any personal data, and all stats are in aggregate only.
