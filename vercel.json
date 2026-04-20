@@ -1,8 +1,9 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "/tag/:slug",
-      "destination": "/tags/:slug/",
+      "source": "/tag/:path*",
+      "destination": "/tags/:path*/",
       "permanent": true
     },
     {
