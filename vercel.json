@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/tag/:slug",
+      "destination": "/tags/:slug/",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/about/",
+      "permanent": true
+    },
+    {
+      "source": "/structure-your-frontend-project",
+      "destination": "/posts/top-5-ways-to-structure-a-frontend-project/",
+      "permanent": true
+    }
+  ]
+}
