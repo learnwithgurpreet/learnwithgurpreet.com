@@ -1,0 +1,36 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+excludeFromSitemap: true
+---
+# {{ meta.siteName }}{{ meta.siteName2 }}
+
+> {{ meta.siteDescription }}
+
+{{ meta.siteName }}{{ meta.siteName2 }} is a personal blog by {{ meta.author.name }}, covering web development, front-end architecture, JavaScript, React, Node.js, performance, and modern web technologies.
+
+## About
+
+- Author: {{ meta.author.name }}
+- Website: {{ meta.author.website }}
+- Location: Frankfurt, Germany
+- Role: Senior Architect eXperience Engineering at Publicis Sapient
+- Experience: 15+ years in web development
+
+## Sections
+
+- [About]({{ meta.url }}/about/): About Gurpreet Singh
+- [Blog Archive]({{ meta.url }}/posts/): All blog posts
+- [Tags]({{ meta.url }}/tags/): Browse posts by topic
+- [Photography]({{ meta.url }}/photography/): Photography gallery
+- [Uses]({{ meta.url }}/uses/): Tools and software used
+- [RSS Feed]({{ meta.url }}/feed/feed.xml): Atom feed for blog posts
+
+## Blog Posts
+{% for post in collections.posts %}
+- [{{ post.data.title }}]({{ meta.url }}{{ post.url }}): {{ post.data.description | truncate(150) }}
+{%- endfor %}
+
+## Optional
+
+- [Full content version]({{ meta.url }}/llms-full.txt)

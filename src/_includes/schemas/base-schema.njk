@@ -8,7 +8,28 @@
         "url": "{{ meta.url }}",
         "name": "{{ meta.siteName }}{{ meta.siteName2 }}",
         "description": "{{ meta.siteDescription }}",
-        "inLanguage": "{{ meta.locale }}"
+        "inLanguage": "{{ meta.locale }}",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{{ meta.url }}/tags/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "{{ meta.url }}#author",
+        "name": "{{ meta.author.name }}",
+        "url": "{{ meta.url }}",
+        "email": "{{ meta.author.email }}",
+        "sameAs": [
+          "{{ personal.platforms.github }}",
+          "{{ personal.platforms.mastodon }}"
+        ],
+        "jobTitle": "Senior Architect eXperience Engineering",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Publicis Sapient"
+        }
       }
     ]
   }
