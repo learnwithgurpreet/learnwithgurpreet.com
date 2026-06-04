@@ -1,7 +1,6 @@
 /* Dark theme variables */
 
 /* Dark theme specific variables based on system preference or manual override */
-:root,
 :root[data-theme='dark'] {
   --color-text: var(--color-base-light);
   --color-bg: var(--color-base-dark);
@@ -17,7 +16,6 @@
 
 /* Enhancements for browsers that support color-mix */
 @supports (background: color-mix(in srgb, red 50%, blue)) {
-  :root,
   :root[data-theme='dark'] {
     --color-text-accent: color-mix(
       in oklab,
@@ -47,7 +45,6 @@
 
 /* Enhancements for browsers that support relative color values */
 @supports (color: hsl(from red h s l)) {
-  :root,
   :root[data-theme='dark'] {
     --color-primary: hsl(from var(--color-primary-highlight) h calc(s / 1.2) l);
     --color-secondary: hsl(from var(--color-secondary-highlight) h calc(s / 1.2) l);
