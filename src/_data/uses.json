@@ -1,14 +1,19 @@
 {
   "Gears": [
     {
-      "title": "Apple MacBook Pro 2021 (14\")",
+      "title": "Apple MacBook Pro M1 (14\")",
       "details": "This is my personal coding computer. Processor M1 Pro Chip, 8-Core CPU, 16-Core GPU, 16 GB RAM, 512 GB SSD.",
       "more_info_link": "https://www.apple.com/mac/"
     },
     {
-      "title": "Samsung Galaxy S25 Ultra 256GB",
+      "title": "iPhone 17",
       "details": "You already know about it :)",
-      "more_info_link": "https://www.samsung.com/de/smartphones/galaxy-s25-ultra/buy/"
+      "more_info_link": "https://www.apple.com/iphone/"
+    },
+    {
+      "title": "Apple Watch SE 3",
+      "details": "You already know about it :)",
+      "more_info_link": "https://www.apple.com/watch/"
     },
     {
       "title": "Sony A6700 Camera",
