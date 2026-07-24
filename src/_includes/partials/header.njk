@@ -1,15 +1,7 @@
 <a href="#main" class="skip-link">{{ meta.skipContent }}</a>
-
-<header class="wrapper">
-  <div class="repel ontop">
-    <a
-      href="/"
-      class="logo | cluster"
-      {% if page.url == "/" %}aria-current="page"{% endif %}
-    >
-      {% include "svg/star.svg" %}
-      <span>{{ meta.siteName }}<span style="color: var(--color-primary)">{{ meta.siteName2 }}</span></span>
-    </a>
-    {% include "partials/main-nav.njk" %}
-  </div>
+<header>
+  <a class="title" href="/">
+    <h1>{{ meta.siteName }}{{ meta.siteName2 }}</h1>
+  </a>
+  {% include "partials/main-nav.njk" %}
 </header>

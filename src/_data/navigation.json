@@ -1,0 +1,38 @@
+{
+  "top": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "Posts",
+      "url": "/posts/"
+    },
+    {
+      "text": "Tags",
+      "url": "/tags/"
+    },
+    {
+      "text": "Uses",
+      "url": "/uses/"
+    },
+    {
+      "text": "About",
+      "url": "/about/"
+    }
+  ],
+  "bottom": [
+    {
+      "text": "Imprint",
+      "url": "/imprint/"
+    },
+    {
+      "text": "Privacy",
+      "url": "/privacy/"
+    },
+    {
+      "text": "RSS",
+      "url": "/feed/feed.xml"
+    }
+  ]
+}

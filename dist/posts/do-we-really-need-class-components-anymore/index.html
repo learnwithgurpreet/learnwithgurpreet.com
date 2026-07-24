@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      
+        Do we really need class components anymore?
+      
+    </title>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.learnwithgurpreet.com#website",
+        "url": "https://www.learnwithgurpreet.com",
+        "name": "LearnWithGurpreet",
+        "description": "I am working with Publicis Sapient as senior architect, experience engineering",
+        "inLanguage": "en_EN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.learnwithgurpreet.com/tags/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.learnwithgurpreet.com#author",
+        "name": "Gurpreet Singh",
+        "url": "https://www.learnwithgurpreet.com",
+        "email": "inbox@gurpreetsingh.me",
+        "sameAs": [
+          "",
+          ""
+        ],
+        "jobTitle": "Senior Architect eXperience Engineering",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Publicis Sapient"
+        }
+      }
+    ]
+  }
+</script>
+
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    },
+    "isPartOf": {
+      "@id": "https://www.learnwithgurpreet.com#website"
+    },
+    "@id": "",
+    "headline": "Do we really need class components anymore?",
+    "description": "ReactJS is a mature enough library that becomes the first choice for developers.",
+    "image": "https://www.learnwithgurpreet.com/assets/og-images/do-we-really-need-class-components-anymore-preview.jpeg",
+    "inLanguage": "en_EN",
+    "publisher": {
+      "@type": "Person",
+      "name": "Gurpreet Singh",
+      "url": "https://www.learnwithgurpreet.com"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Gurpreet Singh"
+    },
+    "datePublished": "2021-04-20T22:00:00.000Z"
+  }
+</script>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
+
+    <!-- everything else: meta tags, icons, open graph etc.  -->
+    <base href="/posts/do-we-really-need-class-components-anymore/" />
+<meta name="msvalidate.01" content="6795913B9B37C4605C83D85239DB46F5" />
+
+<meta
+  name="description"
+  content="
+  
+    ReactJS is a mature enough library that becomes the first choice for developers.
+  
+  "
+/>
+
+<meta name="theme-color" content="#f9f4ec" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#201f1f" media="(prefers-color-scheme: dark)" />
+<!-- Search Engines -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<!-- Made with Eleventy! -->
+<meta name="generator" content="Eleventy v3.1.6" />
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no" />
+<!-- supports both dark and light color schemes, page author prefers light as default. -->
+<meta name="color-scheme" content="light dark" />
+<!-- activates page transitions -->
+<meta name="view-transition" content="same-origin" />
+
+<!-- Helps prevent duplicate content issues -->
+<link rel="canonical" href="https://www.learnwithgurpreet.com/posts/do-we-really-need-class-components-anymore/" />
+
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="humans.txt" />
+
+<!-- LLMs.txt for AI discoverability -->
+<link rel="alternate" type="text/plain" href="https://www.learnwithgurpreet.com/llms.txt" title="LLM-friendly site summary" />
+
+
+
+<!-- Open Graph meta  -->
+<meta property="og:url" content="https://www.learnwithgurpreet.com/posts/do-we-really-need-class-components-anymore/" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="Do we really need class components anymore?"
+/>
+
+<meta
+  property="og:image"
+  content="https://www.learnwithgurpreet.com/assets/og-images/do-we-really-need-class-components-anymore-preview.jpeg"
+/>
+<meta
+  property="og:image:alt"
+  content="Do we really need class components anymore?"
+/>
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:description"
+  content="ReactJS is a mature enough library that becomes the first choice for developers."
+/>
+<meta property="og:site_name" content="LearnWithGurpreet" />
+<meta property="og:locale" content="en_EN" />
+<meta property="article:author" content="Gurpreet Singh" />
+
+<!-- Twitter specific head data was removed in v2 -->
+
+<!-- RSS Autodiscovery. Loops over meta.blog.feedLinks -->
+
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom Feed: LearnWithGurpreet"
+    href="/feed/feed.xml"
+  />
+
+
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+      :root {
+        --width: 720px;
+        --font-main: Verdana, sans-serif;
+        --font-secondary: Verdana, sans-serif;
+        --font-scale: 1em;
+        --background-color: #fff;
+        --heading-color: #222;
+        --text-color: #444;
+        --link-color: #3273dc;
+        --visited-color:  #8b6fcb;
+        --code-background-color: #f2f2f2;
+        --code-color: #222;
+        --blockquote-color: #222;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #01242e;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #000;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+        }
+      }
+      body {
+        font-family: var(--font-secondary);
+        font-size: var(--font-scale);
+        margin: auto;
+        padding: 20px;
+        max-width: var(--width);
+        text-align: left;
+        background-color: var(--background-color);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        color: var(--text-color);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-main);
+        color: var(--heading-color);
+      }
+      a {
+        color: var(--link-color);
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline; 
+      }
+      nav a {
+        margin-right: 8px;
+      }
+      strong, b {
+        color: var(--heading-color);
+      }
+      button {
+        margin: 0;
+        cursor: pointer;
+      }
+      time {
+        font-family: monospace;
+        font-style: normal;
+        font-size: 15px;
+      }
+      main {
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+      }
+      hr {
+        border: 0;
+        border-top: 1px dashed;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      code {
+        font-family: monospace;
+        padding: 2px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+      }
+      blockquote {
+        border-left: 1px solid #999;
+        color: var(--code-color);
+        padding-left: 20px;
+        font-style: italic;
+      }
+      footer {
+        padding: 25px 0;
+        text-align: center;
+      }
+      .title:hover {
+        text-decoration: none;
+      }
+      .title h1 {
+        font-size: 1.5em;
+      }
+      .title h1:before {
+        content: "ᕕ( ᐛ )ᕗ";
+      }
+      .inline {
+        width: auto !important;
+      }
+      .block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center {
+        text-align: center;
+      }
+      .highlight, .code {
+        padding: 1px 15px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        overflow-x: auto;
+      }
+      .note {
+        border: 1px dashed;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        border-radius: 10px 10px 10px 0;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      /* blog post list */
+      ul.blog-posts, .uses-list {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul.blog-posts li {
+        display: flex;
+      }
+      ul.blog-posts li span {
+        flex: 0 0 180px;
+      }
+      ul.blog-posts li a:visited, a[aria-current="page"] {
+        color: var(--visited-color);
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .pagination ol {
+        list-style-type: none;
+        padding: unset;
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+<header>
+  <a class="title" href="/">
+    <h1>LearnWithGurpreet</h1>
+  </a>
+  <nav>
+  <p>
+  
+    <a href="/">Home</a>
+  
+    <a href="/posts/">Posts</a>
+  
+    <a href="/tags/">Tags</a>
+  
+    <a href="/uses/">Uses</a>
+  
+    <a href="/about/">About</a>
+  
+  </p>
+</nav>
+</header>
+    <main id="main"><h1 class="text-primary">Do we really need class components anymore?</h1>
+ <p><time datetime="2021-04-20T22:00:00.000Z">April 21, 2021</time></p>
+
+
+
+
+
+
+  <small>
+    <div class="tags">
+      
+      <a href="/tags/thoughts">#Thoughts</a>
+      
+    </div>
+  </small>
+
+
+<p>ReactJS is a mature enough library that becomes the first choice for developers. When ReactJS got launched it had a strong concept of <em>class components</em>. The reason they were popular was because of their life cycle methods. With the ease of these life cycle methods, you can trigger your custom event at the right time.</p>
+<p>Before it was clear when you need a stateful component goes with a <em>class component</em> otherwise <em>functional component</em>.</p>
+<p>In this post, I call it modern React as it changed a lot over the period of time. Don’t go with the assumption of stateful vs. functional components. Functional components can also be stateful components.</p>
+<p>Do you want to know why?</p>
+<h2>Rendering JSX</h2>
+<pre><code class="language-js">import React from 'react';
+
+const FunctionalComponent = () =&gt; {
+  return &lt;h1&gt;Hello, world!&lt;/h1&gt;;
+};
+</code></pre>
+<pre><code class="language-js">import React, {Component} from 'react';
+class ClassComponent extends Component {
+  render() {
+    return &lt;h1&gt;Hello, world!&lt;/h1&gt;;
+  }
+}
+</code></pre>
+<p>You can see in the above example, we are trying to render a single string which is not a challenge in <code>FunctionalComponent</code>. But <code>ClassComponent</code> makes it more complex.</p>
+<h2>Handling state</h2>
+<p>When it comes to handling states in ReactJS, it is debatable which type of component to go with. For example, I am working on a legacy project with React 15.x.x then I would definitely go with the class component. Because it gives me ReactJS life cycle methods which help to handle component state.</p>
+<p>We can handle the state with <strong>React hooks</strong> since <strong>React 16.8</strong> within functional components.</p>
+<pre><code class="language-js">/* State handling with class component */
+
+import React, {Component} from 'react';
+
+class ClassComponent extends Component {
+  constructor(props) {
+    super(props);
+    // Initial state
+    this.state = {
+      count: 0
+    };
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;p&gt;count: {this.state.count} times&lt;/p&gt;
+        &lt;button onClick={() =&gt; this.setState({count: this.state.count + 1})}&gt;
+          Click
+        &lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre>
+<pre><code class="language-js">/* State handling with the functional component, using react hooks */
+
+import React, {useState} from 'react';
+
+const FunctionalComponent = () =&gt; {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;count: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;Click&lt;/button&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre>
+<p><strong>That was easy, right?</strong></p>
+<p>We can do much more with React hooks. See below:</p>
+<h2>Lifecycle Methods</h2>
+<p>Let’s talk about React lifecycle methods now. These methods are the backbone of ReactJS. I still can recall when someone asked me about these methods in one of the interviews. These methods were only part of React.Component before but now are available with Hooks.</p>
+<h3>On Mount (componentDidMount)</h3>
+<pre><code class="language-js">/* Class component */
+
+import React, {Component} from 'react';
+
+class ClassComponent extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: ''
+    };
+  }
+  componentDidMount() {
+    fetch('some-api.com/user')
+      .then(response =&gt; response.json())
+      .then(data =&gt; this.setState({name: data}));
+  }
+
+  render() {
+    return &lt;h1&gt;{`Hello, my name is ${this.state.name}`}&lt;/h1&gt;;
+  }
+}
+</code></pre>
+<pre><code class="language-js">/* Functional component, using react hooks */
+
+import React, {useState, useEffect} from 'react';
+
+const FunctionalComponent = () =&gt; {
+  const [name, setName] = useState('');
+  useEffect(() =&gt; {
+    fetch('some-api.com/user')
+      .then(response =&gt; response.json())
+      .then(data =&gt; setName(data));
+  }, []);
+
+  return &lt;h1&gt;{`Hello, my name is ${name}`}&lt;/h1&gt;;
+};
+</code></pre>
+<p>See, how easy it is to call an API within a functional component using <a href="https://reactjs.org/docs/hooks-reference.html#useeffect">useEffect</a>.</p>
+<p>Note: The second parameter of the <code>useEffect</code> hook is basically listening to an array of items on which you want to re-run your hook.</p>
+<h3>On Unmounting (componentWillUnmount)</h3>
+<p>In some instances, where you need to clear your timers and de-allocate memory on the unmount.</p>
+<pre><code class="language-js">/* Class component */
+
+import React, {Component} from 'react';
+
+class ClassComponent extends Component {
+  componentDidMount() {
+    const element = document.getElementById('someId');
+    element.removeEventListener('click', this.onLinkClick);
+    element.addEventListener('click', this.onLinkClick);
+  }
+
+  componentWillUnmount() {
+    const element = document.getElementById('someId');
+    element.removeEventListener('click', this.onLinkClick);
+  }
+
+  onLinkClick = () =&gt; {
+    /* Something in this function */
+  };
+
+  render() {
+    return &lt;button id=&quot;someId&quot;&gt;I am button&lt;/button&gt;;
+  }
+}
+</code></pre>
+<pre><code class="language-js">/* Functional component, using react hooks */
+
+import React, {useEffect} from 'react';
+
+const FunctionalComponent = () =&gt; {
+  function onLinkClick() {
+    /* Something in this function */
+  }
+
+  useEffect(() =&gt; {
+    element.removeEventListener('click', onLinkClick);
+    element.addEventListener('click', onLinkClick);
+    return () =&gt; {
+      element.removeEventListener('click', onLinkClick);
+    };
+  }, []);
+
+  return &lt;button id=&quot;someId&quot;&gt;I am button&lt;/button&gt;;
+};
+</code></pre>
+<h2>Conclusion</h2>
+<p>There are some areas where you might need class components. However, I prefer to go with functional.</p>
+<p>In the example above you have seen, we can gain everything by using the functional components. In case your current project is running on class components, don’t worry there is no harm to that. Perhaps, I would recommend using functional components over class.</p>
+<p>Nevertheless, the ReactJS community is still supporting class components and there is no hard rule to avoid them.</p>
+<h2>Useful links</h2>
+<ul>
+<li><a href="https://reactjs.org/docs/hooks-overview.html">Hooks at a Glance</a></li>
+<li><a href="https://reactjs.org/docs/hooks-intro.html">Introduction to Hooks</a></li>
+<li><a href="https://reactjs.org/docs/hooks-reference.html">Hooks API Reference</a></li>
+<li><a href="https://reactjs.org/docs/hooks-custom.html">Building Your Own Hooks</a></li>
+</ul>
+
+
+  <p>
+    <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a coffee</a>
+  </p>
+
+
+
+  <hr />
+  <p>
+    <a
+      href="https://github.com/learnwithgurpreet/learnwithgurpreet.com/tree/main/./src/posts/2021/do-we-really-need-class-components-anymore.md"
+      >View this page on GitHub</a
+    >
+  </p>
+
+
+</main>
+    <footer>
+  <p>
+  
+    <small><a href="/imprint/">Imprint</a></small>
+  
+    <small><a href="/privacy/">Privacy</a></small>
+  
+    <small><a href="/feed/feed.xml">RSS</a></small>
+  
+  </p>
+  <p><small>Copyright &copy; 2026 Learn WithGurpreet. All rights reserved.</small></p>
+</footer>
+  </body>
+</html>

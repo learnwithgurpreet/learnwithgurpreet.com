@@ -1,0 +1,29 @@
+---
+layout: page
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+  addAllPagesToCollections: true
+permalink: /tags/{{ tag | slugify }}/
+eleventyComputed:
+  title: '{{ meta.blog.tagSingle }}: {{ tag }}'
+---
+<ul class="blog-posts">
+  {% set itemList = collections[tag] | reverse %}
+  {% for item in itemList %}
+    {% include 'components/card.njk' %}
+  {% endfor %}
+</ul>
+
+<hr />
+
+<h2>{{ meta.blog.tagMore }}</h2>
+
+<small>
+  <div class="tags">
+  {% for tag in collections.tagList %}
+    <a href="/tags/{{ tag | slugify }}" class="button">#{{ tag }}</a>
+  {% endfor %}
+  </div>
+</small>

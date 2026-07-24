@@ -11,7 +11,7 @@
     "@id": "{{ url }}",
     "headline": "{{ title or meta.siteName + meta.siteName2 }}",
     "description": "{{ discover.description or description or meta.siteDescription }}",
-    "image": "{{ meta.url }}{% if discover.image %}/assets/images/{{ discover.image }}{% else %}{{ meta.opengraph_default }}{% endif %}",
+    "image": "{{ meta.url }}{% if discover.image %}/assets/images/{{ discover.image }}{% else %}/assets/og-images/{{ title | slugify }}-preview.jpeg{% endif %}",
     "inLanguage": "{{ meta.locale }}",
     "publisher": {
       "@type": "{{ meta.siteType }}",

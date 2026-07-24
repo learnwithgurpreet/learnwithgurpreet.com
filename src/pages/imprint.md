@@ -7,5 +7,10 @@ description: Imprint infos
 layout: page
 ---
 
-{{ personal.address }}
-Email: {{ personal.email }}
+{{ meta.creator.name }}
+
+{{ meta.creator.address }}
+
+Tel: {{ meta.creator.telephone }}
+
+Email: [{{ meta.creator.email }}](mailto:{{ meta.creator.email }})

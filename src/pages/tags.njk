@@ -1,0 +1,23 @@
+---
+layout: page
+permalink: /tags/index.html
+eleventyComputed:
+  title: '{{ meta.blog.tagPlural }}'
+---
+
+<small>
+  <div class="tags">
+  {% for tag in collections.tagList %}
+  <a href="/tags/{{ tag | slugify }}" class="button">#{{ tag }}</a>
+  {% endfor %}
+  </div>
+</small>
+
+<hr />
+
+<ul class="blog-posts">
+  {% set itemList = collections.posts %}
+  {% for item in itemList %}
+    {% include 'components/card.njk' %}
+  {% endfor %}
+</ul>

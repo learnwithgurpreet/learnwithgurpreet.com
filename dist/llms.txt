@@ -1,0 +1,75 @@
+# LearnWithGurpreet
+
+> I am working with Publicis Sapient as senior architect, experience engineering
+
+LearnWithGurpreet is a personal blog by Gurpreet Singh, covering web development, front-end architecture, JavaScript, React, Node.js, performance, and modern web technologies.
+
+## About
+
+- Author: Gurpreet Singh
+- Website: https://www.learnwithgurpreet.com
+- Location: Frankfurt, Germany
+- Role: Senior Architect eXperience Engineering at Publicis Sapient
+- Experience: 15+ years in web development
+
+## Sections
+
+- [About](https://www.learnwithgurpreet.com/about/): About Gurpreet Singh
+- [Blog Archive](https://www.learnwithgurpreet.com/posts/): All blog posts
+- [Tags](https://www.learnwithgurpreet.com/tags/): Browse posts by topic
+- [Uses](https://www.learnwithgurpreet.com/uses/): Tools and software used
+- [RSS Feed](https://www.learnwithgurpreet.com/feed/feed.xml): Atom feed for blog posts
+
+## Blog Posts
+
+- [Advanced prompting techniques](https://www.learnwithgurpreet.com/posts/advanced-prompting-techniques/): Below guide will help you to identify different prompt types with examples.
+- [Dusting off the lens: Why I’m returning to photography in 2026](https://www.learnwithgurpreet.com/posts/dusting-off-the-lens-why-im-returning-to-photography-in-2026/): Reconnecting with photography hasn&#39;t just been about picking up a piece of gear. It’s been about relearning how to look at the world.
+- [Next.js 15 build once, deploy many: Achieving environment-agnostic builds with the app router](https://www.learnwithgurpreet.com/posts/nextjs-15-build-once-deploy-many-achieving-environment-agnostic-builds-with-the-app-router/): Master Next.js 15 App Router deployments. Discover how to avoid NEXT_PUBLIC_ variables, implement runtime config, and purge SSG pages on Azure Web...
+- [Automating Next.js 15 deployments: A build once, deploy many github actions guide](https://www.learnwithgurpreet.com/posts/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide/): Learn how to build a high-performance CI/CD pipeline for Next.js 15 using GitHub Actions. Move a single agnostic artifact through DEV, SIT, and PROD...
+- [Your simple guide to google&#39;s AI tools in 2026: practical uses for everyday life](https://www.learnwithgurpreet.com/posts/your-simple-guide-to-googles-ai-tools-in-2026-practical-uses-for-everyday-life/): It is early 2026, and Google has fundamentally shifted from offering simple &quot;chatbots&quot; to providing &quot;AI Agents&quot;—tools that don&#39;t just talk but...
+- [A look at the AI promise humanoid robots](https://www.learnwithgurpreet.com/posts/a-look-at-the-ai-promise-humanoid-robots/): Are humanoid robots ready to be our personal assistants? We explore the large gap between the promised dream and today&#39;s reality.
+- [The hard truth about running Next.js at scale](https://www.learnwithgurpreet.com/posts/the-hard-truth-about-running-nextjs-at-scale/): Next.js has quickly become one of the most dominant frameworks for frontend fullstack development. It&#39;s great for shipping MVPs fast, but here&#39;s the...
+- [How to shrink docker images from gigabytes to megabytes](https://www.learnwithgurpreet.com/posts/how-to-shrink-docker-images-from-gigabytes-to-megabytes/): You might wonder why you should care about the size of your Docker images. Here are a few compelling reasons...
+- [FFmpeg: The one-liner to rule all media files](https://www.learnwithgurpreet.com/posts/ffmpeg-the-one-liner-to-rule-all-media-files/): FFmpeg is a powerful command-line tool to handle all your media needs. Use it to quickly convert formats, create GIFs, resize images, trim videos, and...
+- [Why companies are moving away from NextJS?](https://www.learnwithgurpreet.com/posts/why-companies-are-moving-away-from-nextjs/): Companies are shifting away from Next.js because of concerns about increased complexity, vendor lock-in, performance limitations at scale, and the...
+- [Mono repo vs. micro front-ends with Next.js](https://www.learnwithgurpreet.com/posts/mono-repo-vs-micro-front-ends-with-nextjs/): In the world of web development, the architecture of your project can significantly influence its scalability, maintainability, and performance.
+- [Styling options in NextJS 13+ (server side and client side)](https://www.learnwithgurpreet.com/posts/styling-options-in-nextjs-13-server-side-and-client-side/): Styling choices in Next.js can be confusing. Some prefer CSS modules, while others opt for the popular Tailwind CSS.
+- [State handling in React JS](https://www.learnwithgurpreet.com/posts/state-handling-in-react-js/): React&#39;s component-based architecture enables developers to create reusable, composable UI elements.
+- [Nextcloud on synology docker 2024](https://www.learnwithgurpreet.com/posts/nextcloud-on-synology-docker-2024/): NextCloud is a widely used hosting solution that offers an integrated office suite, allowing users to utilize the platform in a manner similar to...
+- [Eleventy resume builder](https://www.learnwithgurpreet.com/posts/eleventy-resume-builder/): Despite searching the internet, I couldn&#39;t find a quick starter for my online resume project, not even on the official 11ty start page. Consequently,...
+- [Starting my journey to veganism in 2024](https://www.learnwithgurpreet.com/posts/starting-my-journey-to-veganism-in-2024/): Embark on a journey of self-discovery and sustainability in 2024 as I share my resolution to go vegan. Explore the benefits of a plant-powered...
+- [World wide waste](https://www.learnwithgurpreet.com/posts/world-wide-waste/): Digital is Physical, it is quite important to understand whatever you download/upload on web is all impacting our planet earth
+- [The rise of digital minimalism](https://www.learnwithgurpreet.com/posts/the-rise-of-digital-minimalism/): Digital minimalism offers a solution to combat information overload, reduce screen time, etc.
+- [Dockerizing a react app in simple steps](https://www.learnwithgurpreet.com/posts/dockerizing-a-react-app-in-simple-steps/): Docker allows you to package your React app along with its dependencies and configuration into a container
+- [How to setup mac terminal](https://www.learnwithgurpreet.com/posts/how-to-setup-mac-terminal/): People often ask me how I setup my Mac terminal, here is the guide.
+- [Track web traffic anonymously](https://www.learnwithgurpreet.com/posts/track-web-traffic-anonymously/): Implementing analytics on any web platform is not a difficult job but keeping it privacy-focused is
+- [7 ways to make your website more accessible and sustainable](https://www.learnwithgurpreet.com/posts/7-ways-to-make-your-website-more-accessible-and-sustainable/): We often talk about sustainability and try to decrease our CO₂
+- [How to secure a raspberry pi on your network](https://www.learnwithgurpreet.com/posts/how-to-secure-a-raspberry-pi-on-your-network/): If you are planning to expose your RaspberryPi over the internet, you should consider these security guidelines.
+- [Top 5 ways to structure a frontend project](https://www.learnwithgurpreet.com/posts/top-5-ways-to-structure-a-frontend-project/): Open-source projects you get very little chance to structure the project, but you still can set guidelines upfront
+- [Day 6 (last) - Your first week in NodeJS](https://www.learnwithgurpreet.com/posts/day-6-last-your-first-week-in-nodejs/): During the course of this series, we have already developed a Node.js application that can be deployed on the cloud.
+- [Day 5 - Your first week in NodeJS](https://www.learnwithgurpreet.com/posts/day-5-your-first-week-in-nodejs/): I explained how to implement a template engine to get dynamic variables into your HTML file.
+- [Day 4 - Your first week in NodeJS](https://www.learnwithgurpreet.com/posts/day-4-your-first-week-in-nodejs/): I believe by now you are already comfortable with core modules of Node.js and have created your own RESTFul API service.
+- [Day 3 - Your first week in NodeJS](https://www.learnwithgurpreet.com/posts/day-3-your-first-week-in-nodejs/): I believe you have already read my previous article where I explained, how to spin up a Node.js server instance
+- [Day 2 - Your first week in NodeJS](https://www.learnwithgurpreet.com/posts/day-2-your-first-week-in-nodejs/): I believe you have already read my previous article where I explained, the basics of Node.js
+- [Day 1 - Your first week in NodeJS](https://www.learnwithgurpreet.com/posts/day-1-your-first-week-in-nodejs/): I believe you know something about Node.js before starting this course, just to refresh your memory.
+- [How to write short javascript code?](https://www.learnwithgurpreet.com/posts/how-to-write-short-javascript-code/): I know some of you have never used short syntax JavaScript statements for example if/else vs. ternary statement.
+- [I don&#39;t know javascript but ReactJS](https://www.learnwithgurpreet.com/posts/i-dont-know-javascript-but-reactjs/): Isn’t it weird to witness such a scenario where someone can code the ReactJS component but can&#39;t write Vanilla JavaScript?
+- [CORS in NextJS](https://www.learnwithgurpreet.com/posts/cors-in-nextjs/): Setting up CORS is always a challenge for people who are not really from server-side application backgrounds.
+- [GitHub copilot - future of programming?](https://www.learnwithgurpreet.com/posts/github-copilot-future-of-programming/): There were a couple of questions that came to my mind when I saw this first.
+- [PiHole on docker](https://www.learnwithgurpreet.com/posts/pihole-on-docker/): My follow-up article to Up and running with RaspberryPi with Docker. Previously, I showed configuring docker and docker-compose on RaspberryPi.
+- [Up and running with raspberrypi with docker](https://www.learnwithgurpreet.com/posts/up-and-running-with-raspberrypi-with-docker/): How to configure RaspberryPi with docker and docker-compose.
+- [My react stack for 2021](https://www.learnwithgurpreet.com/posts/my-react-stack-for-2021/): I will showcase what options are available in the market to start on a ReactJS based application.
+- [Do we really need class components anymore?](https://www.learnwithgurpreet.com/posts/do-we-really-need-class-components-anymore/): ReactJS is a mature enough library that becomes the first choice for developers.
+- [Aria is not my thing](https://www.learnwithgurpreet.com/posts/aria-is-not-my-thing/): I am reading a lot about accessibility guidelines and met/working with some people who are responsible to deliver accessible experiences
+- [Node.js login service (express.js + passport)](https://www.learnwithgurpreet.com/posts/nodejs-login-service-expressjs-passport/): I often see developers struggle or invest too much time to create authorization modules in their Node.js applications.
+- [Express.js + EJS complete solution](https://www.learnwithgurpreet.com/posts/expressjs-ejs-complete-solution/): People who have less time to invest and are familiar with the Handlebar template engine can quickly set up their website.
+- [My first strapi project experience](https://www.learnwithgurpreet.com/posts/my-first-strapi-project-experience/): I found Strapi as a good example since it is not only popular these days but comes with nearly zero bootstrap footprints.
+- [Host your strapi project](https://www.learnwithgurpreet.com/posts/host-your-strapi-project/): In this article, I will walk you through the Strapi CMS setup on your local machine followed by deploying it to Heroku.
+- [Can we use google services without compromising privacy?](https://www.learnwithgurpreet.com/posts/can-we-use-google-services-without-compromising-privacy/): Over the period of time, people are aware of what internet privacy is and why it is important.
+- [Are you logging your NodeJS code?](https://www.learnwithgurpreet.com/posts/are-you-logging-your-nodejs-code/): Logs are an essential part of an application, it provides you deep level access
+- [How I explained web designing to my grandmother](https://www.learnwithgurpreet.com/posts/how-i-explained-web-designing-to-my-grandmother/): I would like to share a question that I often asked my grandmother
+- [Responsive vs. adaptive design](https://www.learnwithgurpreet.com/posts/responsive-vs-adaptive-design/): One of the regular topics which usually comes in every discussion before starting a website is actually a bit confusing too.
+
+## Optional
+
+- [Full content version](https://www.learnwithgurpreet.com/llms-full.txt)
