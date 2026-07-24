@@ -4,7 +4,9 @@ schema: blog
 ---
 <h1 class="text-primary">{{ title }}</h1>
 {% set definedDate = date %} <p>{% include "components/date.njk" %}</p>
-
+{% if note %}
+<div class="note">{{ note | safe }}</div>
+{% endif %}
 {% if image %}
   {% eleventyImage image, alt or title, null, "eager", "feature" %}
 {% endif %}
