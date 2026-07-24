@@ -15,7 +15,6 @@
     {% include "schemas/base-schema.njk" %}
 
     {% if schema == 'blog' %}{%- include "schemas/blogpost-schema.njk" -%}{% endif %}
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
 
     <!-- everything else: meta tags, icons, open graph etc.  -->
     {% include "partials/meta-info.njk" %}
@@ -25,7 +24,7 @@
         --font-main: Verdana, sans-serif;
         --font-secondary: Verdana, sans-serif;
         --font-scale: 1em;
-        --background-color: #fff;
+        --background-color: {{ meta.themeColorLight }};
         --heading-color: #222;
         --text-color: #444;
         --link-color: #3273dc;
@@ -36,7 +35,7 @@
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --background-color: #01242e;
+          --background-color: {{ meta.themeColorDark }};
           --heading-color: #eee;
           --text-color: #ddd;
           --link-color: #8cc2dd;
@@ -185,5 +184,6 @@
     {% include "partials/header.njk" %}
     <main id="main">{{ content | safe }}</main>
     {% include "partials/footer.njk" %}
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
   </body>
 </html>

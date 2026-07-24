@@ -23,9 +23,8 @@
     "address": "Frankfurt, Germany",
     "telephone": "+49 152 18055291"
   },
-  "themeColorLight": "#f9f4ec",
-  "themeColorDark": "#201f1f",
-  "themeBgColor": "#FBFBFB",
+  "themeColorLight": "#fff",
+  "themeColorDark": "#01242e",
   "opengraph_default": "/assets/images/template/opengraph-default.jpg",
   "opengraph_default_alt": "Building a greener web: where code meets sustainability to shape a better digital future. 🌍🌱",
   "blog": {
