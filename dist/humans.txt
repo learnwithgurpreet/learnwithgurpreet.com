@@ -1,0 +1,9 @@
+/* TEAM */
+Developer: Gurpreet Singh
+Contact: inbox@gurpreetsingh.me
+Site: https://www.learnwithgurpreet.com
+
+Find me on: https://fosstodon.org/@GurpreetSingh
+
+/* SITE */
+Doctype: HTML5

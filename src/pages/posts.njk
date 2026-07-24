@@ -1,0 +1,21 @@
+---
+title: Posts
+description: 'All blog posts can be found here'
+layout: page
+pagination:
+  data: collections.posts
+  size: 10
+permalink: 'posts/{% if pagination.pageNumber >=1  %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
+---
+<p>This blog has a pagination of {{ pagination.size }} posts per page.</p>
+<ul class="blog-posts">
+  {% set itemList = pagination.items %}
+  {% for item in itemList %}
+    {% include 'components/card.njk' %}
+  {% endfor %}
+</ul>
+{% set collectionToPaginate = collections.posts %}
+{% set metaKey = "blog" %}
+{% if collectionToPaginate.length > pagination.size %}
+  {% include 'components/pagination.njk' %}
+{% endif %}

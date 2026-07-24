@@ -9,26 +9,36 @@ layout: page
 
 I respect the EU General Data Protection Regulation (GDPR) and this policy document explains how I collect and handle any information you provide to me.
 
-**What background data is collected?**
+## What background data is collected?
+
 I'm using [Umami](https://umami.is/) analytics to track page views and errors on the site.
 
-**How do I use the data you provide?**
+## How do I use the data you provide?
+
 It does not collect any personal data, and all stats are in aggregate only.
 
-**How secure is your data?**
+## How secure is your data?
+
 Very secure, as this website does not collect any personal information.
 
-**How secure is this website?**
+## How secure is this website?
+
 This website transmits itself using HTTPS, encrypting all data between the browser and the server. Your network provider can still see that you are downloading assets from this site, but not its content. This also protects you from third parties intercepting data, for example, while browsing on public WiFi, or from network providers injecting advertisements on this site. All relevant response HTTP headers are set for your protection and the Content Security Policy is adjusted to this websites requirements.
 
-**Data controller**
+## Data controller
 
-{{ personal.address }}
+{{ meta.creator.name }}
 
-If you have any questions or doubts, please contact me: <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>.
+{{ meta.creator.address }}
 
-**Changes to the policy**
+Tel: {{ meta.creator.telephone }}
+
+If you have any questions or doubts, please contact me: [{{ meta.creator.email }}](mailto:{{ meta.creator.email }}).
+
+## Changes to the policy
+
 If I change the content of this policy, those changes will be effective at the time I post them here.
 
-**Complaints**
-If you have any reason to complain about the way I handle your privacy, please contact me by email: <a href="mailto:{{ personal.email }}">{{ personal.email }}</a>.
+## Complaints
+
+If you have any reason to complain about the way I handle your privacy, please contact me by email: [{{ meta.creator.email }}](mailto:{{ meta.creator.email }}).

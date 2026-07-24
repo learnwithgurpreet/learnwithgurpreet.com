@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      
+        Automating Next.js 15 deployments: A build once, deploy many github actions guide
+      
+    </title>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.learnwithgurpreet.com#website",
+        "url": "https://www.learnwithgurpreet.com",
+        "name": "LearnWithGurpreet",
+        "description": "I am working with Publicis Sapient as senior architect, experience engineering",
+        "inLanguage": "en_EN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.learnwithgurpreet.com/tags/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.learnwithgurpreet.com#author",
+        "name": "Gurpreet Singh",
+        "url": "https://www.learnwithgurpreet.com",
+        "email": "inbox@gurpreetsingh.me",
+        "sameAs": [
+          "",
+          ""
+        ],
+        "jobTitle": "Senior Architect eXperience Engineering",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Publicis Sapient"
+        }
+      }
+    ]
+  }
+</script>
+
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    },
+    "isPartOf": {
+      "@id": "https://www.learnwithgurpreet.com#website"
+    },
+    "@id": "",
+    "headline": "Automating Next.js 15 deployments: A build once, deploy many github actions guide",
+    "description": "Learn how to build a high-performance CI/CD pipeline for Next.js 15 using GitHub Actions. Move a single agnostic artifact through DEV, SIT, and PROD without rebuilding",
+    "image": "https://www.learnwithgurpreet.com/assets/og-images/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide-preview.jpeg",
+    "inLanguage": "en_EN",
+    "publisher": {
+      "@type": "Person",
+      "name": "Gurpreet Singh",
+      "url": "https://www.learnwithgurpreet.com"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Gurpreet Singh"
+    },
+    "datePublished": "2026-01-14T23:00:00.000Z"
+  }
+</script>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
+
+    <!-- everything else: meta tags, icons, open graph etc.  -->
+    <base href="/posts/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide/" />
+<meta name="msvalidate.01" content="6795913B9B37C4605C83D85239DB46F5" />
+
+<meta
+  name="description"
+  content="
+  
+    Learn how to build a high-performance CI/CD pipeline for Next.js 15 using GitHub Actions. Move a single agnostic artifact through DEV, SIT, and PROD without rebuilding
+  
+  "
+/>
+
+<meta name="theme-color" content="#f9f4ec" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#201f1f" media="(prefers-color-scheme: dark)" />
+<!-- Search Engines -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<!-- Made with Eleventy! -->
+<meta name="generator" content="Eleventy v3.1.6" />
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no" />
+<!-- supports both dark and light color schemes, page author prefers light as default. -->
+<meta name="color-scheme" content="light dark" />
+<!-- activates page transitions -->
+<meta name="view-transition" content="same-origin" />
+
+<!-- Helps prevent duplicate content issues -->
+<link rel="canonical" href="https://www.learnwithgurpreet.com/posts/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide/" />
+
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="humans.txt" />
+
+<!-- LLMs.txt for AI discoverability -->
+<link rel="alternate" type="text/plain" href="https://www.learnwithgurpreet.com/llms.txt" title="LLM-friendly site summary" />
+
+
+
+<!-- Open Graph meta  -->
+<meta property="og:url" content="https://www.learnwithgurpreet.com/posts/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide/" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="Automating Next.js 15 deployments: A build once, deploy many github actions guide"
+/>
+
+<meta
+  property="og:image"
+  content="https://www.learnwithgurpreet.com/assets/og-images/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide-preview.jpeg"
+/>
+<meta
+  property="og:image:alt"
+  content="Automating Next.js 15 deployments: A build once, deploy many github actions guide"
+/>
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:description"
+  content="Learn how to build a high-performance CI/CD pipeline for Next.js 15 using GitHub Actions. Move a single agnostic artifact through DEV, SIT, and PROD without rebuilding"
+/>
+<meta property="og:site_name" content="LearnWithGurpreet" />
+<meta property="og:locale" content="en_EN" />
+<meta property="article:author" content="Gurpreet Singh" />
+
+<!-- Twitter specific head data was removed in v2 -->
+
+<!-- RSS Autodiscovery. Loops over meta.blog.feedLinks -->
+
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom Feed: LearnWithGurpreet"
+    href="/feed/feed.xml"
+  />
+
+
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+      :root {
+        --width: 720px;
+        --font-main: Verdana, sans-serif;
+        --font-secondary: Verdana, sans-serif;
+        --font-scale: 1em;
+        --background-color: #fff;
+        --heading-color: #222;
+        --text-color: #444;
+        --link-color: #3273dc;
+        --visited-color:  #8b6fcb;
+        --code-background-color: #f2f2f2;
+        --code-color: #222;
+        --blockquote-color: #222;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #01242e;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #000;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+        }
+      }
+      body {
+        font-family: var(--font-secondary);
+        font-size: var(--font-scale);
+        margin: auto;
+        padding: 20px;
+        max-width: var(--width);
+        text-align: left;
+        background-color: var(--background-color);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        color: var(--text-color);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-main);
+        color: var(--heading-color);
+      }
+      a {
+        color: var(--link-color);
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline; 
+      }
+      nav a {
+        margin-right: 8px;
+      }
+      strong, b {
+        color: var(--heading-color);
+      }
+      button {
+        margin: 0;
+        cursor: pointer;
+      }
+      time {
+        font-family: monospace;
+        font-style: normal;
+        font-size: 15px;
+      }
+      main {
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+      }
+      hr {
+        border: 0;
+        border-top: 1px dashed;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      code {
+        font-family: monospace;
+        padding: 2px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+      }
+      blockquote {
+        border-left: 1px solid #999;
+        color: var(--code-color);
+        padding-left: 20px;
+        font-style: italic;
+      }
+      footer {
+        padding: 25px 0;
+        text-align: center;
+      }
+      .title:hover {
+        text-decoration: none;
+      }
+      .title h1 {
+        font-size: 1.5em;
+      }
+      .title h1:before {
+        content: "ᕕ( ᐛ )ᕗ";
+      }
+      .inline {
+        width: auto !important;
+      }
+      .block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center {
+        text-align: center;
+      }
+      .highlight, .code {
+        padding: 1px 15px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        overflow-x: auto;
+      }
+      .note {
+        border: 1px dashed;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        border-radius: 10px 10px 10px 0;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      /* blog post list */
+      ul.blog-posts, .uses-list {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul.blog-posts li {
+        display: flex;
+      }
+      ul.blog-posts li span {
+        flex: 0 0 180px;
+      }
+      ul.blog-posts li a:visited, a[aria-current="page"] {
+        color: var(--visited-color);
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .pagination ol {
+        list-style-type: none;
+        padding: unset;
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+<header>
+  <a class="title" href="/">
+    <h1>LearnWithGurpreet</h1>
+  </a>
+  <nav>
+  <p>
+  
+    <a href="/">Home</a>
+  
+    <a href="/posts/">Posts</a>
+  
+    <a href="/tags/">Tags</a>
+  
+    <a href="/uses/">Uses</a>
+  
+    <a href="/about/">About</a>
+  
+  </p>
+</nav>
+</header>
+    <main id="main"><h1 class="text-primary">Automating Next.js 15 deployments: A build once, deploy many github actions guide</h1>
+ <p><time datetime="2026-01-14T23:00:00.000Z">January 15, 2026</time></p>
+
+
+
+
+
+
+  <small>
+    <div class="tags">
+      
+      <a href="/tags/tech">#Tech</a>
+      
+      <a href="/tags/nextjs">#NextJS</a>
+      
+    </div>
+  </small>
+
+
+<p>In my previous guide, <a href="/posts/nextjs-15-build-once-deploy-many-achieving-environment-agnostic-builds-with-the-app-router/">&quot;Next.js 15 Build Once, Deploy Many: Achieving Environment-Agnostic Builds with the App Router&quot;</a>, we discussed the architectural shift toward runtime configuration. Now, it is time to put that theory into practice.</p>
+<p>To achieve a true &quot;Build Once, Deploy Many&quot; workflow, your GitHub Actions must be structured to separate the expensive Build phase from the lightweight <strong>Deploy</strong> phase.</p>
+<h2>The Strategy: Artifact Promotion</h2>
+<p>In a standard pipeline, developers often run <code>npm run build</code> for every environment. This is inefficient. Instead, we will:</p>
+<ol>
+<li>
+<p><strong>Build</strong> the application once in a &quot;Standalone&quot; mode.</p>
+</li>
+<li>
+<p><strong>Upload</strong> that bundle as a GitHub Artifact.</p>
+</li>
+<li>
+<p><strong>Download</strong> and push that same bundle to Azure DEV, SIT, and PROD.</p>
+</li>
+</ol>
+<h3>The Pipeline Visualized</h3>
+<pre><code class="language-text">[ CI/CD RUNNER ]
+       |
+ [ Job: Build ] ---------------------&gt; [ Artifact Storage ]
+ (npm build + zip)                            |
+       |                                      |
+ [ Job: Deploy DEV ] &lt;------------------------+
+ (Download + Azure Push)                      |
+       |                                      |
+ [ Job: Deploy SIT ] &lt;------------------------+ (Manual Approval)
+ (Download + Azure Push)
+</code></pre>
+<h2>The GitHub Actions Workflow</h2>
+<p>This YAML configuration utilizes <strong>GitHub Environments</strong> to manage promotion logic and secrets for different Azure targets.</p>
+<pre><code class="language-yaml">name: Next.js 15 Promotion Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  # --- STAGE 1: BUILD ---
+  build:
+    name: Build Universal Artifact
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install &amp; Build
+        # Note: No env variables are passed here!
+        run: |
+          npm ci
+          npm run build
+
+      - name: Package Standalone Output
+        # We prepare the standalone folder for Azure
+        run: |
+          cp -r .next/static .next/standalone/.next/static
+          cp -r public .next/standalone/public
+          cd .next/standalone &amp;&amp; zip -r ../../site.zip .
+
+      - name: Archive Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nextjs-universal-bundle
+          path: site.zip
+          retention-days: 5
+
+  # --- STAGE 2: DEPLOY TO DEV ---
+  deploy-dev:
+    name: Deploy to DEV
+    needs: build
+    runs-on: ubuntu-latest
+    environment: Development
+    steps:
+      - name: Get Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: nextjs-universal-bundle
+
+      - name: Push to Azure DEV
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'myapp-dev-web'
+          publish-profile: $
+          package: site.zip
+
+      - name: Trigger Revalidation
+        run: curl -X GET &quot;https://myapp-dev-web.azurewebsites.net/api/revalidate?secret=$&quot;
+
+  # --- STAGE 3: DEPLOY TO SIT ---
+  deploy-sit:
+    name: Promote to SIT
+    needs: deploy-dev
+    runs-on: ubuntu-latest
+    environment: SIT # Set this to require manual approval in GitHub
+    steps:
+      - name: Get Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: nextjs-universal-bundle
+
+      - name: Push to Azure SIT
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: 'myapp-sit-web'
+          publish-profile: $
+          package: site.zip
+
+      - name: Trigger Revalidation
+        run: curl -X GET &quot;https://myapp-sit-web.azurewebsites.net/api/revalidate?secret=$&quot;
+</code></pre>
+<h2>Key Technical Considerations</h2>
+<ol>
+<li>
+<p><strong>Standalone Output</strong>: For this pipeline to work, your <code>next.config.js</code> must have <code>output: 'standalone'</code>. This tells Next.js to package only the essential files required for a production server, significantly reducing the size of your <code>site.zip</code>.</p>
+</li>
+<li>
+<p><strong>Manual Approvals (The Gatekeeper)</strong>: By using <code>environment: SIT</code>, you can go to your GitHub repository settings and add &quot;Required Reviewers.&quot; This prevents the code from moving from DEV to SIT until a Lead Developer or QA Engineer clicks &quot;Approve.&quot;</p>
+</li>
+<li>
+<p><strong>Azure Application Settings</strong>: Since we are no longer using <code>NEXT_PUBLIC_</code> variables, you must go to the Azure Portal &gt; Configuration for each Web App and manually add your <code>API_BASE_URL</code>. The Next.js server will read these at runtime via the SSR approach we established.</p>
+</li>
+</ol>
+<h2>Benefits of this Pipeline</h2>
+<ul>
+<li>
+<p><strong>Speed</strong>: Deployments to SIT and PROD take seconds because the build step is skipped.</p>
+</li>
+<li>
+<p><strong>Integrity</strong>: You are guaranteed that the code running in SIT is identical to the code tested in DEV.</p>
+</li>
+<li>
+<p><strong>Cost</strong>: You save significant GitHub Actions &quot;Minutes&quot; by only building once per commit.</p>
+</li>
+</ul>
+<blockquote>
+<p>If you haven't yet configured your application to handle runtime variables without <code>NEXT_PUBLIC_</code>, check out my companion article: <a href="/posts/nextjs-15-build-once-deploy-many-achieving-environment-agnostic-builds-with-the-app-router/">Next.js 15 Build Once, Deploy Many: Achieving Environment-Agnostic Builds with the App Router</a>.</p>
+</blockquote>
+
+
+  <p>
+    <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a coffee</a>
+  </p>
+
+
+
+  <hr />
+  <p>
+    <a
+      href="https://github.com/learnwithgurpreet/learnwithgurpreet.com/tree/main/./src/posts/2026/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide.md"
+      >View this page on GitHub</a
+    >
+  </p>
+
+
+</main>
+    <footer>
+  <p>
+  
+    <small><a href="/imprint/">Imprint</a></small>
+  
+    <small><a href="/privacy/">Privacy</a></small>
+  
+    <small><a href="/feed/feed.xml">RSS</a></small>
+  
+  </p>
+  <p><small>Copyright &copy; 2026 Learn WithGurpreet. All rights reserved.</small></p>
+</footer>
+  </body>
+</html>

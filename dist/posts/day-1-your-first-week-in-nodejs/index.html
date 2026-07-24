@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      
+        Day 1 - Your first week in NodeJS
+      
+    </title>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.learnwithgurpreet.com#website",
+        "url": "https://www.learnwithgurpreet.com",
+        "name": "LearnWithGurpreet",
+        "description": "I am working with Publicis Sapient as senior architect, experience engineering",
+        "inLanguage": "en_EN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.learnwithgurpreet.com/tags/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.learnwithgurpreet.com#author",
+        "name": "Gurpreet Singh",
+        "url": "https://www.learnwithgurpreet.com",
+        "email": "inbox@gurpreetsingh.me",
+        "sameAs": [
+          "",
+          ""
+        ],
+        "jobTitle": "Senior Architect eXperience Engineering",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Publicis Sapient"
+        }
+      }
+    ]
+  }
+</script>
+
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    },
+    "isPartOf": {
+      "@id": "https://www.learnwithgurpreet.com#website"
+    },
+    "@id": "",
+    "headline": "Day 1 - Your first week in NodeJS",
+    "description": "I believe you know something about Node.js before starting this course, just to refresh your memory.",
+    "image": "https://www.learnwithgurpreet.com/assets/og-images/day-1-your-first-week-in-nodejs-preview.jpeg",
+    "inLanguage": "en_EN",
+    "publisher": {
+      "@type": "Person",
+      "name": "Gurpreet Singh",
+      "url": "https://www.learnwithgurpreet.com"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Gurpreet Singh"
+    },
+    "datePublished": "2021-08-03T00:00:00.000Z"
+  }
+</script>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
+
+    <!-- everything else: meta tags, icons, open graph etc.  -->
+    <base href="/posts/day-1-your-first-week-in-nodejs/" />
+<meta name="msvalidate.01" content="6795913B9B37C4605C83D85239DB46F5" />
+
+<meta
+  name="description"
+  content="
+  
+    I believe you know something about Node.js before starting this course, just to refresh your memory.
+  
+  "
+/>
+
+<meta name="theme-color" content="#f9f4ec" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#201f1f" media="(prefers-color-scheme: dark)" />
+<!-- Search Engines -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<!-- Made with Eleventy! -->
+<meta name="generator" content="Eleventy v3.1.6" />
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no" />
+<!-- supports both dark and light color schemes, page author prefers light as default. -->
+<meta name="color-scheme" content="light dark" />
+<!-- activates page transitions -->
+<meta name="view-transition" content="same-origin" />
+
+<!-- Helps prevent duplicate content issues -->
+<link rel="canonical" href="https://www.learnwithgurpreet.com/posts/day-1-your-first-week-in-nodejs/" />
+
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="humans.txt" />
+
+<!-- LLMs.txt for AI discoverability -->
+<link rel="alternate" type="text/plain" href="https://www.learnwithgurpreet.com/llms.txt" title="LLM-friendly site summary" />
+
+
+
+<!-- Open Graph meta  -->
+<meta property="og:url" content="https://www.learnwithgurpreet.com/posts/day-1-your-first-week-in-nodejs/" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="Day 1 - Your first week in NodeJS"
+/>
+
+<meta
+  property="og:image"
+  content="https://www.learnwithgurpreet.com/assets/og-images/day-1-your-first-week-in-nodejs-preview.jpeg"
+/>
+<meta
+  property="og:image:alt"
+  content="Day 1 - Your first week in NodeJS"
+/>
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:description"
+  content="I believe you know something about Node.js before starting this course, just to refresh your memory."
+/>
+<meta property="og:site_name" content="LearnWithGurpreet" />
+<meta property="og:locale" content="en_EN" />
+<meta property="article:author" content="Gurpreet Singh" />
+
+<!-- Twitter specific head data was removed in v2 -->
+
+<!-- RSS Autodiscovery. Loops over meta.blog.feedLinks -->
+
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom Feed: LearnWithGurpreet"
+    href="/feed/feed.xml"
+  />
+
+
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+      :root {
+        --width: 720px;
+        --font-main: Verdana, sans-serif;
+        --font-secondary: Verdana, sans-serif;
+        --font-scale: 1em;
+        --background-color: #fff;
+        --heading-color: #222;
+        --text-color: #444;
+        --link-color: #3273dc;
+        --visited-color:  #8b6fcb;
+        --code-background-color: #f2f2f2;
+        --code-color: #222;
+        --blockquote-color: #222;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #01242e;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #000;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+        }
+      }
+      body {
+        font-family: var(--font-secondary);
+        font-size: var(--font-scale);
+        margin: auto;
+        padding: 20px;
+        max-width: var(--width);
+        text-align: left;
+        background-color: var(--background-color);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        color: var(--text-color);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-main);
+        color: var(--heading-color);
+      }
+      a {
+        color: var(--link-color);
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline; 
+      }
+      nav a {
+        margin-right: 8px;
+      }
+      strong, b {
+        color: var(--heading-color);
+      }
+      button {
+        margin: 0;
+        cursor: pointer;
+      }
+      time {
+        font-family: monospace;
+        font-style: normal;
+        font-size: 15px;
+      }
+      main {
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+      }
+      hr {
+        border: 0;
+        border-top: 1px dashed;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      code {
+        font-family: monospace;
+        padding: 2px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+      }
+      blockquote {
+        border-left: 1px solid #999;
+        color: var(--code-color);
+        padding-left: 20px;
+        font-style: italic;
+      }
+      footer {
+        padding: 25px 0;
+        text-align: center;
+      }
+      .title:hover {
+        text-decoration: none;
+      }
+      .title h1 {
+        font-size: 1.5em;
+      }
+      .title h1:before {
+        content: "ᕕ( ᐛ )ᕗ";
+      }
+      .inline {
+        width: auto !important;
+      }
+      .block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center {
+        text-align: center;
+      }
+      .highlight, .code {
+        padding: 1px 15px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        overflow-x: auto;
+      }
+      .note {
+        border: 1px dashed;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        border-radius: 10px 10px 10px 0;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      /* blog post list */
+      ul.blog-posts, .uses-list {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul.blog-posts li {
+        display: flex;
+      }
+      ul.blog-posts li span {
+        flex: 0 0 180px;
+      }
+      ul.blog-posts li a:visited, a[aria-current="page"] {
+        color: var(--visited-color);
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .pagination ol {
+        list-style-type: none;
+        padding: unset;
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+<header>
+  <a class="title" href="/">
+    <h1>LearnWithGurpreet</h1>
+  </a>
+  <nav>
+  <p>
+  
+    <a href="/">Home</a>
+  
+    <a href="/posts/">Posts</a>
+  
+    <a href="/tags/">Tags</a>
+  
+    <a href="/uses/">Uses</a>
+  
+    <a href="/about/">About</a>
+  
+  </p>
+</nav>
+</header>
+    <main id="main"><h1 class="text-primary">Day 1 - Your first week in NodeJS</h1>
+ <p><time datetime="2021-08-03T00:00:00.000Z">August 3, 2021</time></p>
+
+
+
+
+
+
+  <small>
+    <div class="tags">
+      
+      <a href="/tags/nodejs-beginner-course">#NodeJS Beginner Course</a>
+      
+    </div>
+  </small>
+
+
+<p>I believe you know something about Node.js before starting this course, just to refresh your memory. Node.js is a JavaScript runtime, built on Chrome’s V8 JavaScript engine. Node.js uses an event-driven, non-blocking model that makes it lightweight and efficient.</p>
+<p>Node.js package ecosystem, npm, is the largest ecosystem of open source libraries in the world.</p>
+<p><strong>Let’s jump on Day 1 agenda now.</strong></p>
+<h2>1. Installation</h2>
+<p>You can simply go to the <a href="https://nodejs.org/en/download/">official Node.js website</a> and download the latest stable version (LTS) based on your OS.</p>
+<p><img src="/assets/images/blog/l82jOlmdT.png" alt="download node" title="download node"></p>
+<p>download nodejs page</p>
+<p>After the installation, you can simply open your terminal/command prompt, to check if it’s running or not.</p>
+<pre><code class="language-bash">$ node --version
+// v14.16.1 (in my case)
+</code></pre>
+<p>In addition to the above, you can also go to any editor and create a file <code>app.js</code> (or any name).</p>
+<pre><code class="language-js">// app.js
+console.log('node is working');
+</code></pre>
+<p>Now run this file using Node.js</p>
+<pre><code class="language-bash">$ node app.js
+// node is working
+</code></pre>
+<p>You have installed Node.js on your machine 🏆</p>
+<h2>2. Global Objects</h2>
+<p>After installing Node.js, let’s quickly touch upon <strong>Global objects</strong> which we can use without any objection and third-party imports. These objects/functions are nothing but built-in into Node.js objects. If you are already working on JavaScript you defiantly know about some of these objects like (console, setInterval, setTimeout, etc.).</p>
+<p>The main difference between JavaScript (window) vs. Node.js global objects is, you can’t get access to the screen-related function example: scroll, style, etc.</p>
+<p>You can try following code examples in Node.js</p>
+<pre><code class="language-js">// app.js
+setTimeout(() =&gt; {
+  console.log(&quot;5 seconds have passed&quot;);
+}, 5000);
+
+// Run this code again
+$ node app.js
+</code></pre>
+<p>Another useful global object is <code>process</code>, we will use this a lot in further lessons. <code>process</code> holds the latest state of your Node.js running process. It gives you access to read which environment your server is running or you can set custom environment variables while starting your server.</p>
+<p>The common use case is to store credentials inside <code>process</code> to later use them in your program.</p>
+<pre><code class="language-bash">// Setting process variable
+$ export DB_NAME=demo_db
+$ export DB_PASSWORD=yes_you_are_right
+
+// Run your app
+$ node app.js
+
+// app.js
+const {DB_NAME, DB_PASSWORD} = process.env
+console.log(DB_NAME); // demo_db
+console.log(DB_PASSWORD); // yes_you_are_right
+</code></pre>
+<h2>3. Modules + <code>require()</code></h2>
+<p>So far (above), we wrote everything in a single file, which is good for practice programs and all. If you want to work on a real project where you might have other teams/people surrounding you and working on the same project, then recommended approach is to work with modules.</p>
+<p><strong>Modules</strong> are nothing but an approach to split your code into different-2 re-usable pieces.</p>
+<p>It can be a file or a function within the same file, you must have heard of the philosophy of pure-functional programming where every function is responsible to do a single job.</p>
+<h3>Let’s take an example, you want to count the <code>length</code> of an array.</h3>
+<pre><code class="language-js">// Create a new file next to your app.js
+// count.js
+
+const count = arr =&gt; {
+  return arr.length;
+};
+</code></pre>
+<p>Now you have <code>count.js</code> in place, it’s time to make it re-usable for the application.</p>
+<blockquote>
+<p>Before calling it a module, we need to make some changes to the <code>count.js</code> file.</p>
+</blockquote>
+<pre><code class="language-js">// count.js
+
+const count = arr =&gt; {
+  return arr.length;
+};
+
+module.exports = count; // It will export this component as a module
+</code></pre>
+<p>Since we have the <code>count</code> module ready to include, let’s call it in <code>app.js</code>.</p>
+<pre><code class="language-js">// app.js
+
+const count = require('./count'); // including `count` function as a module
+console.log(count([1, 98, 22, 41])); // return: 4
+</code></pre>
+<p>You can send multiple modules from your single file.</p>
+<pre><code class="language-js">// utils.js
+
+const add = (a, b) =&gt; {
+  return a + b;
+};
+
+const sub = (a, b) =&gt; {
+  return a - b;
+};
+
+const getDatabaseName = () =&gt; process.env.DB_NAME;
+
+module.exports = {
+  add,
+  sub,
+  getDatabaseName
+};
+
+// You also change your public function names
+module.exports = {
+  plus: add,
+  minus: sub,
+  DBName: getDatabaseName
+};
+</code></pre>
+<pre><code class="language-js">// app.js
+
+const utils = require('./utils');
+
+console.log(utils.add(1, 2)); // result: 3
+console.log(utils.sub(2, 1)); // result: 1
+console.log(utils.getDatabaseName()); // result: demo_db
+</code></pre>
+<h2>4. Event emitting</h2>
+<p>Like the above-defined module, we have some built-in core Node.js modules available to use. One of the examples is the <code>events</code> module.</p>
+<p>Similar to JavaScript <code>click</code>/<code>onChange</code> events Node.js has the capability to define your own events which can be used when needed.</p>
+<pre><code class="language-js">// custom-events.js
+
+const events = require('events');
+const utils = require('./utils');
+
+const eventEmitter = new events.EventEmitter();
+
+eventEmitter.on('showSum', (a, b) =&gt; {
+  console.log(`Sum is: ${utils.add(a, b)}`);
+});
+
+module.exports = eventEmitter;
+</code></pre>
+<p>Our event emitter module is now ready, let’s use it in our application.</p>
+<pre><code class="language-js">// app.js
+
+const customEvents = require('./custom-events');
+customEvents.emit('showSum', 1, 2); // Sum is: 3
+</code></pre>
+<h2>5. Read/Write/Steam files</h2>
+<p>After learning event handling in Node.js let’s do a quick check on file handling with Node.js core module <code>fs</code>.</p>
+<p>Let’s read the file first in order to try the <code>fs</code> module. But first, we need a file to read. Let’s create a file first.</p>
+<h3>Read operation ()</h3>
+<pre><code class="language-bash">// Inside the same directory
+$ touch read.txt
+$ vim ./read.text  // Add some content and save the file.
+</code></pre>
+<pre><code class="language-js">// app.js
+
+const fs = require('fs');
+
+const readMeFile = fs.readFileSync('./read.txt', 'utf-8');
+console.log(readMeFile); // File contents
+</code></pre>
+<h3>Write operation</h3>
+<pre><code class="language-js">// app.js
+
+const fs = require('fs');
+
+const readMeFile = fs.readFileSync('./read.txt', 'utf-8');
+fs.writeFileSync('./read-new.txt', readMeFile);
+</code></pre>
+<p>The above statement will simply read the contents from the <code>read.txt</code> file write another file <code>read-new.txt</code> with its content.</p>
+<p>There are two ways to read/write files, synchronous/asynchronous, we are using sync. method to read the file. It prevents the program execute unless it reads the entire file.</p>
+<p>On the other hand, <code>fs.readFile</code> can read files asynchronously, sometimes we use this method too.</p>
+<blockquote>
+<p>Let’s quick touch upon async. file read operation:</p>
+</blockquote>
+<pre><code class="language-js">const fs = require('fs');
+
+fs.readFile('./read.txt', 'utf-8', (err, data) =&gt; {
+  if (err) {
+    console.error(err);
+  }
+  console.log(data);
+});
+
+console.log('Am I first?');
+
+// Result:
+// file content
+// Am I first?
+</code></pre>
+<p>In the example above you can see, text outside the <code>readFile</code> operation logged first. Async. operation is beneficial when your further operations are independent of the file read/write operations.</p>
+<p>Hope you like the starting of the series, stay tuned for further posts in this series.</p>
+<p>Happy reading!</p>
+<h2>Useful Links</h2>
+<ul>
+<li>
+<p><a href="https://nodejs.org/en/download/">Install Node.js</a></p>
+</li>
+<li>
+<p><a href="https://nodejs.org/dist/latest-v14.x/docs/api/globals.html">Global Objects</a></p>
+</li>
+<li>
+<p><a href="https://nodejs.org/dist/latest-v14.x/docs/api/events.html">Events</a></p>
+</li>
+<li>
+<p><a href="https://nodejs.org/dist/latest-v14.x/docs/api/fs.html">File system</a></p>
+</li>
+</ul>
+
+
+  <p>
+    <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a coffee</a>
+  </p>
+
+
+
+  <hr />
+  <p>
+    <a
+      href="https://github.com/learnwithgurpreet/learnwithgurpreet.com/tree/main/./src/posts/2021/day-1-your-first-week-in-nodejs.md"
+      >View this page on GitHub</a
+    >
+  </p>
+
+
+</main>
+    <footer>
+  <p>
+  
+    <small><a href="/imprint/">Imprint</a></small>
+  
+    <small><a href="/privacy/">Privacy</a></small>
+  
+    <small><a href="/feed/feed.xml">RSS</a></small>
+  
+  </p>
+  <p><small>Copyright &copy; 2026 Learn WithGurpreet. All rights reserved.</small></p>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      
+        The hard truth about running Next.js at scale
+      
+    </title>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.learnwithgurpreet.com#website",
+        "url": "https://www.learnwithgurpreet.com",
+        "name": "LearnWithGurpreet",
+        "description": "I am working with Publicis Sapient as senior architect, experience engineering",
+        "inLanguage": "en_EN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.learnwithgurpreet.com/tags/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.learnwithgurpreet.com#author",
+        "name": "Gurpreet Singh",
+        "url": "https://www.learnwithgurpreet.com",
+        "email": "inbox@gurpreetsingh.me",
+        "sameAs": [
+          "",
+          ""
+        ],
+        "jobTitle": "Senior Architect eXperience Engineering",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Publicis Sapient"
+        }
+      }
+    ]
+  }
+</script>
+
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    },
+    "isPartOf": {
+      "@id": "https://www.learnwithgurpreet.com#website"
+    },
+    "@id": "",
+    "headline": "The hard truth about running Next.js at scale",
+    "description": "Next.js has quickly become one of the most dominant frameworks for frontend fullstack development. It&#39;s great for shipping MVPs fast, but here&#39;s the big question, is it equally good for production-grade applications? Let&#39;s break it down and talk about the trade-offs you might face when using the Next.js stack.",
+    "image": "https://www.learnwithgurpreet.com/assets/og-images/the-hard-truth-about-running-nextjs-at-scale-preview.jpeg",
+    "inLanguage": "en_EN",
+    "publisher": {
+      "@type": "Person",
+      "name": "Gurpreet Singh",
+      "url": "https://www.learnwithgurpreet.com"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Gurpreet Singh"
+    },
+    "datePublished": "2025-10-09T22:00:00.000Z"
+  }
+</script>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
+
+    <!-- everything else: meta tags, icons, open graph etc.  -->
+    <base href="/posts/the-hard-truth-about-running-nextjs-at-scale/" />
+<meta name="msvalidate.01" content="6795913B9B37C4605C83D85239DB46F5" />
+
+<meta
+  name="description"
+  content="
+  
+    Next.js has quickly become one of the most dominant frameworks for frontend fullstack development. It&#39;s great for shipping MVPs fast, but here&#39;s the big question, is it equally good for production-grade applications? Let&#39;s break it down and talk about the trade-offs you might face when using the Next.js stack.
+  
+  "
+/>
+
+<meta name="theme-color" content="#f9f4ec" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#201f1f" media="(prefers-color-scheme: dark)" />
+<!-- Search Engines -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<!-- Made with Eleventy! -->
+<meta name="generator" content="Eleventy v3.1.6" />
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no" />
+<!-- supports both dark and light color schemes, page author prefers light as default. -->
+<meta name="color-scheme" content="light dark" />
+<!-- activates page transitions -->
+<meta name="view-transition" content="same-origin" />
+
+<!-- Helps prevent duplicate content issues -->
+<link rel="canonical" href="https://www.learnwithgurpreet.com/posts/the-hard-truth-about-running-nextjs-at-scale/" />
+
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="humans.txt" />
+
+<!-- LLMs.txt for AI discoverability -->
+<link rel="alternate" type="text/plain" href="https://www.learnwithgurpreet.com/llms.txt" title="LLM-friendly site summary" />
+
+
+
+<!-- Open Graph meta  -->
+<meta property="og:url" content="https://www.learnwithgurpreet.com/posts/the-hard-truth-about-running-nextjs-at-scale/" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="The hard truth about running Next.js at scale"
+/>
+
+<meta
+  property="og:image"
+  content="https://www.learnwithgurpreet.com/assets/og-images/the-hard-truth-about-running-nextjs-at-scale-preview.jpeg"
+/>
+<meta
+  property="og:image:alt"
+  content="The hard truth about running Next.js at scale"
+/>
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:description"
+  content="Next.js has quickly become one of the most dominant frameworks for frontend fullstack development. It&#39;s great for shipping MVPs fast, but here&#39;s the big question, is it equally good for production-grade applications? Let&#39;s break it down and talk about the trade-offs you might face when using the Next.js stack."
+/>
+<meta property="og:site_name" content="LearnWithGurpreet" />
+<meta property="og:locale" content="en_EN" />
+<meta property="article:author" content="Gurpreet Singh" />
+
+<!-- Twitter specific head data was removed in v2 -->
+
+<!-- RSS Autodiscovery. Loops over meta.blog.feedLinks -->
+
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom Feed: LearnWithGurpreet"
+    href="/feed/feed.xml"
+  />
+
+
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+      :root {
+        --width: 720px;
+        --font-main: Verdana, sans-serif;
+        --font-secondary: Verdana, sans-serif;
+        --font-scale: 1em;
+        --background-color: #fff;
+        --heading-color: #222;
+        --text-color: #444;
+        --link-color: #3273dc;
+        --visited-color:  #8b6fcb;
+        --code-background-color: #f2f2f2;
+        --code-color: #222;
+        --blockquote-color: #222;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #01242e;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #000;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+        }
+      }
+      body {
+        font-family: var(--font-secondary);
+        font-size: var(--font-scale);
+        margin: auto;
+        padding: 20px;
+        max-width: var(--width);
+        text-align: left;
+        background-color: var(--background-color);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        color: var(--text-color);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-main);
+        color: var(--heading-color);
+      }
+      a {
+        color: var(--link-color);
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline; 
+      }
+      nav a {
+        margin-right: 8px;
+      }
+      strong, b {
+        color: var(--heading-color);
+      }
+      button {
+        margin: 0;
+        cursor: pointer;
+      }
+      time {
+        font-family: monospace;
+        font-style: normal;
+        font-size: 15px;
+      }
+      main {
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+      }
+      hr {
+        border: 0;
+        border-top: 1px dashed;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      code {
+        font-family: monospace;
+        padding: 2px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+      }
+      blockquote {
+        border-left: 1px solid #999;
+        color: var(--code-color);
+        padding-left: 20px;
+        font-style: italic;
+      }
+      footer {
+        padding: 25px 0;
+        text-align: center;
+      }
+      .title:hover {
+        text-decoration: none;
+      }
+      .title h1 {
+        font-size: 1.5em;
+      }
+      .title h1:before {
+        content: "ᕕ( ᐛ )ᕗ";
+      }
+      .inline {
+        width: auto !important;
+      }
+      .block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center {
+        text-align: center;
+      }
+      .highlight, .code {
+        padding: 1px 15px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        overflow-x: auto;
+      }
+      .note {
+        border: 1px dashed;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        border-radius: 10px 10px 10px 0;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      /* blog post list */
+      ul.blog-posts, .uses-list {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul.blog-posts li {
+        display: flex;
+      }
+      ul.blog-posts li span {
+        flex: 0 0 180px;
+      }
+      ul.blog-posts li a:visited, a[aria-current="page"] {
+        color: var(--visited-color);
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .pagination ol {
+        list-style-type: none;
+        padding: unset;
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+<header>
+  <a class="title" href="/">
+    <h1>LearnWithGurpreet</h1>
+  </a>
+  <nav>
+  <p>
+  
+    <a href="/">Home</a>
+  
+    <a href="/posts/">Posts</a>
+  
+    <a href="/tags/">Tags</a>
+  
+    <a href="/uses/">Uses</a>
+  
+    <a href="/about/">About</a>
+  
+  </p>
+</nav>
+</header>
+    <main id="main"><h1 class="text-primary">The hard truth about running Next.js at scale</h1>
+ <p><time datetime="2025-10-09T22:00:00.000Z">October 10, 2025</time></p>
+
+
+
+
+
+
+  <small>
+    <div class="tags">
+      
+      <a href="/tags/tech">#Tech</a>
+      
+    </div>
+  </small>
+
+
+<p>Next.js has quickly become one of the most dominant frameworks for frontend fullstack development. It's great for shipping MVPs fast, but here's the big question: is it equally good for production-grade applications? Let's break it down and talk about the trade-offs you might face when using the Next.js stack.</p>
+<blockquote>
+<p>Quick note: this write-up is based on my recent project experience, not ChatGPT or any AI-generated content 😉</p>
+</blockquote>
+<h2>The &quot;Vercel Way&quot;</h2>
+<p>As you probably know, Next.js is developed and maintained by <a href="https://vercel.com/">Vercel</a>. That means there are areas where Next.js nudges you toward doing things <em>the Vercel way</em>. If you don't, well, be ready to spend some time searching (or asking your favorite AI assistant).</p>
+<p>Vercel shines when it comes to build performance and caching. It helps you ship projects blazingly fast, with build times that are hard for most competitors to match. But this convenience has a price tag. Hosting large-scale enterprise apps on Vercel can be expensive.</p>
+<h2>My Experience</h2>
+<p>We're building an enterprise application and chose Next.js as our framework. The infrastructure runs on Azure Web Apps. The first deployment taught us an important lesson: Next.js needs to be switched to a <strong>standalone output</strong> build when you're not hosting on Vercel.</p>
+<p>Yes, there's a configuration in <code>next.config.js</code> that allows you to generate a standalone build instead of the default one tailored for Vercel/Netlify. Once we enabled that, things worked as expected.</p>
+<p>Coming from a Java or backend-heavy background, you're probably familiar with the idea of <em>build once, deploy everywhere</em>. With Next.js (or React), it works differently.</p>
+<p>After scouring forums, I noticed many developers struggling to build Next.js apps outside Vercel. Each environment (DEV/STAGE/PROD) typically requires a rebuild. It's doable, but not exactly the advertised or preferred path.</p>
+<p>Still, I decided to give it a shot. Here's what we did:</p>
+<ul>
+<li>Renamed all public environment variables starting with <code>NEXT_PUBLIC_</code> to <code>PUBLIC_</code> because Next.js inlines <code>NEXT_PUBLIC_</code> variables at build time, which makes them static. For example: <code>process.env.NEXT_PUBLIC_KEY</code> gets replaced with a fixed value during build.</li>
+<li>Split our env. variables into two categories:
+<ol>
+<li><strong>Public</strong> (<code>PUBLIC_</code>)</li>
+<li><strong>Secret</strong> (<code>SECRET_</code>)</li>
+</ol>
+</li>
+</ul>
+<p>Now, how do you access <code>PUBLIC_</code> variables on the client side?</p>
+<p>We solved it by creating an API endpoint that fetches these variables at runtime:</p>
+<pre><code class="language-ts">&quot;use server&quot;;
+
+import { NextResponse } from &quot;next/server&quot;;
+
+// Example usage: /api/env?key=PUBLIC_API_URL
+// Note: Only PUBLIC_ variables are exposed on the client
+
+export async function GET(req: Request) {
+  const { searchParams } = new URL(req.url);
+  const key = searchParams.get(&quot;key&quot;);
+
+  if (!key) {
+    return NextResponse.json({ error: &quot;Missing query param: key&quot; }, { status: 400 });
+  }
+
+  if (!key.startsWith(&quot;PUBLIC_&quot;)) {
+    return NextResponse.json({ error: &quot;Only PUBLIC_ variables are accessible&quot; }, { status: 403 });
+  }
+
+  const value = process.env[key];
+
+  if (!value) {
+    console.log(&quot;env-variable&quot;, &quot;GET&quot;, &quot;not found&quot;, { key });
+    return NextResponse.json({ error: `Env variable ${key} not configured` }, { status: 404 });
+  }
+
+  return NextResponse.json({ [key]: value });
+}
+</code></pre>
+<p>With these changes, we were able to generate a <code>dist</code> folder (standalone build) that works across multiple environments with runtime variables. No more rebuilding for every environment.</p>
+<h2>SSG and SSR Challenges</h2>
+<p>By default, Next.js pages are <strong>SSR (Server-Side Rendered)</strong>. That was our next challenge. During build time, API calls in <code>async</code> components were being executed and responses cached, which caused outdated data issues.</p>
+<p>We also had some <strong>SSG (Static Site Generation)</strong> pages facing the same problem, stale content that wouldn't refresh automatically.</p>
+<p>Next.js doesn't cache pages as simple HTML. Instead, it stores JSON metadata chunks. To solve this, we added a <strong>post-deployment cache purge strategy</strong>. Basically, we created an API route to call Next.js's internal <code>revalidatePath</code> method whenever we needed to refresh cached content.</p>
+<pre><code class="language-ts">// api/revalidate/route.ts
+
+&quot;use server&quot;;
+
+import { NextResponse } from &quot;next/server&quot;;
+import { headers } from &quot;next/headers&quot;;
+import { revalidatePath } from &quot;next/cache&quot;;
+
+export async function POST(req: Request) {
+  try {
+    const secret = process.env.REVALIDATE_SECRET;
+    const headersList = await headers();
+    const authHeader = headersList.get(&quot;authorization&quot;);
+
+    if (authHeader !== secret) {
+      return NextResponse.json({ error: &quot;Not Authorized&quot; }, { status: 401 });
+    }
+
+    const reqBody = await req.json();
+    const paths = reqBody.paths || [&quot;/&quot;];
+
+    for (const p of paths) {
+      await revalidatePath(p);
+    }
+
+    return NextResponse.json({ revalidated: paths });
+  } catch (error) {
+    console.error(&quot;Error parsing request body:&quot;, error);
+    return NextResponse.json({ error: &quot;Failed to parse request body&quot; }, { status: 400 });
+  }
+}
+</code></pre>
+<p>This gave us a reliable way to control cache invalidation after deployments.</p>
+<h2>Bonus tip</h2>
+<p>Make sure when you are deploying to Azure Web Apps, CDN enablement is not that easy. Since Next.js comes with its own compress policy (gzip) it won't allow you to easily use Azure frontdoor as a CDN solution.</p>
+<p>You have to do some tweaks.</p>
+<pre><code class="language-bash"># Create a ruleset in Azure Frontdoor
+
+Name: RuleSetName
+
+IF
+  - Condition: Request file extension
+  - Operator: Equal
+  - Value:
+    - js
+    - css
+    - woff
+    - woff2
+    - ttf
+    - eot
+    - otf
+    - ico
+  - String transform: To lowercase
+  
+THEN
+  - Action: Response header
+  - Operator: Append
+  - Header name: x-cache-version
+  - Header value: v1 (treat it as a version number)
+AND THEN
+  - Action: Route Configuration Override
+  - Override Origin group: no
+  - Caching: Enabled
+  - Query String caching behavior: Use Query String
+  - Compression: Enabled
+  - Cache behavior: Override always
+  - Days: 1
+  - Hours: 0
+  - Minutes: 0
+  - Seconds: 0
+AND THEN
+  - Action: Response header
+  - Operator: Overwrite
+  - Header name: Cache-Control
+  - Header value: public, max-age=31536000, immutable
+AND THEN
+  - Action: Request header
+  - Operator: Delete
+  - Header name: Accept-Encoding
+  
+Stop evaluating remaining rules: Checked
+</code></pre>
+<p>Above configurations enable caching for all your mentioned files in <code>IF</code> condition for 1 year</p>
+<p><em>I would like to express my gratitude to <a href="https://www.linkedin.com/in/frank-mueller-2bbb491b0/">Frank Mueller</a> and <a href="https://www.linkedin.com/in/vikas-chawla-94726312/">Vikas Chawla</a> for their assistance in writing the cache rules.</em></p>
+<h2>Conclusion</h2>
+<p>Modern frameworks like Next.js look sleek and make development feel effortless. But once you move into enterprise territory, you'll run into bottlenecks that require extra effort, research, and debugging.</p>
+<p>The good news? with the right strategies, like standalone builds, smart env. variable handling, and cache revalidation, you can absolutely make Next.js production ready.</p>
+
+
+  <p>
+    <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a coffee</a>
+  </p>
+
+
+
+  <hr />
+  <p>
+    <a
+      href="https://github.com/learnwithgurpreet/learnwithgurpreet.com/tree/main/./src/posts/2025/the-hard-truth-about-running-nextjs-at-scale.md"
+      >View this page on GitHub</a
+    >
+  </p>
+
+
+</main>
+    <footer>
+  <p>
+  
+    <small><a href="/imprint/">Imprint</a></small>
+  
+    <small><a href="/privacy/">Privacy</a></small>
+  
+    <small><a href="/feed/feed.xml">RSS</a></small>
+  
+  </p>
+  <p><small>Copyright &copy; 2026 Learn WithGurpreet. All rights reserved.</small></p>
+</footer>
+  </body>
+</html>

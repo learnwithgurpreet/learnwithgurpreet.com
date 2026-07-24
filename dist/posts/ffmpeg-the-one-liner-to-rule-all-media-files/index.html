@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      
+        FFmpeg: The one-liner to rule all media files
+      
+    </title>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.learnwithgurpreet.com#website",
+        "url": "https://www.learnwithgurpreet.com",
+        "name": "LearnWithGurpreet",
+        "description": "I am working with Publicis Sapient as senior architect, experience engineering",
+        "inLanguage": "en_EN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.learnwithgurpreet.com/tags/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.learnwithgurpreet.com#author",
+        "name": "Gurpreet Singh",
+        "url": "https://www.learnwithgurpreet.com",
+        "email": "inbox@gurpreetsingh.me",
+        "sameAs": [
+          "",
+          ""
+        ],
+        "jobTitle": "Senior Architect eXperience Engineering",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Publicis Sapient"
+        }
+      }
+    ]
+  }
+</script>
+
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    },
+    "isPartOf": {
+      "@id": "https://www.learnwithgurpreet.com#website"
+    },
+    "@id": "",
+    "headline": "FFmpeg: The one-liner to rule all media files",
+    "description": "FFmpeg is a powerful command-line tool to handle all your media needs. Use it to quickly convert formats, create GIFs, resize images, trim videos, and extract audio right from your terminal. It&#39;s the fast, free, and scriptable alternative to heavy video editing software.",
+    "image": "https://www.learnwithgurpreet.com/assets/og-images/ffmpeg-the-one-liner-to-rule-all-media-files-preview.jpeg",
+    "inLanguage": "en_EN",
+    "publisher": {
+      "@type": "Person",
+      "name": "Gurpreet Singh",
+      "url": "https://www.learnwithgurpreet.com"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Gurpreet Singh"
+    },
+    "datePublished": "2025-08-26T22:00:00.000Z"
+  }
+</script>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
+
+    <!-- everything else: meta tags, icons, open graph etc.  -->
+    <base href="/posts/ffmpeg-the-one-liner-to-rule-all-media-files/" />
+<meta name="msvalidate.01" content="6795913B9B37C4605C83D85239DB46F5" />
+
+<meta
+  name="description"
+  content="
+  
+    FFmpeg is a powerful command-line tool to handle all your media needs. Use it to quickly convert formats, create GIFs, resize images, trim videos, and extract audio right from your terminal. It&#39;s the fast, free, and scriptable alternative to heavy video editing software.
+  
+  "
+/>
+
+<meta name="theme-color" content="#f9f4ec" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#201f1f" media="(prefers-color-scheme: dark)" />
+<!-- Search Engines -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<!-- Made with Eleventy! -->
+<meta name="generator" content="Eleventy v3.1.6" />
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no" />
+<!-- supports both dark and light color schemes, page author prefers light as default. -->
+<meta name="color-scheme" content="light dark" />
+<!-- activates page transitions -->
+<meta name="view-transition" content="same-origin" />
+
+<!-- Helps prevent duplicate content issues -->
+<link rel="canonical" href="https://www.learnwithgurpreet.com/posts/ffmpeg-the-one-liner-to-rule-all-media-files/" />
+
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="humans.txt" />
+
+<!-- LLMs.txt for AI discoverability -->
+<link rel="alternate" type="text/plain" href="https://www.learnwithgurpreet.com/llms.txt" title="LLM-friendly site summary" />
+
+
+
+<!-- Open Graph meta  -->
+<meta property="og:url" content="https://www.learnwithgurpreet.com/posts/ffmpeg-the-one-liner-to-rule-all-media-files/" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="FFmpeg: The one-liner to rule all media files"
+/>
+
+<meta
+  property="og:image"
+  content="https://www.learnwithgurpreet.com/assets/og-images/ffmpeg-the-one-liner-to-rule-all-media-files-preview.jpeg"
+/>
+<meta
+  property="og:image:alt"
+  content="FFmpeg: The one-liner to rule all media files"
+/>
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:description"
+  content="FFmpeg is a powerful command-line tool to handle all your media needs. Use it to quickly convert formats, create GIFs, resize images, trim videos, and extract audio right from your terminal. It&#39;s the fast, free, and scriptable alternative to heavy video editing software."
+/>
+<meta property="og:site_name" content="LearnWithGurpreet" />
+<meta property="og:locale" content="en_EN" />
+<meta property="article:author" content="Gurpreet Singh" />
+
+<!-- Twitter specific head data was removed in v2 -->
+
+<!-- RSS Autodiscovery. Loops over meta.blog.feedLinks -->
+
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom Feed: LearnWithGurpreet"
+    href="/feed/feed.xml"
+  />
+
+
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+      :root {
+        --width: 720px;
+        --font-main: Verdana, sans-serif;
+        --font-secondary: Verdana, sans-serif;
+        --font-scale: 1em;
+        --background-color: #fff;
+        --heading-color: #222;
+        --text-color: #444;
+        --link-color: #3273dc;
+        --visited-color:  #8b6fcb;
+        --code-background-color: #f2f2f2;
+        --code-color: #222;
+        --blockquote-color: #222;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #01242e;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #000;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+        }
+      }
+      body {
+        font-family: var(--font-secondary);
+        font-size: var(--font-scale);
+        margin: auto;
+        padding: 20px;
+        max-width: var(--width);
+        text-align: left;
+        background-color: var(--background-color);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        color: var(--text-color);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-main);
+        color: var(--heading-color);
+      }
+      a {
+        color: var(--link-color);
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline; 
+      }
+      nav a {
+        margin-right: 8px;
+      }
+      strong, b {
+        color: var(--heading-color);
+      }
+      button {
+        margin: 0;
+        cursor: pointer;
+      }
+      time {
+        font-family: monospace;
+        font-style: normal;
+        font-size: 15px;
+      }
+      main {
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+      }
+      hr {
+        border: 0;
+        border-top: 1px dashed;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      code {
+        font-family: monospace;
+        padding: 2px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+      }
+      blockquote {
+        border-left: 1px solid #999;
+        color: var(--code-color);
+        padding-left: 20px;
+        font-style: italic;
+      }
+      footer {
+        padding: 25px 0;
+        text-align: center;
+      }
+      .title:hover {
+        text-decoration: none;
+      }
+      .title h1 {
+        font-size: 1.5em;
+      }
+      .title h1:before {
+        content: "ᕕ( ᐛ )ᕗ";
+      }
+      .inline {
+        width: auto !important;
+      }
+      .block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center {
+        text-align: center;
+      }
+      .highlight, .code {
+        padding: 1px 15px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        overflow-x: auto;
+      }
+      .note {
+        border: 1px dashed;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        border-radius: 10px 10px 10px 0;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      /* blog post list */
+      ul.blog-posts, .uses-list {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul.blog-posts li {
+        display: flex;
+      }
+      ul.blog-posts li span {
+        flex: 0 0 180px;
+      }
+      ul.blog-posts li a:visited, a[aria-current="page"] {
+        color: var(--visited-color);
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .pagination ol {
+        list-style-type: none;
+        padding: unset;
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+<header>
+  <a class="title" href="/">
+    <h1>LearnWithGurpreet</h1>
+  </a>
+  <nav>
+  <p>
+  
+    <a href="/">Home</a>
+  
+    <a href="/posts/">Posts</a>
+  
+    <a href="/tags/">Tags</a>
+  
+    <a href="/uses/">Uses</a>
+  
+    <a href="/about/">About</a>
+  
+  </p>
+</nav>
+</header>
+    <main id="main"><h1 class="text-primary">FFmpeg: The one-liner to rule all media files</h1>
+ <p><time datetime="2025-08-26T22:00:00.000Z">August 27, 2025</time></p>
+
+
+
+
+
+
+  <small>
+    <div class="tags">
+      
+      <a href="/tags/tech">#Tech</a>
+      
+    </div>
+  </small>
+
+
+<h2>TL;DR</h2>
+<p>FFmpeg is a powerful command-line tool to handle all your media needs. Use it to quickly convert formats, create GIFs, resize images, trim videos, and extract audio right from your terminal. It's the fast, free, and scriptable alternative to heavy video editing software.</p>
+<h2>Introduction to the Library</h2>
+<p>FFmpeg is a complete, cross-platform solution to record, convert, and stream audio and video. It's the engine behind major platforms like YouTube and Netflix. While it can seem complex due to its command-line interface and numerous parameters, knowing the right commands can make it an invaluable tool for any media-related work. It originated in the early 2000s and has since become a cornerstone of internet video.</p>
+<h2>Installation Process</h2>
+<p>Here's how to install FFmpeg on different operating systems:</p>
+<h3>macOS</h3>
+<p>The easiest way to install FFmpeg on a Mac is by using Homebrew, a package manager for macOS.</p>
+<ol>
+<li>Open the Terminal app.</li>
+<li>If you don't have Homebrew installed, run the following command:</li>
+</ol>
+<pre><code class="language-bash">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;
+</code></pre>
+<ol start="3">
+<li>Once Homebrew is installed, you can install FFmpeg with this command:</li>
+</ol>
+<pre><code class="language-bash">brew install ffmpeg
+</code></pre>
+<h3>Windows</h3>
+<ol>
+<li>Download the latest FFmpeg build from the official website. The builds from gyan.dev are recommended.</li>
+<li>Extract the downloaded <code>.7z</code> file using a tool like 7-Zip.</li>
+<li>Rename the extracted folder to <code>FFmpeg</code> and move it to the root of your <code>C:</code> drive <code>(C:\FFmpeg)</code>.</li>
+<li>Add FFmpeg to your system's PATH environment variable:
+<ul>
+<li>Search for &quot;Edit the system environment variables&quot; in the Start Menu and open it.</li>
+<li>In the System Properties window, click on &quot;Environment Variables&quot;.</li>
+<li>Under &quot;System variables,&quot; find and select the &quot;Path&quot; variable, then click &quot;Edit.&quot;</li>
+<li>Click &quot;New&quot; and add the path to the <code>bin</code> folder inside your FFmpeg directory: <code>C:\FFmpeg\bin</code>.</li>
+<li>Click &quot;OK&quot; to close all windows.</li>
+</ul>
+</li>
+<li>Open Command Prompt and type <code>ffmpeg</code> to verify the installation.</li>
+</ol>
+<h3>Linux</h3>
+<p>You can use your distribution's package manager to install FFmpeg.</p>
+<ul>
+<li><strong>Debian/Ubuntu:</strong></li>
+</ul>
+<pre><code class="language-bash">sudo apt update
+sudo apt install ffmpeg
+</code></pre>
+<ul>
+<li><strong>Fedora/CentOS:</strong></li>
+</ul>
+<pre><code class="language-bash">sudo dnf install ffmpeg
+</code></pre>
+<ul>
+<li><strong>Arch Linux:</strong></li>
+</ul>
+<pre><code class="language-bash">sudo pacman -S ffmpeg
+</code></pre>
+<h2>Important Commands</h2>
+<p>Here are some of the most common and useful FFmpeg commands:</p>
+<h3>Image Resizing</h3>
+<p>To resize an image, you can use the <code>scale</code> filter. To maintain the aspect ratio, you can specify one dimension and set the other to <code>-1</code>.</p>
+<pre><code class="language-bash">ffmpeg -i input.jpg -vf scale=320:-1 output.png
+</code></pre>
+<p>This command resizes <code>input.jpg</code> to a width of 320 pixels while maintaining the original aspect ratio.</p>
+<h3>GIF Creation</h3>
+<p>You can easily create a GIF from a video. The following command creates a high-quality GIF from a specific portion of a video.</p>
+<pre><code class="language-bash">ffmpeg -ss 30 -t 3 -i input.mp4 -vf &quot;fps=10,scale=320:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse&quot; -loop 0 output.gif
+</code></pre>
+<ul>
+<li><code>-ss 30</code>: Starts the GIF 30 seconds into the video.</li>
+<li><code>-t 3</code>: Makes the GIF 3 seconds long.</li>
+<li><code>fps=10</code>: Sets the frame rate to 10 frames per second.</li>
+<li><code>scale=320:-1</code>: Resizes the GIF to a width of 320 pixels.</li>
+<li>The <code>palettegen</code> and <code>paletteuse</code> filters create a custom color palette for better quality.</li>
+<li><code>-loop 0</code>: Makes the GIF loop infinitely.</li>
+</ul>
+<h3>Video Format Changes</h3>
+<p>Converting a video from one format to another is straightforward.</p>
+<pre><code class="language-bash">ffmpeg -i input.mp4 output.avi
+</code></pre>
+<p>This command converts an MP4 file to an AVI file. You can also specify video and audio codecs, bitrates, and other options for more control over the output.</p>
+<h3>Other Useful Commands</h3>
+<ul>
+<li><strong>Extract Audio:</strong></li>
+</ul>
+<pre><code class="language-bash">ffmpeg -i input.mp4 -vn output.mp3
+</code></pre>
+<ul>
+<li><strong>Cut a Video:</strong></li>
+</ul>
+<pre><code class="language-bash">ffmpeg -i input.mp4 -ss 00:00:30 -t 00:00:30 output.mp4
+</code></pre>
+<ul>
+<li><strong>Compress a Video:</strong></li>
+</ul>
+<pre><code class="language-bash">ffmpeg -i input.mp4 -vcodec libx264 -crf 23 output.mp4
+</code></pre>
+<h2>Use Cases</h2>
+<p>FFmpeg is incredibly versatile. Here are some of its key use cases:</p>
+<ul>
+<li>
+<p><strong>Media Conversion</strong>: Convert audio and video files between various formats.</p>
+</li>
+<li>
+<p><strong>Video and Audio Editing</strong>: Trim, crop, merge, and apply filters to media files.</p>
+</li>
+<li>
+<p><strong>Streaming</strong>: Stream live video and audio content over the internet.</p>
+</li>
+<li>
+<p><strong>Screen Recording and Capture</strong>: Record your computer screen, capture video from webcams, and record audio from microphones.</p>
+</li>
+<li>
+<p><strong>Automation</strong>: Integrate FFmpeg into scripts to automate repetitive multimedia tasks.</p>
+</li>
+<li>
+<p><strong>Watermarking</strong>: Add text or image watermarks to your videos.</p>
+</li>
+</ul>
+
+
+  <p>
+    <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a coffee</a>
+  </p>
+
+
+
+  <hr />
+  <p>
+    <a
+      href="https://github.com/learnwithgurpreet/learnwithgurpreet.com/tree/main/./src/posts/2025/ffmpeg-the-one-liner-to-rule-all-media-files.md"
+      >View this page on GitHub</a
+    >
+  </p>
+
+
+</main>
+    <footer>
+  <p>
+  
+    <small><a href="/imprint/">Imprint</a></small>
+  
+    <small><a href="/privacy/">Privacy</a></small>
+  
+    <small><a href="/feed/feed.xml">RSS</a></small>
+  
+  </p>
+  <p><small>Copyright &copy; 2026 Learn WithGurpreet. All rights reserved.</small></p>
+</footer>
+  </body>
+</html>

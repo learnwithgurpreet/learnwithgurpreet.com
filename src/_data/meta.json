@@ -1,0 +1,88 @@
+{
+  "url": "https://www.learnwithgurpreet.com",
+  "siteName": "Learn",
+  "siteName2": "WithGurpreet",
+  "tagLine": "Every space has a story",
+  "siteDescription": "I am working with Publicis Sapient as senior architect, experience engineering",
+  "siteType": "Person",
+  "locale": "en_EN",
+  "lang": "en",
+  "skipContent": "Skip to content",
+  "author": {
+    "name": "Gurpreet Singh",
+    "avatar": "/favicon.png",
+    "email": "inbox@gurpreetsingh.me",
+    "website": "https://www.learnwithgurpreet.com"
+  },
+  "creator": {
+    "name": "Gurpreet Singh",
+    "email": "inbox@gurpreetsingh.me",
+    "website": "https://www.learnwithgurpreet.com",
+    "social": "https://fosstodon.org/@GurpreetSingh",
+    "company": "Gurpreet Labs",
+    "address": "Frankfurt, Germany",
+    "telephone": "+49 152 18055291"
+  },
+  "themeColorLight": "#f9f4ec",
+  "themeColorDark": "#201f1f",
+  "themeBgColor": "#FBFBFB",
+  "opengraph_default": "/assets/images/template/opengraph-default.jpg",
+  "opengraph_default_alt": "Building a greener web: where code meets sustainability to shape a better digital future. 🌍🌱",
+  "blog": {
+    "name": "Learn with Gurpreet Blog",
+    "description": "Building a greener web: where code meets sustainability to shape a better digital future. 🌍🌱",
+    "feedLinks": [
+      {
+        "title": "Atom Feed",
+        "url": "/feed/feed.xml",
+        "type": "application/atom+xml"
+      }
+    ],
+    "tagSingle": "Tag",
+    "tagPlural": "Tags",
+    "tagMore": "More tags:",
+    "paginationLabel": "Blog",
+    "paginationPage": "Page",
+    "paginationPrevious": "Previous",
+    "paginationNext": "Next",
+    "paginationNumbers": true
+  },
+  "details": {
+    "aria": "section controls",
+    "expand": "expand all",
+    "collapse": "collapse all"
+  },
+  "navigation": {
+    "ariaTop": "Main",
+    "ariaBottom": "Complementary",
+    "ariaPlatforms": "Platforms",
+    "drawerNav": false,
+    "navLabel": "Menu"
+  },
+  "themeSwitch": {
+    "title": "Theme",
+    "light": "light",
+    "dark": "dark",
+    "initial": "select"
+  },
+  "greenweb": {
+    "providers": {
+      "domain": "netlify.com",
+      "service": "cdn"
+    },
+    "credentials": {
+      "domain": "",
+      "doctype": "",
+      "url": ""
+    }
+  },
+  "viewRepo": {
+    "allow": true,
+    "infoText": "View this page on GitHub"
+  },
+  "buyMeACoffee": {
+    "allow": true,
+    "text": "Buy me a coffee",
+    "link": "https://www.buymeacoffee.com/gurpreet.singh"
+  }
+}

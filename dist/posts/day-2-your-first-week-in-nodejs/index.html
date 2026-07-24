@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      
+        Day 2 - Your first week in NodeJS
+      
+    </title>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.learnwithgurpreet.com#website",
+        "url": "https://www.learnwithgurpreet.com",
+        "name": "LearnWithGurpreet",
+        "description": "I am working with Publicis Sapient as senior architect, experience engineering",
+        "inLanguage": "en_EN",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.learnwithgurpreet.com/tags/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.learnwithgurpreet.com#author",
+        "name": "Gurpreet Singh",
+        "url": "https://www.learnwithgurpreet.com",
+        "email": "inbox@gurpreetsingh.me",
+        "sameAs": [
+          "",
+          ""
+        ],
+        "jobTitle": "Senior Architect eXperience Engineering",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Publicis Sapient"
+        }
+      }
+    ]
+  }
+</script>
+
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    },
+    "isPartOf": {
+      "@id": "https://www.learnwithgurpreet.com#website"
+    },
+    "@id": "",
+    "headline": "Day 2 - Your first week in NodeJS",
+    "description": "I believe you have already read my previous article where I explained, the basics of Node.js",
+    "image": "https://www.learnwithgurpreet.com/assets/og-images/day-2-your-first-week-in-nodejs-preview.jpeg",
+    "inLanguage": "en_EN",
+    "publisher": {
+      "@type": "Person",
+      "name": "Gurpreet Singh",
+      "url": "https://www.learnwithgurpreet.com"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Gurpreet Singh"
+    },
+    "datePublished": "2021-08-04T00:00:00.000Z"
+  }
+</script>
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
+
+    <!-- everything else: meta tags, icons, open graph etc.  -->
+    <base href="/posts/day-2-your-first-week-in-nodejs/" />
+<meta name="msvalidate.01" content="6795913B9B37C4605C83D85239DB46F5" />
+
+<meta
+  name="description"
+  content="
+  
+    I believe you have already read my previous article where I explained, the basics of Node.js
+  
+  "
+/>
+
+<meta name="theme-color" content="#f9f4ec" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#201f1f" media="(prefers-color-scheme: dark)" />
+<!-- Search Engines -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<!-- Made with Eleventy! -->
+<meta name="generator" content="Eleventy v3.1.6" />
+<!-- Disable automatic detection and formatting of possible phone numbers -->
+<meta name="format-detection" content="telephone=no" />
+<!-- supports both dark and light color schemes, page author prefers light as default. -->
+<meta name="color-scheme" content="light dark" />
+<!-- activates page transitions -->
+<meta name="view-transition" content="same-origin" />
+
+<!-- Helps prevent duplicate content issues -->
+<link rel="canonical" href="https://www.learnwithgurpreet.com/posts/day-2-your-first-week-in-nodejs/" />
+
+<!-- Links to information about the author(s) of the document -->
+<link rel="author" href="humans.txt" />
+
+<!-- LLMs.txt for AI discoverability -->
+<link rel="alternate" type="text/plain" href="https://www.learnwithgurpreet.com/llms.txt" title="LLM-friendly site summary" />
+
+
+
+<!-- Open Graph meta  -->
+<meta property="og:url" content="https://www.learnwithgurpreet.com/posts/day-2-your-first-week-in-nodejs/" />
+<meta property="og:type" content="website" />
+<meta
+  property="og:title"
+  content="Day 2 - Your first week in NodeJS"
+/>
+
+<meta
+  property="og:image"
+  content="https://www.learnwithgurpreet.com/assets/og-images/day-2-your-first-week-in-nodejs-preview.jpeg"
+/>
+<meta
+  property="og:image:alt"
+  content="Day 2 - Your first week in NodeJS"
+/>
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:description"
+  content="I believe you have already read my previous article where I explained, the basics of Node.js"
+/>
+<meta property="og:site_name" content="LearnWithGurpreet" />
+<meta property="og:locale" content="en_EN" />
+<meta property="article:author" content="Gurpreet Singh" />
+
+<!-- Twitter specific head data was removed in v2 -->
+
+<!-- RSS Autodiscovery. Loops over meta.blog.feedLinks -->
+
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    title="Atom Feed: LearnWithGurpreet"
+    href="/feed/feed.xml"
+  />
+
+
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+    <style>
+      :root {
+        --width: 720px;
+        --font-main: Verdana, sans-serif;
+        --font-secondary: Verdana, sans-serif;
+        --font-scale: 1em;
+        --background-color: #fff;
+        --heading-color: #222;
+        --text-color: #444;
+        --link-color: #3273dc;
+        --visited-color:  #8b6fcb;
+        --code-background-color: #f2f2f2;
+        --code-color: #222;
+        --blockquote-color: #222;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --background-color: #01242e;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #000;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+        }
+      }
+      body {
+        font-family: var(--font-secondary);
+        font-size: var(--font-scale);
+        margin: auto;
+        padding: 20px;
+        max-width: var(--width);
+        text-align: left;
+        background-color: var(--background-color);
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        line-height: 1.5;
+        color: var(--text-color);
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-main);
+        color: var(--heading-color);
+      }
+      a {
+        color: var(--link-color);
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline; 
+      }
+      nav a {
+        margin-right: 8px;
+      }
+      strong, b {
+        color: var(--heading-color);
+      }
+      button {
+        margin: 0;
+        cursor: pointer;
+      }
+      time {
+        font-family: monospace;
+        font-style: normal;
+        font-size: 15px;
+      }
+      main {
+        line-height: 1.6;
+      }
+      table {
+        width: 100%;
+      }
+      hr {
+        border: 0;
+        border-top: 1px dashed;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      code {
+        font-family: monospace;
+        padding: 2px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+      }
+      blockquote {
+        border-left: 1px solid #999;
+        color: var(--code-color);
+        padding-left: 20px;
+        font-style: italic;
+      }
+      footer {
+        padding: 25px 0;
+        text-align: center;
+      }
+      .title:hover {
+        text-decoration: none;
+      }
+      .title h1 {
+        font-size: 1.5em;
+      }
+      .title h1:before {
+        content: "ᕕ( ᐛ )ᕗ";
+      }
+      .inline {
+        width: auto !important;
+      }
+      .block {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .center {
+        text-align: center;
+      }
+      .highlight, .code {
+        padding: 1px 15px;
+        background-color: var(--code-background-color);
+        color: var(--code-color);
+        border-radius: 3px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        overflow-x: auto;
+      }
+      .note {
+        border: 1px dashed;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        border-radius: 10px 10px 10px 0;
+        margin-bottom: 30px;
+        position: relative;
+      }
+      /* blog post list */
+      ul.blog-posts, .uses-list {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul.blog-posts li {
+        display: flex;
+      }
+      ul.blog-posts li span {
+        flex: 0 0 180px;
+      }
+      ul.blog-posts li a:visited, a[aria-current="page"] {
+        color: var(--visited-color);
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      .pagination ol {
+        list-style-type: none;
+        padding: unset;
+        display: flex;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+<header>
+  <a class="title" href="/">
+    <h1>LearnWithGurpreet</h1>
+  </a>
+  <nav>
+  <p>
+  
+    <a href="/">Home</a>
+  
+    <a href="/posts/">Posts</a>
+  
+    <a href="/tags/">Tags</a>
+  
+    <a href="/uses/">Uses</a>
+  
+    <a href="/about/">About</a>
+  
+  </p>
+</nav>
+</header>
+    <main id="main"><h1 class="text-primary">Day 2 - Your first week in NodeJS</h1>
+ <p><time datetime="2021-08-04T00:00:00.000Z">August 4, 2021</time></p>
+
+
+
+
+
+
+  <small>
+    <div class="tags">
+      
+      <a href="/tags/nodejs-beginner-course">#NodeJS Beginner Course</a>
+      
+    </div>
+  </small>
+
+
+<h2>Prerequisite</h2>
+<ol>
+<li><a href="/posts/day-1-your-first-week-in-nodejs/">Day 1 - Your first week in NodeJS</a></li>
+</ol>
+<p>I believe you have already read my previous article where I explained, the basics of Node.js, from creating custom modules, event handling, and file read/write operations. Let’s jump on today’s topic and write the code together.</p>
+<h2>Creating a Server</h2>
+<p>In the current world, people are looking for de-coupled systems/architectures solutions where each and every module can run independently and be responsible. These systems can be stateless or stateful (we will read about it later). These servers can be categorized into two segments, <strong>Client</strong> and <strong>Server</strong>.</p>
+<h3>Client (front-end)</h3>
+<p>The client is where we invite end users, it can be a Mobile App or a Website. When someone is hitting <code>https://google.com</code> they are looking at the front-end of Google. The client platform is then responsible to get data from Server (backend APIs) or sometimes the backend renders the frontend code (like WordPress does) which we also call Traditional or Monolith structure.</p>
+<h3>Server (backend)</h3>
+<p>Node.js brought a big change in backend systems wherein people are not heading towards micro-service architecture. Servers/APIs are getting powerful and solving a single problem at a time. Headless architecture is one of its kind which can run without and state and gives expected output.</p>
+<p>Let’s quickly jump on client-side server creation. We will use the core Node.js module for this server.</p>
+<p>We will divide this into two sections, request and response.</p>
+<p><img src="/assets/images/blog/NRrw-CXTO-1024x538.png" alt="request and response" title="request and response"></p>
+<p>Request and Response architecture</p>
+<h4>JSON response example</h4>
+<pre><code class="language-js">// app.js
+
+const http = require('http');
+
+const server = http.createServer((request, response) =&gt; {
+  response.writeHead(200, {'Content-Type': 'application/JSON'});
+  response.end(JSON.stringify({name: 'John', employee_id: 'DS123'}));
+});
+
+server.listen(3000, '127.0.0.1', () =&gt;
+  console.log('Server is started on http://127.0.0.1:3000')
+);
+</code></pre>
+<p>To run the above file you need to run <code>$ node app.js</code> in your console and you will see a response in JSON format.</p>
+<p>It is important to understand response headers here, If you check I am sending the request back with the “application/JSON” header but in string. http module only supports string responses but can be distinguished by headers.</p>
+<blockquote>
+<p><a href="http://127.0.0.1">http://127.0.0.1</a> equivalent to <a href="http://localhost">http://localhost</a>, IP is required when you want to run your application on Local Networks.</p>
+</blockquote>
+<h4>HTML response example</h4>
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Welcome&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        background-color: cornflowerblue;
+        text-align: center;
+        font-size: 16px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to my webpage&lt;/h1&gt;
+    &lt;p&gt;This page is running on awesome Node.js sever!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-js">// app.js
+
+const http = require('http');
+const fs = require('fs');
+
+const server = http.createServer((request, response) =&gt; {
+  console.log(`request made: ${request.url}`);
+  response.writeHead(200, {'Content-Type': 'text/html'});
+  const readStream = fs.createReadStream(`${__dirname}/index.html`, 'utf8');
+  readStream.pipe(response);
+});
+
+server.listen(3000, '127.0.0.1', () =&gt;
+  console.log('Server is started on http://127.0.0.1:3000')
+);
+</code></pre>
+<h4>Output</h4>
+<p><img src="/assets/images/blog/4YVWO-UmXp-1024x585.png" alt="webpage output" title="webpage output"></p>
+<p>homepage</p>
+<p>You can see in the above example, we had to add inline styles for the page. We will cover external styles in the next article.</p>
+<p>Don’t panic it’s just a start, we will go through more robust and better ways of doing this.</p>
+<h2>Routing</h2>
+<p>I’ll quickly touch upon core <code>http</code> module routing since we will read these routes in detail when we get on the express.js topic.</p>
+<p>Routing is nothing but letting users redirect from one page to another. It also helps to divide code into authorized vs. non-authorized pages.</p>
+<p>We will quickly create another <code>HTML</code> page so users can navigate through these two different pages.</p>
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Welcome&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        background-color: cornflowerblue;
+        text-align: center;
+        font-size: 16px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px;
+      }
+      a {
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to my webpage&lt;/h1&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;This page is running on awesome Node.js sever!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-html">&lt;!-- contact.html --&gt;
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Contact&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        background-color: cornflowerblue;
+        text-align: center;
+        font-size: 16px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      h1 {
+        font-size: 3rem;
+      }
+      ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 10px;
+      }
+      a {
+        font-size: 1.2rem;
+        color: white;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Contact me on Twitter @gsin11&lt;/h1&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;/contact&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;This page is running on awesome Node.js sever!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-js">// app.js
+
+const http = require('http');
+const fs = require('fs');
+
+const server = http.createServer((request, response) =&gt; {
+  let readStream;
+  const url = request.url;
+
+  console.log(`request made: ${url}`);
+  response.writeHead(200, {'Content-Type': 'text/html'});
+
+  if (url === '/contact') {
+    readStream = fs.createReadStream(`${__dirname}/contact.html`, 'utf8');
+  } else {
+    readStream = fs.createReadStream(`${__dirname}/index.html`, 'utf8');
+  }
+
+  readStream.pipe(response);
+});
+
+server.listen(3000, '127.0.0.1', () =&gt;
+  console.log('Server is started on http://127.0.0.1:3000')
+);
+</code></pre>
+<p><img src="/assets/images/blog/pokvIuVoQV-1024x520.png" alt="home page" title="home page"></p>
+<p>homepage</p>
+<p><img src="/assets/images/blog/4c3Oe6sO0-1024x546.png" alt="contact page" title="contact page"></p>
+<p>Contact Page</p>
+<h2>Node Package Manager (NPM)</h2>
+<p>NPM is the world’s largest software registry. Open-source developers from every continent use npm to share and borrow packages, and many organizations use npm to manage private development as well.</p>
+<p>NPM comes as the default package manager with Node.js and gives access to install third-party packages.</p>
+<p>We will be using an <a href="https://www.npmjs.com/package/express">express</a> package in order to make our Node.js server better from a routing perspective and well as to keep the code more managed and modular.</p>
+<p>To start with <code>npm</code> you need to run the <code>$ npm init -y</code> command, it will create a file called <code>package.json</code> which will keep track of all the packages we install later.</p>
+<h2>Installing NodeMon</h2>
+<p>You have noticed before whenever we were making any changes to our <code>app.js</code> file we had to restart our node.js server. Well, this new package <a href="https://www.npmjs.com/package/nodemon">NodeMon</a> will be able to resolve this problem.</p>
+<p>You can install this package with <code>npm install nodemon</code> and you will see another directory created with some packages called <code>node_modules</code>.</p>
+<p><img src="/assets/images/blog/D5gk3lR9A2.png" alt="directory structure" title="directory structure"></p>
+<p>We will now quickly open our <code>package.json</code> file and make the following changes:</p>
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;node&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;&quot;,
+  &quot;main&quot;: &quot;app.js&quot;,
+  &quot;scripts&quot;: {
+    &quot;start&quot;: &quot;nodemon app.js&quot;
+  },
+  &quot;keywords&quot;: [],
+  &quot;author&quot;: &quot;&quot;,
+  &quot;license&quot;: &quot;ISC&quot;,
+  &quot;dependencies&quot;: {
+    &quot;nodemon&quot;: &quot;^2.0.12&quot;
+  }
+}
+</code></pre>
+<p>Instead of running your server with <code>$ node app.js</code> you can now run <code>$ npm start</code>, it will use the <code>start</code> command mentioned under <code>scripts</code> object in <code>package.json</code>.</p>
+<p>Now if you make any changes to your <code>app.js</code> file it will automatically restart your Node.js server.</p>
+<h2>Useful Links</h2>
+<ul>
+<li>
+<p><a href="https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_http_createserver_options_requestlistener">Create Server</a></p>
+</li>
+<li>
+<p><a href="https://www.npmjs.com/">Node Package Manager</a></p>
+</li>
+<li>
+<p><a href="https://www.npmjs.com/package/nodemon">Nodemon</a></p>
+</li>
+</ul>
+
+
+  <p>
+    <a href="https://www.buymeacoffee.com/gurpreet.singh">Buy me a coffee</a>
+  </p>
+
+
+
+  <hr />
+  <p>
+    <a
+      href="https://github.com/learnwithgurpreet/learnwithgurpreet.com/tree/main/./src/posts/2021/day-2-your-first-week-in-nodejs.md"
+      >View this page on GitHub</a
+    >
+  </p>
+
+
+</main>
+    <footer>
+  <p>
+  
+    <small><a href="/imprint/">Imprint</a></small>
+  
+    <small><a href="/privacy/">Privacy</a></small>
+  
+    <small><a href="/feed/feed.xml">RSS</a></small>
+  
+  </p>
+  <p><small>Copyright &copy; 2026 Learn WithGurpreet. All rights reserved.</small></p>
+</footer>
+  </body>
+</html>
