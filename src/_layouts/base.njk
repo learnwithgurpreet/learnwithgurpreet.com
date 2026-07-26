@@ -99,11 +99,16 @@
         max-width: 100%;
         height: auto;
       }
-      code {
+      pre {
+        overflow: scroll;
+      }
+      code,
+      pre {
         font-family: monospace;
-        padding: 2px;
-        background-color: var(--code-background-color);
         color: var(--code-color);
+        line-height: 1.4;
+        background-color: var(--code-background-color);
+        padding: 0.1em 0.4em;
         border-radius: 3px;
       }
       blockquote {
