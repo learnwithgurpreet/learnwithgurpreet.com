@@ -1,8 +1,10 @@
-<footer>
-  <p>
-  {% for item in navigation.bottom %}
-    <small><a href="{{ item.url }}">{{ item.text }}</a></small>
-  {% endfor %}
-  </p>
+<footer class="container">
+  <nav>
+    <ul>
+      {% for item in navigation.bottom %}
+        <li><small><a href="{{ item.url }}">{{ item.text }}</a></small></li>
+      {% endfor %}
+    </ul>
+  </nav>
   <p><small>Copyright &copy; {% year %} {{ meta.siteName }} {{ meta.siteName2 }}. All rights reserved.</small></p>
 </footer>

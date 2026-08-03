@@ -9,7 +9,7 @@ layout: page
     
 {% for key, value in uses %}
   <h2 id="{{ key }}">{{ key }}</h2>
-  <ul class="uses-list">
+  <ul>
     {% for obj in uses[ key ] %}
     <li>
       <h3>{{ obj.title }}</h3>

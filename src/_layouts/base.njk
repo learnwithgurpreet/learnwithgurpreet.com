@@ -12,183 +12,34 @@
         {{ meta.siteName }}{{ meta.siteName2 }}
       {% endif %}
     </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.pink.min.css" />
+    <style>
+      .skip-to-content {
+        z-index: 999;
+        position: absolute;
+        top: calc(var(--pico-spacing) * .75);
+        left: calc(var(--pico-spacing) * .75);
+        transform: translateY(-1000%);
+        opacity: 0;
+      }
+      .skip-to-content:focus {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      summary h2 {
+        display: inline;
+      }
+    </style>
     {% include "schemas/base-schema.njk" %}
 
     {% if schema == 'blog' %}{%- include "schemas/blogpost-schema.njk" -%}{% endif %}
 
     <!-- everything else: meta tags, icons, open graph etc.  -->
     {% include "partials/meta-info.njk" %}
-    <style>
-      :root {
-        --width: 720px;
-        --font-main: Verdana, sans-serif;
-        --font-secondary: Verdana, sans-serif;
-        --font-scale: 1em;
-        --background-color: {{ meta.themeColorLight }};
-        --heading-color: #222;
-        --text-color: #444;
-        --link-color: #3273dc;
-        --visited-color:  #8b6fcb;
-        --code-background-color: #f2f2f2;
-        --code-color: #222;
-        --blockquote-color: #222;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --background-color: {{ meta.themeColorDark }};
-          --heading-color: #eee;
-          --text-color: #ddd;
-          --link-color: #8cc2dd;
-          --visited-color:  #8b6fcb;
-          --code-background-color: #000;
-          --code-color: #ddd;
-          --blockquote-color: #ccc;
-        }
-      }
-      body {
-        font-family: var(--font-secondary);
-        font-size: var(--font-scale);
-        margin: auto;
-        padding: 20px;
-        max-width: var(--width);
-        text-align: left;
-        background-color: var(--background-color);
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        line-height: 1.5;
-        color: var(--text-color);
-      }
-      h1, h2, h3, h4, h5, h6 {
-        font-family: var(--font-main);
-        color: var(--heading-color);
-      }
-      a {
-        color: var(--link-color);
-        cursor: pointer;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline; 
-      }
-      nav a {
-        margin-right: 8px;
-      }
-      strong, b {
-        color: var(--heading-color);
-      }
-      button {
-        margin: 0;
-        cursor: pointer;
-      }
-      time {
-        font-family: monospace;
-        font-style: normal;
-        font-size: 15px;
-      }
-      main {
-        line-height: 1.6;
-      }
-      table {
-        width: 100%;
-      }
-      hr {
-        border: 0;
-        border-top: 1px dashed;
-      }
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-      pre {
-        overflow: scroll;
-      }
-      code,
-      pre {
-        font-family: monospace;
-        color: var(--code-color);
-        line-height: 1.4;
-        background-color: var(--code-background-color);
-        padding: 0.1em 0.4em;
-        border-radius: 3px;
-      }
-      blockquote {
-        border-left: 1px solid #999;
-        color: var(--code-color);
-        padding-left: 20px;
-        font-style: italic;
-      }
-      footer {
-        padding: 25px 0;
-        text-align: center;
-      }
-      .title:hover {
-        text-decoration: none;
-      }
-      .title h1 {
-        font-size: 1.5em;
-      }
-      .title h1:before {
-        content: "シ";
-        padding-right: 5px;
-      }
-      .inline {
-        width: auto !important;
-      }
-      .block {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .center {
-        text-align: center;
-      }
-      .highlight, .code {
-        padding: 1px 15px;
-        background-color: var(--code-background-color);
-        color: var(--code-color);
-        border-radius: 3px;
-        margin-block-start: 1em;
-        margin-block-end: 1em;
-        overflow-x: auto;
-      }
-      .note {
-        border: 1px dashed;
-        padding: 10px 15px;
-        font-size: 0.9em;
-        border-radius: 10px 10px 10px 0;
-        margin-bottom: 30px;
-        position: relative;
-      }
-      /* blog post list */
-      ul.blog-posts, .uses-list {
-        list-style-type: none;
-        padding: unset;
-      }
-      ul.blog-posts li {
-        display: flex;
-      }
-      ul.blog-posts li span {
-        flex: 0 0 180px;
-      }
-      ul.blog-posts li a:visited, a[aria-current="page"] {
-        color: var(--visited-color);
-      }
-      .pagination {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-      .pagination ol {
-        list-style-type: none;
-        padding: unset;
-        display: flex;
-        gap: 10px;
-      }
-    </style>
   </head>
   <body>
     {% include "partials/header.njk" %}
-    <main id="main">{{ content | safe }}</main>
+    <main class="container" id="main">{{ content | safe }}</main>
     {% include "partials/footer.njk" %}
     <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
   </body>

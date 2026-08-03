@@ -4,20 +4,21 @@ permalink: /tags/index.html
 eleventyComputed:
   title: '{{ meta.blog.tagPlural }}'
 ---
-
-<small>
-  <div class="tags">
-  {% for tag in collections.tagList %}
-  <a href="/tags/{{ tag | slugify }}" class="button">#{{ tag }}</a>
-  {% endfor %}
+<details>
+  <summary><h2>All Tags</h2></summary>
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+    {% set tagList = collections.tagList | reverse %}
+    {% for tag in tagList %}
+      <a href="/tags/{{ tag | slugify }}" role="button">#{{ tag }}</a>
+    {% endfor %}
   </div>
-</small>
+</details>
 
 <hr />
 
-<ul class="blog-posts">
+<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
   {% set itemList = collections.posts %}
   {% for item in itemList %}
-    {% include 'components/card.njk' %}
+    {% include 'components/post-card.njk' %}
   {% endfor %}
-</ul>
+</div>

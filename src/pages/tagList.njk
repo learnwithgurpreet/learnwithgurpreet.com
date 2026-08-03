@@ -9,21 +9,21 @@ permalink: /tags/{{ tag | slugify }}/
 eleventyComputed:
   title: '{{ meta.blog.tagSingle }}: {{ tag }}'
 ---
-<ul class="blog-posts">
+<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
   {% set itemList = collections[tag] | reverse %}
   {% for item in itemList %}
-    {% include 'components/card.njk' %}
+    {% include 'components/post-card.njk' %}
   {% endfor %}
-</ul>
+</div>
 
 <hr />
 
-<h2>{{ meta.blog.tagMore }}</h2>
-
-<small>
-  <div class="tags">
-  {% for tag in collections.tagList %}
-    <a href="/tags/{{ tag | slugify }}" class="button">#{{ tag }}</a>
+<details>
+  <summary><h2>{{ meta.blog.tagMore }}</h2></summary>
+  <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+  {% set tagList = collections.tagList | reverse %}
+  {% for tag in tagList %}
+    <a href="/tags/{{ tag | slugify }}" role="button">#{{ tag }}</a>
   {% endfor %}
-  </div>
-</small>
+</div>
+</details>

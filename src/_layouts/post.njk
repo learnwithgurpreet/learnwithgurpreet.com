@@ -2,7 +2,7 @@
 layout: base
 schema: blog
 ---
-<h1 class="text-primary">{{ title }}</h1>
+<h1>{{ title }}</h1>
 {% set definedDate = date %} <p>{% include "components/date.njk" %}</p>
 {% if note %}
 <div class="note">{{ note | safe }}</div>
@@ -12,17 +12,15 @@ schema: blog
 {% endif %}
 
 {% if credit %}
-  <small class="center block">© {{ credit }}</small>
+  <p>© {{ credit }}</p>
 {% endif %}
 
 {% if tags.length > 1 %}
-  <small>
-    <div class="tags">
-      {% for tag in tags %}{% if tag != "posts" %}
-      <a href="/tags/{{ tag | slug }}">#{{ tag }}</a>
-      {% endif %}{% endfor %}
-    </div>
-  </small>
+  <p>
+    {% for tag in tags %}{% if tag != "posts" %}
+    <a href="/tags/{{ tag | slug }}">#{{ tag }}</a>
+    {% endif %}{% endfor %}
+  </p>
 {% endif %}
 
 {{ content | safe }}

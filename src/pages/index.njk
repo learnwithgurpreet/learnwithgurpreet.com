@@ -11,10 +11,10 @@ blog:
 <p>I am working as Senior Architect eXperience Engineering (front-end architect) with Publicis Sapient. Having more than 15 years of experience in the area of jQuery, JavaScript, HTML5, and CSS3. My expertise is to work on full stack-based projects using NodeJS and ReactJS.</p>
 
 <h2>{{ blog.title }}</h2>
-<ul>
-  <!-- loop posts -->
+<p>Top 8 posts</p>
+<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
   {% set itemList = collections.posts %}
-  {% for item in itemList.slice(0, 10) %}
-    <li><a href="{{ item.url | url }}">{{ item.data.title }}</a></li>
+  {% for item in itemList.slice(0, 8) %}
+    {% include "components/post-card.njk" %}
   {% endfor %}
-</ul>
+</div>

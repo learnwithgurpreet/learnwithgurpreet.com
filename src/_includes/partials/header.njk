@@ -1,7 +1,14 @@
-<a href="#main" class="skip-link">{{ meta.skipContent }}</a>
-<header>
-  <a class="title" href="/">
+<a href="#main" class="skip-to-content contrast" role="button">{{ meta.skipContent }}</a>
+<header class="container">
+  <hgroup>
     <h1>{{ meta.siteName }}{{ meta.siteName2 }}</h1>
-  </a>
-  {% include "partials/main-nav.njk" %}
+    <p>{{ meta.tagLine }}</p>
+  </hgroup>
+  <nav>
+    <ul>
+    {% for item in navigation.top %}
+      <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+    {% endfor %}
+    </ul>
+  </nav>
 </header>

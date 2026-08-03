@@ -4,16 +4,16 @@ description: 'All blog posts can be found here'
 layout: page
 pagination:
   data: collections.posts
-  size: 10
+  size: 12
 permalink: 'posts/{% if pagination.pageNumber >=1  %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
 ---
 <p>This blog has a pagination of {{ pagination.size }} posts per page.</p>
-<ul class="blog-posts">
+<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
   {% set itemList = pagination.items %}
   {% for item in itemList %}
-    {% include 'components/card.njk' %}
+    {% include 'components/post-card.njk' %}
   {% endfor %}
-</ul>
+</div>
 {% set collectionToPaginate = collections.posts %}
 {% set metaKey = "blog" %}
 {% if collectionToPaginate.length > pagination.size %}
