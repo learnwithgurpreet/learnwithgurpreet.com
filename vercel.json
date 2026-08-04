@@ -2,13 +2,13 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
-      "source": "/posts/dusting-off-the-lens-why-im-returning-to-photography-in-2026",
+      "source": "/posts/dusting-off-the-lens-why-im-returning-to-photography-in-2026/",
       "destination": "/posts/dusting-off-the-lens/",
       "permanent": true
     },
     {
-      "source": "/posts/dusting-off-the-lens-why-im-returning-to-photography-in-2026/",
-      "destination": "/posts/dusting-off-the-lens/",
+      "source": "/posts/nextjs-15-build-once-deploy-many-achieving-environment-agnostic-builds-with-the-app-router/",
+      "destination": "/posts/nextjs-15-build-once-deploy-many/",
       "permanent": true
     }
   ]
