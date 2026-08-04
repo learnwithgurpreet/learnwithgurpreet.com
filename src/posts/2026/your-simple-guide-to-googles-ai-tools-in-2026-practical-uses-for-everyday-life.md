@@ -1,7 +1,7 @@
 ---
 title: "Simple guide to google's AI tools in 2026"
 date: '2026-01-14'
-description: It is early 2026, and Google has fundamentally shifted from offering simple "chatbots" to providing "AI Agents"—tools that don't just talk but actually do things.
+description: 'Practical guide to Google’s AI tools.'
 tags:
   - 'AI'
   - 'Tech'

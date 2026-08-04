@@ -1,7 +1,7 @@
 ---
 title: 'Day 1 - Your first week in NodeJS'
 date: 2021-08-03
-description: I believe you know something about Node.js before starting this course, just to refresh your memory.
+description: 'Beginner-friendly introduction to Node.js basics.'
 tags:
   - 'NodeJS Beginner Course'
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'My react stack for 2021'
 date: '2021-05-08'
-description: I will showcase what options are available in the market to start on a ReactJS based application.
+description: 'An opinionated React stack for 2021.'
 tags:
   - 'Thoughts'
 ---

@@ -3,7 +3,7 @@ title: A look at the AI promise humanoid robots
 date: '2025-10-30'
 image: './src/assets/images/blog/robot.jpg'
 credit: '1x.tech'
-description: Are humanoid robots ready to be our personal assistants? We explore the large gap between the promised dream and today's reality.
+description: 'Are humanoid robots ready for everyday life?'
 tags:
   - 'Thoughts'
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'My first strapi project experience'
 date: '2021-02-26'
-description: I found Strapi as a good example since it is not only popular these days but comes with nearly zero bootstrap footprints.
+description: 'First impressions of Strapi as headless CMS.'
 tags:
   - 'Tech'
 ---

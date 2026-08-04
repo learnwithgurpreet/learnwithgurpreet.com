@@ -1,7 +1,7 @@
 ---
 title: "Dusting off the lens"
 date: '2026-01-19'
-description: Reconnecting with photography hasn't just been about picking up a piece of gear. It’s been about relearning how to look at the world.
+description: 'Return to photography with renewed purpose.'
 tags:
   - 'Photography'
 ---

@@ -1,7 +1,7 @@
 ---
 title: "FFmpeg: The one-liner to rule all media files"
 date: '2025-08-27'
-description: FFmpeg is a powerful command-line tool to handle all your media needs. Use it to quickly convert formats, create GIFs, resize images, trim videos, and extract audio right from your terminal. It's the fast, free, and scriptable alternative to heavy video editing software.
+description: 'Master FFmpeg for quick media conversions.'
 tags:
   - 'Tech'
 ---

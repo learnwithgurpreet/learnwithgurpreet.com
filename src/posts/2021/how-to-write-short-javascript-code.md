@@ -1,7 +1,7 @@
 ---
 title: 'How to write short javascript code?'
 date: '2021-07-28'
-description: I know some of you have never used short syntax JavaScript statements for example if/else vs. ternary statement.
+description: 'Learn concise JavaScript patterns and shortcuts.'
 tags:
   - 'Tech'
 ---

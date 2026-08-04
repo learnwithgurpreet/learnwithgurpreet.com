@@ -1,7 +1,7 @@
 ---
 title: 'Node.js login service (express.js + passport)'
 date: '2021-03-19'
-description: I often see developers struggle or invest too much time to create authorization modules in their Node.js applications.
+description: 'Build a secure login system with Passport.'
 tags:
   - 'NodeJS'
 ---

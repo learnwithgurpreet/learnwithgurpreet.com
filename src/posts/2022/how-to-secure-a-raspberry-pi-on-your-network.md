@@ -1,7 +1,7 @@
 ---
 title: 'How to secure a raspberry pi on your network'
 date: '2022-05-14'
-description: If you are planning to expose your RaspberryPi over the internet, you should consider these security guidelines.
+description: 'Secure your Raspberry Pi against common threats.'
 tags:
   - 'Raspberry PI'
 ---

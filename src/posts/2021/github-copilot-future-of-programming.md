@@ -1,7 +1,7 @@
 ---
 title: 'GitHub copilot - future of programming?'
 date: '2021-07-10'
-description: There were a couple of questions that came to my mind when I saw this first.
+description: 'Explores whether Copilot will reshape coding.'
 tags:
   - 'Thoughts'
 ---

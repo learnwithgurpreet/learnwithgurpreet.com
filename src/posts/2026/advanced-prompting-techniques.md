@@ -1,7 +1,7 @@
 ---
 title: Advanced prompting techniques
 date: '2026-04-02'
-description: Below guide will help you to identify different prompt types with examples.
+description: 'Master AI prompting with practical examples.'
 tags:
   - 'AI'
   - 'Tech'

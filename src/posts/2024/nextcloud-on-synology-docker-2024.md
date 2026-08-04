@@ -1,7 +1,7 @@
 ---
 title: Nextcloud on synology docker 2024
 date: '2024-01-25'
-description: NextCloud is a widely used hosting solution that offers an integrated office suite, allowing users to utilize the platform in a manner similar to services such as Dropbox and Google Drive.
+description: 'Host Nextcloud on Synology with Docker.'
 tags:
   - 'Tech'
 ---

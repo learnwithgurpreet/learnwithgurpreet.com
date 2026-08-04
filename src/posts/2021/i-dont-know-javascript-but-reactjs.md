@@ -1,7 +1,7 @@
 ---
 title: "I don't know javascript but ReactJS"
 date: '2021-07-25'
-description: Isn’t it weird to witness such a scenario where someone can code the ReactJS component but can't write Vanilla JavaScript?
+description: 'JavaScript fundamentals matter even with React.'
 tags:
   - 'Thoughts'
 ---

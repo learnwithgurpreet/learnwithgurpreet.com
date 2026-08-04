@@ -1,7 +1,7 @@
 ---
 title: 'Can we use google services without compromising privacy?'
 date: '2021-02-24'
-description: Over the period of time, people are aware of what internet privacy is and why it is important.
+description: 'Practical ways to use Google services privately.'
 tags:
   - 'Privacy'
 ---
