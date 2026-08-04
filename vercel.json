@@ -55,6 +55,16 @@
       "source": "/posts/the-hard-truth-about-running-nextjs-at-scale/",
       "destination": "/posts/hard-truth-about-running-nextjs-at-scale/",
       "permanent": true
+    },
+    {
+      "source": "/posts/styling-options-in-nextjs-13-server-side-and-client-side",
+      "destination": "/posts/styling-options-in-nextjs-13/",
+      "permanent": true
+    },
+    {
+      "source": "/posts/styling-options-in-nextjs-13-server-side-and-client-side/",
+      "destination": "/posts/styling-options-in-nextjs-13/",
+      "permanent": true
     }
   ]
 }

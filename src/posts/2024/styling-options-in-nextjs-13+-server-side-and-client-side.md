@@ -1,5 +1,5 @@
 ---
-title: 'Styling options in NextJS 13+ (server side and client side)'
+title: 'Styling options in NextJS 13+'
 date: '2024-05-14'
 description: Styling choices in Next.js can be confusing. Some prefer CSS modules, while others opt for the popular Tailwind CSS.
 tags:

@@ -115,6 +115,9 @@
         color: var(--link-color);
         font-size: 1.2rem;
       }
+      a[aria-current="page"] {
+        color: var(--font-color);
+      }
       a:hover {
         text-decoration: underline;
       }
@@ -144,6 +147,10 @@
       .skip-to-content:focus {
         transform: translateY(0);
         opacity: 1;
+      }
+      summary {
+        cursor: pointer;
+        padding: 0.5rem 0;
       }
     </style>
     {% include "schemas/base-schema.njk" %}
