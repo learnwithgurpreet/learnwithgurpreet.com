@@ -36,7 +36,7 @@ module.exports = async function (eleventyConfig) {
 
   // 	--------------------- Passthrough File Copy -----------------------
   // same path
-  ['src/assets/fonts/', 'src/assets/images/template', 'src/assets/images/blog', 'src/assets/og-images', 'src/redirects.json'].forEach(
+  ['src/assets/fonts/', 'src/assets/images/template', 'src/assets/images/blog', 'src/assets/og-images', 'src/vercel.json'].forEach(
     path => eleventyConfig.addPassthroughCopy(path)
   );
 
