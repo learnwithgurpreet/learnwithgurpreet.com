@@ -2,27 +2,29 @@
 layout: base
 schema: blog
 ---
-<h1>{{ title }}</h1>
-{% set definedDate = date %} <p>{% include "components/date.njk" %}</p>
-{% if note %}
-<div class="note">{{ note | safe }}</div>
-{% endif %}
-{% if image %}
-  {% eleventyImage image, alt or title, null, "eager", "feature" %}
-{% endif %}
+<article>
+  <h1>{{ title }}</h1>
+  {% set definedDate = date %}{% include "components/date.njk" %}
+  {% if note %}
+  <blockquote>{{ note | safe }}</blockquote>
+  {% endif %}
+  {% if image %}
+    {% eleventyImage image, alt or title, null, "eager", "feature" %}
+  {% endif %}
 
-{% if credit %}
-  <p>© {{ credit }}</p>
-{% endif %}
+  {% if credit %}
+    <p>© {{ credit }}</p>
+  {% endif %}
 
-{% if tags.length > 1 %}
-  <p>
-    {% for tag in tags %}{% if tag != "posts" %}
-    <a href="/tags/{{ tag | slug }}">#{{ tag }}</a>
-    {% endif %}{% endfor %}
-  </p>
-{% endif %}
+  {% if tags.length > 1 %}
+    <p>
+      {% for tag in tags %}{% if tag != "posts" %}
+      <a href="/tags/{{ tag | slug }}">#{{ tag }}</a>
+      {% endif %}{% endfor %}
+    </p>
+  {% endif %}
 
-{{ content | safe }}
-{% include 'components/buy-me-coffee.njk' %}
-{% include 'components/edit-on.njk' %}
+  {{ content | safe }}
+  {% include 'components/buy-me-coffee.njk' %}
+  {% include 'components/edit-on.njk' %}
+</article>

@@ -8,7 +8,7 @@ pagination:
 permalink: 'posts/{% if pagination.pageNumber >=1  %}page-{{ pagination.pageNumber + 1 }}/{% endif %}index.html'
 ---
 <p>This blog has a pagination of {{ pagination.size }} posts per page.</p>
-<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+<div class="blog-list">
   {% set itemList = pagination.items %}
   {% for item in itemList %}
     {% include 'components/post-card.njk' %}

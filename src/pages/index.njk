@@ -10,9 +10,8 @@ blog:
 
 <p>I am working as Senior Architect eXperience Engineering (front-end architect) with Publicis Sapient. Having more than 15 years of experience in the area of jQuery, JavaScript, HTML5, and CSS3. My expertise is to work on full stack-based projects using NodeJS and ReactJS.</p>
 
-<h2>{{ blog.title }}</h2>
-<p>Top 8 posts</p>
-<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+<h2>Top 8 {{ blog.title }}</h2>
+<div class="blog-list">
   {% set itemList = collections.posts %}
   {% for item in itemList.slice(0, 8) %}
     {% include "components/post-card.njk" %}

@@ -1,10 +1,9 @@
 {% set title = item.data.title %}
+{# {{ title | truncate(60, true, '...') }} #}
 {% set definedDate = item.date %}
 {% set description = item.data.description %}
 <article>
-  <h3><a href="{{ item.url | url }}">{{ title | truncate(22, true, '...') }}</a></h3>
-  <p>{{ description | truncate(50, true, '...') }}</p>
-  <footer>
-    <small>{% include "components/date.njk" %}</small>
-  </footer>
+  <a href="{{ item.url | url }}"><h2>{{ title }}</h2></a>
+  {% include "components/date.njk" %}
+  <p>{{ description | truncate(100, true, '...') }}</p>
 </article>
