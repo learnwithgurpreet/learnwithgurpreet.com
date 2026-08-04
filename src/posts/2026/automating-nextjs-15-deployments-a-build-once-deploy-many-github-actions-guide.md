@@ -1,5 +1,5 @@
 ---
-title: "Automating Next.js 15 deployments: A build once, deploy many github actions guide"
+title: "Automating Next.js 15 deployments"
 date: '2026-01-15'
 description: Learn how to build a high-performance CI/CD pipeline for Next.js 15 using GitHub Actions. Move a single agnostic artifact through DEV, SIT, and PROD without rebuilding
 tags:
