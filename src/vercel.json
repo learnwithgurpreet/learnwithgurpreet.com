@@ -2,6 +2,11 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "redirects": [
     {
+      "source": "/posts/dusting-off-the-lens-why-im-returning-to-photography-in-2026",
+      "destination": "/posts/dusting-off-the-lens/",
+      "permanent": true
+    },
+    {
       "source": "/posts/dusting-off-the-lens-why-im-returning-to-photography-in-2026/",
       "destination": "/posts/dusting-off-the-lens/",
       "permanent": true
