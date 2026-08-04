@@ -5,7 +5,7 @@ description: Learn how to build a high-performance CI/CD pipeline for Next.js 15
 tags:
   - 'Tech'
   - 'NextJS'
-note: "In my previous guide, <a href=\"/posts/nextjs-15-build-once-deploy-many-achieving-environment-agnostic-builds-with-the-app-router/\">Next.js 15 Build Once, Deploy Many: Achieving Environment-Agnostic Builds with the App Router</a>, we discussed the architectural shift toward runtime configuration. Now, it is time to put that theory into practice."
+note: "In my previous guide, <a href=\"/posts/nextjs-15-build-once-deploy-many/\">Next.js 15 build once, deploy many</a>, we discussed the architectural shift toward runtime configuration. Now, it is time to put that theory into practice."
 ---
 
 To achieve a true "Build Once, Deploy Many" workflow, your GitHub Actions must be structured to separate the expensive Build phase from the lightweight **Deploy** phase.
