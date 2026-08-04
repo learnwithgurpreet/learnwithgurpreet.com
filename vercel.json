@@ -17,6 +17,11 @@
       "permanent": true
     },
     {
+      "source": "/posts/nextjs-15-build-once-deploy-many-achieving-environment-agnostic-builds-with-the-app-router/",
+      "destination": "/posts/nextjs-15-build-once-deploy-many/",
+      "permanent": true
+    },
+    {
       "source": "/posts/automating-nextjs-15-deployments-a-build-once-deploy-many-github-actions-guide",
       "destination": "/posts/automating-nextjs-15-deployments/",
       "permanent": true
