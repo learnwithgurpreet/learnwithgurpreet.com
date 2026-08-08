@@ -17,11 +17,13 @@ schema: blog
   {% endif %}
 
   {% if tags.length > 1 %}
-    <p>
+  <nav class="navigation-menu">
+    <ul>
       {% for tag in tags %}{% if tag != "posts" %}
-      <a href="/tags/{{ tag | slug }}">#{{ tag }}</a>
+      <li><a href="/tags/{{ tag | slug }}">#{{ tag }}</a></li>
       {% endif %}{% endfor %}
-    </p>
+    </ul>
+  </nav>
   {% endif %}
 
   {{ content | safe }}

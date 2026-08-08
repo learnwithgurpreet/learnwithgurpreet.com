@@ -15,15 +15,13 @@ eleventyComputed:
     {% include 'components/post-card.njk' %}
   {% endfor %}
 </div>
-
 <hr />
-
-<details>
-  <summary>{{ meta.blog.tagMore }}</summary>
-  <div>
+<h2>{{ meta.blog.tagMore }}</h2>
+<nav class="navigation-menu">
+  <ul>
   {% set tagList = collections.tagList | reverse %}
   {% for tag in tagList %}
-    <a href="/tags/{{ tag | slugify }}" role="button">#{{ tag }}</a>
+    <li><a href="/tags/{{ tag | slugify }}" role="button">#{{ tag }}</a></li>
   {% endfor %}
-</div>
-</details>
+  </ul>
+</nav>

@@ -4,15 +4,15 @@ permalink: /tags/index.html
 eleventyComputed:
   title: '{{ meta.blog.tagPlural }}'
 ---
-<details>
-  <summary>All Tags</summary>
-  <div>
-    {% set tagList = collections.tagList | reverse %}
-    {% for tag in tagList %}
-      <a href="/tags/{{ tag | slugify }}" role="button">#{{ tag }}</a>
-    {% endfor %}
-  </div>
-</details>
+<h2>All Tags</h2>
+<nav class="navigation-menu">
+  <ul>
+  {% set tagList = collections.tagList | reverse %}
+  {% for tag in tagList %}
+    <li><a href="/tags/{{ tag | slugify }}" role="button">#{{ tag }}</a></li>
+  {% endfor %}
+  </ul>
+</nav>
 
 <hr />
 
