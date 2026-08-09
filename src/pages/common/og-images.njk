@@ -82,7 +82,6 @@ eleventyExcludeFromCollections: true
 			fill="{{ text }}"
 			letter-spacing="-0.5"
 		>
-			<!-- <tspan x="160" y="580">{{ meta.siteName }} · {{ meta.url | replace("https://", "") | replace("http://", "") }}</tspan> -->
-			<tspan x="160" y="580">{{ meta.siteName }}{{ meta.siteName2 }} — {{ meta.tagLine }}</tspan>
+			<tspan x="160" y="580">{{ meta.blog.name }} — {{ meta.tagLine }}</tspan>
 		</text>
 </svg>

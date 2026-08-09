@@ -9,7 +9,7 @@
       "@id": "{{ meta.url }}#website"
     },
     "@id": "{{ url }}",
-    "headline": "{{ title or meta.siteName + meta.siteName2 }}",
+    "headline": "{{ title or meta.blog.name }}",
     "description": "{{ discover.description or description or meta.siteDescription }}",
     "image": "{{ meta.url }}{% if discover.image %}/assets/images/{{ discover.image }}{% else %}/assets/og-images/{{ title | slugify }}-preview.jpeg{% endif %}",
     "inLanguage": "{{ meta.locale }}",
