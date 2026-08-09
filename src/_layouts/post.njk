@@ -17,7 +17,7 @@ schema: blog
   {% endif %}
 
   {% if tags.length > 1 %}
-  <nav class="navigation-menu">
+  <nav>
     <ul>
       {% for tag in tags %}{% if tag != "posts" %}
       <li><a href="/tags/{{ tag | slug }}">#{{ tag }}</a></li>
