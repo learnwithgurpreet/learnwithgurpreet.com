@@ -11,6 +11,4 @@ layout: page
 
 {{ meta.creator.address }}
 
-Tel: {{ meta.creator.telephone }}
-
 Email: [{{ meta.creator.email }}](mailto:{{ meta.creator.email }})

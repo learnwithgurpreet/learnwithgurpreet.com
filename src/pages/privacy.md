@@ -31,8 +31,6 @@ This website transmits itself using HTTPS, encrypting all data between the brows
 
 {{ meta.creator.address }}
 
-Tel: {{ meta.creator.telephone }}
-
 If you have any questions or doubts, please contact me: [{{ meta.creator.email }}](mailto:{{ meta.creator.email }}).
 
 ## Changes to the policy
