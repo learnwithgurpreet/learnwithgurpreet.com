@@ -139,21 +139,18 @@
         padding-top: 0.25rem;
         margin: 0;
       }
-      @font-face {
-        font-family: 'FontWithASyntaxHighlighterLightOwl-Regular';
-        src:
-          url('/assets/fonts/FontWithASyntaxHighlighterLightOwl-Regular.woff2')
-          format('woff2')
-        ;
-      }
-      code {
-        font-family: "FontWithASyntaxHighlighterLightOwl-Regular", monospace;
+
+      code { 
+        font-family: monospace;
         color: var(--codeColor);
+        font-size: 90%;
         background-color: var(--codeBgColor);
+        padding: 0 0.2em;
       }
+      
       pre:has(code) {
         line-height: 1.5rem;
-        padding: 1rem 2rem;
+        padding: 0.5rem 1em;
         overflow-x: auto;
         background-color: var(--codeBgColor);
         border-radius: 0.5rem;
