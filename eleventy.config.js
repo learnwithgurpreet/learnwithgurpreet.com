@@ -10,6 +10,7 @@ const {
 } = require('./config/filters/index.js');
 const { slugifyString } = require('./config/utils/index.js');
 const { svgToJpeg } = require('./config/events/index.js');
+const externalLinksPlugin = require("./config/utils/externalLinks.js");
 
 module.exports = async function (eleventyConfig) {
   eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
@@ -29,6 +30,7 @@ module.exports = async function (eleventyConfig) {
     'groupByYear',
     groupBy(post => post.date.getFullYear())
   );
+  eleventyConfig.addPlugin(externalLinksPlugin);
 
   if (process.env.ELEVENTY_RUN_MODE === 'serve') {
     eleventyConfig.on('eleventy.after', svgToJpeg);
