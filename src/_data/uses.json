@@ -1,19 +1,14 @@
 {
   "Gears": [
     {
-      "title": "Apple MacBook Pro M1 (14\")",
-      "details": "This is my personal coding computer. Processor M1 Pro Chip, 8-Core CPU, 16-Core GPU, 16 GB RAM, 512 GB SSD.",
-      "more_info_link": "https://www.apple.com/mac/"
+      "title": "TUXEDO InfinityBook Pro 14 - Gen10",
+      "details": "Linux first laptop with 14\" display, AMD Ryzen AI 9 HX 370, 32GB RAM, 1TB SSD, Custom built for Linux.",
+      "more_info_link": "https://www.tuxedocomputers.com/en/TUXEDO-InfinityBook-Pro-14-Gen10.tuxedo"
     },
     {
-      "title": "iPhone 17",
+      "title": "Google Pixel 11 Pro",
       "details": "You already know about it :)",
-      "more_info_link": "https://www.apple.com/iphone/"
-    },
-    {
-      "title": "Apple Watch SE 3",
-      "details": "You already know about it :)",
-      "more_info_link": "https://www.apple.com/watch/"
+      "more_info_link": "https://www.google.com/pixel/11/pro/"
     },
     {
       "title": "Insta 360 flow pro 2 (AI-tracking-bundle)",
