@@ -26,7 +26,9 @@ schema: blog
   </nav>
   {% endif %}
 
-  {{ content | safe }}
+  <div id="post-content">
+    {{ content | safe }}
+  </div>
   {% include 'components/buy-me-coffee.njk' %}
   {% include 'components/edit-on.njk' %}
 </article>

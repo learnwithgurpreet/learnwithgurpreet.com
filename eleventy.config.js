@@ -1,11 +1,11 @@
+const cheerio = require("cheerio");
 const { getAllPosts, groupBy, tagList } = require('./config/collections/index.js');
-const { imageShortcode, includeRaw, liteYoutube } = require('./config/shortcodes/index.js');
+const { imageShortcode } = require('./config/shortcodes/index.js');
 const {
   toISOString,
   formatDate,
   toAbsoluteUrl,
   stripHtml,
-  minifyJs,
   splitlines
 } = require('./config/filters/index.js');
 const { slugifyString } = require('./config/utils/index.js');
@@ -45,6 +45,68 @@ module.exports = async function (eleventyConfig) {
   // to root
   eleventyConfig.addPassthroughCopy({
     'src/assets/images/favicon/*': '/'
+  });
+
+  eleventyConfig.addTransform("content-heading-slugs", (content, outputPath) => {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+
+    try {
+      const $ = cheerio.load(content, { decodeEntities: false });
+
+      // Only process headings inside the content area
+      const $container = $("#post-content");
+      if ($container.length === 0) {
+        return $.html();
+      }
+
+      // Track all IDs in the document to ensure global uniqueness
+      const used = new Set();
+      $("[id]").each((_, el) => {
+        const id = $(el).attr("id");
+        if (id) used.add(id);
+      });
+
+      $container.find("h2, h3, h4, h5, h6").each((_, el) => {
+        const $el = $(el);
+        const existing = $el.attr("id");
+        let idToUse;
+
+        if (existing) {
+          used.add(existing);
+          idToUse = existing;
+        } else {
+          const base = slugifyString($el.text());
+          if (!base) return;
+
+          let slug = base;
+          let i = 2;
+          while (used.has(slug)) {
+            slug = `${base}-${i++}`;
+          }
+          $el.attr("id", slug);
+          used.add(slug);
+          idToUse = slug;
+        }
+
+        // Wrap heading contents in a self-link when safe
+        const hasDirectOnlyAnchor = $el.children("a").length === 1 && $el.contents().length === 1;
+        const containsAnyAnchor = $el.find("a").length > 0;
+
+        if (hasDirectOnlyAnchor) {
+          const $a = $el.children("a").first();
+          $a.attr("href", `#${idToUse}`);
+        } else if (!containsAnyAnchor) {
+          const inner = $el.html();
+          const $a = $("<a></a>").attr("href", `#${idToUse}`).html(inner);
+          $el.empty().append($a);
+        }
+      });
+
+      return $.html();
+    } catch (err) {
+      console.warn("[content-heading-slugs] transform failed:", err && err.message ? err.message : err);
+      return content; // Safe fallback
+    }
   });
 
   return {
