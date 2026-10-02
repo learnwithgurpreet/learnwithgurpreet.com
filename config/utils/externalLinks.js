@@ -6,7 +6,10 @@ module.exports = function externalLinksPlugin(eleventyConfig) {
       return content;
     }
 
-    const $ = load(content, null, false);
+    const $ = load(content, {
+      decodeEntities: false,
+      xmlMode: false
+    });
 
     $("a[href]").each(function () {
       const link = $(this);
@@ -45,6 +48,11 @@ module.exports = function externalLinksPlugin(eleventyConfig) {
       }
     });
 
-    return $.html();
+    // Preserve DOCTYPE and full HTML structure
+    const doctype = content.match(/^<!doctype[^>]*>/i)?.[0] || '';
+    const html = $.html();
+    // Remove any doctype cheerio might have added
+    const cleanHtml = html.replace(/^<!doctype[^>]*>\s*/i, '');
+    return doctype ? doctype + '\n' + cleanHtml : cleanHtml;
   });
 };

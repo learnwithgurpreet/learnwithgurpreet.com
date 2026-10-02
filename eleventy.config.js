@@ -1,4 +1,5 @@
 const cheerio = require("cheerio");
+const htmlmin = require("html-minifier-terser");
 const { getAllPosts, groupBy, tagList } = require('./config/collections/index.js');
 const { imageShortcode } = require('./config/shortcodes/index.js');
 const {
@@ -51,12 +52,15 @@ module.exports = async function (eleventyConfig) {
     if (!outputPath || !outputPath.endsWith(".html")) return content;
 
     try {
-      const $ = cheerio.load(content, { decodeEntities: false });
+      const $ = cheerio.load(content, {
+        decodeEntities: false,
+        xmlMode: false
+      });
 
       // Only process headings inside the content area
       const $container = $("#post-content");
       if ($container.length === 0) {
-        return $.html();
+        return content; // Return original if no post-content found
       }
 
       // Track all IDs in the document to ensure global uniqueness
@@ -102,11 +106,41 @@ module.exports = async function (eleventyConfig) {
         }
       });
 
-      return $.html();
+      // Preserve DOCTYPE and full HTML structure
+      const doctype = content.match(/^<!doctype[^>]*>/i)?.[0] || '';
+      const html = $.html();
+      // Remove any doctype cheerio might have added
+      const cleanHtml = html.replace(/^<!doctype[^>]*>\s*/i, '');
+      return doctype ? doctype + '\n' + cleanHtml : cleanHtml;
     } catch (err) {
       console.warn("[content-heading-slugs] transform failed:", err && err.message ? err.message : err);
       return content; // Safe fallback
     }
+  });
+
+  // HTML minification for production
+  eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+
+    if (process.env.NODE_ENV === "production") {
+      try {
+        return htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: true,
+          keepClosingSlash: true,
+          caseSensitive: true,
+          conservativeCollapse: false,
+          preserveLineBreaks: false
+        });
+      } catch (err) {
+        console.warn("[htmlmin] transform failed:", err && err.message ? err.message : err);
+        return content;
+      }
+    }
+    return content;
   });
 
   return {

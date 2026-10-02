@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "eleventy --serve --watch",
-    "build": "eleventy"
+    "build": "NODE_ENV=production npx @11ty/eleventy --quiet"
   },
   "keywords": [],
   "repository": {
@@ -23,6 +23,10 @@
     "cheerio": "^1.2.0",
     "dayjs": "^1.11.21",
     "esbuild": "^0.28.1",
-    "html-minifier-terser": "^7.2.0"
+    "html-minifier-terser": "^7.2.0",
+    "slugify": "^1.6.9"
+  },
+  "devDependencies": {
+    "rimraf": "^6.1.3"
   }
 }
