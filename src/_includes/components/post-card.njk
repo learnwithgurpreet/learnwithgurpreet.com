@@ -5,5 +5,5 @@
 <article>
   <h2><a href="{{ item.url | url }}">{{ title }}</a></h2>
   {% include "components/date.njk" %}
-  <p>{{ description | truncate(100, true, '...') }}</p>
+  {# <p>{{ description | truncate(100, true, '...') }}</p> #}
 </article>
