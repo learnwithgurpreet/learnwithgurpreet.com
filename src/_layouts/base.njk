@@ -23,7 +23,7 @@
       --standard-border: 1px solid var(--border);
       --font: "Times New Roman", monospace;
       --code-font: monospace;
-      --content-max: 900px;
+      --content-max: min(100% - 2rem, 75rem);
       --radius: 0.5rem;
       color-scheme: light;
     }
@@ -207,8 +207,101 @@
       margin-bottom: 2.5rem;
     }
 
+    .header-anchor {
+      text-decoration: none;
+      font-size: 0.80em;
+      margin-left: 0.15em;
+    }
+
     .footnotes {
       font-size: 80%;
+    }
+
+    /* TOC Styles */
+    .post-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .post-wrapper {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+
+      .post-wrapper nav.toc {
+        flex: 0 0 250px;
+        position: sticky;
+        top: 2rem;
+        max-height: calc(100vh - 4rem);
+        overflow-y: auto;
+        background-color: transparent;
+        padding: 0;
+      }
+
+      .post-wrapper #post-content {
+        flex: 1;
+        min-width: 0;
+        order: 1;
+      }
+
+      .post-wrapper .toc li {
+        border-left: 2px solid transparent;
+      }
+
+      .post-wrapper .toc li:has(.is-current) {
+        border-left-color: var(--accent);
+      }
+
+      .post-wrapper .toc h2 {
+        padding-left: 1rem;
+      }
+    }
+
+    nav.toc {
+      border-left: var(--standard-border);
+      font-size: 0.95rem;
+      background-color: var(--accent-bg);
+      padding: 1rem;
+    }
+
+    nav.toc h2 {
+      margin-top: 0;
+    }
+
+    nav.toc ol {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      display: grid;
+    }
+
+    nav.toc ol ol {
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    nav.toc li {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+      white-space: wrap;
+      padding-left: 1rem;
+    }
+
+    nav.toc a {
+      color: var(--text);
+      display: block;
+      transition: color 0.2s;
+    }
+
+    nav.toc a:hover {
+      color: var(--accent);
+    }
+
+    nav.toc a.is-current {
+      color: var(--accent);
+      font-weight: bold;
     }
 
     .skip-to-content {
@@ -265,6 +358,64 @@
   {% include "partials/header.njk" %}
   <main id="main">{{ content | safe }}</main>
   {% include "partials/footer.njk" %}
+  <script>
+    // TOC scroll highlighting
+    (function () {
+      const toc = document.querySelector('nav.toc');
+      if (!toc) return;
+
+      const tocLinks = toc.querySelectorAll('a[href^="#"]');
+      const headings = Array.from(tocLinks).map(link => {
+        const id = link.getAttribute('href').substring(1);
+        return document.getElementById(id);
+      }).filter(Boolean);
+
+      if (headings.length === 0) return;
+
+      function updateActiveLink() {
+        // Find the current heading based on scroll position
+        let current = null;
+        const scrollPosition = window.scrollY + 100; // Offset for better UX
+
+        for (let i = headings.length - 1; i >= 0; i--) {
+          const heading = headings[i];
+          if (heading.offsetTop <= scrollPosition) {
+            current = heading;
+            break;
+          }
+        }
+
+        // Remove is-current from all links
+        tocLinks.forEach(link => link.classList.remove('is-current'));
+
+        // Add is-current to the active link
+        if (current) {
+          const activeLink = toc.querySelector(`a[href="#${current.id}"]`);
+          if (activeLink) {
+            activeLink.classList.add('is-current');
+          }
+        }
+      }
+
+      // Throttle scroll events for performance
+      let ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateActiveLink();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+
+      // Listen to scroll events
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Initial check
+      updateActiveLink();
+    })();
+  </script>
   <script defer src="https://cloud.umami.is/script.js" data-website-id="5f065192-b2a1-46ea-82ae-3d5f72b17d79"></script>
 </body>
 

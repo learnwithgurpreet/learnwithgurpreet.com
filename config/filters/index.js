@@ -2,6 +2,7 @@ const dayjs = require('dayjs');
 const site = require('../../src/_data/meta.json');
 const { throwIfNotType } = require('../utils');
 const esbuild = require('esbuild');
+const generateTOC = require('./toc');
 
 /** Removes all tags from an HTML string. */
 const stripHtml = str => {
@@ -77,5 +78,6 @@ module.exports = {
   toAbsoluteUrl,
   stripHtml,
   minifyJs,
-  splitlines
+  splitlines,
+  generateTOC
 };

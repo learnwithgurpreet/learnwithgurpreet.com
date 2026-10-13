@@ -9,11 +9,11 @@ schema: blog
   <blockquote>{{ note | safe }}</blockquote>
   {% endif %}
   {% if image %}
-    {% eleventyImage image, alt or title, null, "eager", "feature" %}
+  {% eleventyImage image, alt or title, null, "eager", "feature" %}
   {% endif %}
 
   {% if credit %}
-    <p>© {{ credit }}</p>
+  <p>© {{ credit }}</p>
   {% endif %}
 
   {% if tags.length > 1 %}
@@ -26,8 +26,11 @@ schema: blog
   </nav>
   {% endif %}
 
-  <div id="post-content">
-    {{ content | safe }}
+  <div class="post-wrapper">
+    {{ content | generateTOC | safe }}
+    <div id="post-content">
+      {{ content | safe }}
+    </div>
   </div>
   {% include 'components/buy-me-coffee.njk' %}
   {% include 'components/edit-on.njk' %}

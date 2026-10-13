@@ -7,7 +7,8 @@ const {
   formatDate,
   toAbsoluteUrl,
   stripHtml,
-  splitlines
+  splitlines,
+  generateTOC
 } = require('./config/filters/index.js');
 const { slugifyString } = require('./config/utils/index.js');
 const { svgToJpeg } = require('./config/events/index.js');
@@ -27,6 +28,7 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter('stripHtml', stripHtml);
   eleventyConfig.addFilter('slugify', slugifyString);
   eleventyConfig.addFilter('splitlines', splitlines);
+  eleventyConfig.addFilter('generateTOC', generateTOC);
   eleventyConfig.addFilter(
     'groupByYear',
     groupBy(post => post.date.getFullYear())
@@ -92,18 +94,19 @@ module.exports = async function (eleventyConfig) {
           idToUse = slug;
         }
 
-        // Wrap heading contents in a self-link when safe
-        const hasDirectOnlyAnchor = $el.children("a").length === 1 && $el.contents().length === 1;
-        const containsAnyAnchor = $el.find("a").length > 0;
+        // Add tabindex="-1" to the heading
+        $el.attr("tabindex", "-1");
 
-        if (hasDirectOnlyAnchor) {
-          const $a = $el.children("a").first();
-          $a.attr("href", `#${idToUse}`);
-        } else if (!containsAnyAnchor) {
-          const inner = $el.html();
-          const $a = $("<a></a>").attr("href", `#${idToUse}`).html(inner);
-          $el.empty().append($a);
-        }
+        // Remove any existing anchor links to avoid duplicates
+        $el.find("a.header-anchor").remove();
+
+        // Append header anchor link with # symbol
+        const $anchor = $("<a></a>")
+          .addClass("header-anchor")
+          .attr("href", `#${idToUse}`)
+          .text("#");
+
+        $el.append(" ").append($anchor);
       });
 
       // Preserve DOCTYPE and full HTML structure
